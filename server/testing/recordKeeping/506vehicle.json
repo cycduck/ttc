@@ -1,0 +1,686 @@
+[
+    {
+        "id": "4413",
+        "routeId": "506",
+        "directionId": "506_1_MSCX",
+        "predictable": true,
+        "secsSinceReport": 8,
+        "kph": null,
+        "heading": 245,
+        "lat": 43.680752,
+        "lon": -79.310883,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4413",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4413."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4516",
+        "routeId": "506",
+        "directionId": "506_0_506",
+        "predictable": true,
+        "secsSinceReport": 6,
+        "kph": null,
+        "heading": 73,
+        "lat": 43.671665,
+        "lon": -79.324516,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4516",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4516."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4187",
+        "routeId": "506",
+        "directionId": "506_0_506",
+        "predictable": true,
+        "secsSinceReport": 7,
+        "kph": null,
+        "heading": 74,
+        "lat": 43.6543009,
+        "lon": -79.42305,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4187",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4187."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4482",
+        "routeId": "506",
+        "directionId": "506_1_506",
+        "predictable": true,
+        "secsSinceReport": 7,
+        "kph": null,
+        "heading": 253,
+        "lat": 43.662449,
+        "lon": -79.364769,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4482",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4482."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4176",
+        "routeId": "506",
+        "directionId": "506_0_506",
+        "predictable": true,
+        "secsSinceReport": 20,
+        "kph": null,
+        "heading": 75,
+        "lat": 43.6586,
+        "lon": -79.3963009,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4176",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4176."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4091",
+        "routeId": "506",
+        "directionId": "506_1_506",
+        "predictable": true,
+        "secsSinceReport": 20,
+        "kph": null,
+        "heading": 257,
+        "lat": 43.652599,
+        "lon": -79.432335,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4091",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4091."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4021",
+        "routeId": "506",
+        "directionId": "506_0_506",
+        "predictable": true,
+        "secsSinceReport": 10,
+        "kph": null,
+        "heading": 72,
+        "lat": 43.680683,
+        "lon": -79.311035,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4021",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4021."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4447",
+        "routeId": "506",
+        "directionId": "506_0_506",
+        "predictable": true,
+        "secsSinceReport": 7,
+        "kph": null,
+        "heading": 74,
+        "lat": 43.662384,
+        "lon": -79.37693,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4447",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4447."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4432",
+        "routeId": "506",
+        "directionId": "506_0_506",
+        "predictable": true,
+        "secsSinceReport": 20,
+        "kph": null,
+        "heading": 76,
+        "lat": 43.651432,
+        "lon": -79.451286,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4432",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4432."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4504",
+        "routeId": "506",
+        "directionId": "506_0_506",
+        "predictable": true,
+        "secsSinceReport": 7,
+        "kph": null,
+        "heading": 71,
+        "lat": 43.688816,
+        "lon": -79.301903,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4504",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4504."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4074",
+        "routeId": "506",
+        "directionId": "506_1_506",
+        "predictable": true,
+        "secsSinceReport": 11,
+        "kph": null,
+        "heading": 224,
+        "lat": 43.679699,
+        "lon": -79.312782,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4074",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4074."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4572",
+        "routeId": "506",
+        "directionId": "506_1_506",
+        "predictable": true,
+        "secsSinceReport": 20,
+        "kph": null,
+        "heading": 253,
+        "lat": 43.669899,
+        "lon": -79.3326189,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4572",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4572."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4481",
+        "routeId": "506",
+        "directionId": "506_1_506",
+        "predictable": true,
+        "secsSinceReport": 18,
+        "kph": null,
+        "heading": 254,
+        "lat": 43.653385,
+        "lon": -79.427452,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4481",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4481."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4048",
+        "routeId": "506",
+        "directionId": "506_0_506",
+        "predictable": true,
+        "secsSinceReport": 11,
+        "kph": null,
+        "heading": 73,
+        "lat": 43.669151,
+        "lon": -79.335869,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4048",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4048."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4100",
+        "routeId": "506",
+        "directionId": "506_0_506",
+        "predictable": true,
+        "secsSinceReport": 20,
+        "kph": null,
+        "heading": 203,
+        "lat": 43.648018,
+        "lon": -79.45813,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4100",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4100."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4455",
+        "routeId": "506",
+        "directionId": "506_0_506",
+        "predictable": true,
+        "secsSinceReport": 7,
+        "kph": null,
+        "heading": 165,
+        "lat": 43.647785,
+        "lon": -79.458015,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4455",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4455."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4147",
+        "routeId": "506",
+        "directionId": "506_1_506",
+        "predictable": true,
+        "secsSinceReport": 7,
+        "kph": null,
+        "heading": 180,
+        "lat": 43.6579819,
+        "lon": -79.399635,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4147",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4147."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    },
+    {
+        "id": "4459",
+        "routeId": "506",
+        "directionId": "506_1_506",
+        "predictable": true,
+        "secsSinceReport": 19,
+        "kph": null,
+        "heading": 254,
+        "lat": 43.662083,
+        "lon": -79.378304,
+        "leadingVehicleId": null,
+        "_links": {
+            "self": {
+                "href": "http://localhost:8080/agencies/ttc/vehicles/4459",
+                "type": "application/json",
+                "rel": "self",
+                "rt": "vehicle",
+                "title": "Transit agency ttc vehicle 4459."
+            },
+            "to": [],
+            "from": [
+                {
+                    "href": "http://localhost:8080/agencies/ttc/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles for agency ttc."
+                },
+                {
+                    "href": "http://localhost:8080/agencies/ttc/routes/506/vehicles",
+                    "type": "application/json",
+                    "rel": "section",
+                    "rt": "vehicle",
+                    "title": "A collection of vehicles currently on route 506 for agency ttc."
+                }
+            ]
+        }
+    }
+]

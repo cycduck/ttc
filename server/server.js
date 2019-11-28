@@ -1,0 +1,69 @@
+const express = require('express');
+const app = express();
+const restbus = require('restbus');
+const axios = require('axios');
+const fs = require('file-system');
+const PORT = process.env.PORT || 8080;
+// use the port from the environment variable, else use 8080 https://stackoverflow.com/questions/18864677/what-is-process-env-port-in-node-js
+
+// // Find out which routes to use first
+// restbus.listen(PORT, (err) =>{
+//   if(err) {
+//     console.log(`Server Error: ${err}`)
+//   }
+//   console.log(`listening on PORT: ${PORT}`)
+// })
+
+app.use('/restbus', restbus.middleware()); 
+
+
+app.get ('/agencies/ttc/vehicles', (req, res) => {
+  console.time('process time ');
+  // axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/vehicles`) // all vehicles
+  axios.all([
+    axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/506/vehicles`), // vehicles for 506
+    axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/vehicles`) // vehicles for 505
+  ])
+  .then(axios.spread((vehicle506, vehicle505) => {
+    const x = {};
+    x[vehicle505.data[0].routeId] = vehicle505.data
+    x[vehicle506.data[0].routeId] = vehicle506.data
+    
+    const vehicleAll = [];
+    vehicleAll.push(x)
+
+    fs.writeFile('./data/data.json', JSON.stringify(vehicleAll), function (err) {console.log(err)})
+    res.json(vehicleAll);
+    console.timeEnd('process time ');
+  }))
+  .catch(err => {
+    console.log(err)
+  })
+  ////////
+  // console.time('process time to filter through vehicle list for 506 ');
+  // axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/vehicles`) // all vehicles
+  // .then(response => {
+    
+  //   // test filter through the route in the vehicle, average 0.001s
+  //   let vehicle506 = response.data.find(info => {
+  //     return info.routeId === '506'
+  //   })
+  //   let vehicle505 = response.data.find(info => {
+  //     return info.routeId === '505'
+  //   })
+  //   const vehicleAll = [vehicle505, vehicle506]
+  //   res.json(vehicleAll)
+  //   console.timeEnd('process time to filter through vehicle list for 506 ');
+  // })
+  // .catch(err => {
+  //   console.log(err);
+  // })
+  ////////
+})
+
+app.listen(PORT, (err) =>{
+  if(err) {
+    console.log(`Server Error: ${err}`)
+  }
+  console.log(`listening on PORT: ${PORT}`)
+})
