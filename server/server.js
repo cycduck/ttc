@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const restbus = require('restbus');
+const cors = require('cors');
 const axios = require('axios');
 const fs = require('file-system');
 const PORT = process.env.PORT || 8080;
@@ -15,7 +16,23 @@ const PORT = process.env.PORT || 8080;
 // })
 
 app.use('/restbus', restbus.middleware()); 
+app.use(cors());
 
+
+busMapping = (axiosdata) => {
+  let x = axiosdata.map(info => {
+    // console.log('axiosdata', info.id)
+    return {
+      busId: info.id,
+      routeId: info.routeId,
+      directionId: (info.directionId ? (info.directionId[4] == 0 ? "E" : "W") : "nada"), // E/S: 0 W/N: 1
+      kph: info.kph,
+      lat: info.lat,
+      lng: info.lon
+    }
+  })
+  return x
+}
 
 app.get ('/agencies/ttc/vehicles', (req, res) => {
   console.time('process time ');
@@ -26,13 +43,16 @@ app.get ('/agencies/ttc/vehicles', (req, res) => {
   ])
   .then(axios.spread((vehicle506, vehicle505) => {
     const x = {};
-    x[vehicle505.data[0].routeId] = vehicle505.data
-    x[vehicle506.data[0].routeId] = vehicle506.data
+    // x[vehicle505.data[0].routeId] = vehicle505.data
+    // x[vehicle506.data[0].routeId] = vehicle506.data // Processing time is insignificant
+    
+    x[vehicle505.data[0].routeId] = busMapping(vehicle505.data) 
+    x[vehicle506.data[0].routeId] = busMapping(vehicle506.data)
     
     const vehicleAll = [];
     vehicleAll.push(x)
 
-    fs.writeFile('./data/data.json', JSON.stringify(vehicleAll), function (err) {console.log(err)})
+    // fs.writeFile('./data/data.json', JSON.stringify(vehicleAll), function (err) {console.log(err)})
     res.json(vehicleAll);
     console.timeEnd('process time ');
   }))

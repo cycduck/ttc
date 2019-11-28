@@ -6,17 +6,19 @@
 * [x] create-react-app
 * [x] install react-leaflet
 Have to install
-https://www.npmjs.com/package/leaflet, which has the css files from 
+* https://www.npmjs.com/package/leaflet, which has the css files from 
 * https://leafletjs.com/
 * https://leafletjs.com/examples/custom-icons/
 Then install the JS files  19:59
 https://react-leaflet.js.org/docs/en/installation 
 * [x] get the map on the page
 * [x] Icon... currently it has a margin
-https://www.geoapify.com/create-custom-map-marker-icon/
+* https://www.geoapify.com/create-custom-map-marker-icon/
 https://leafletjs.com/reference-1.6.0.html#divicon
 * [x] get the users location
+* [ ] axios get on client app.js
 * [ ] floating form??? 54:10 w/ react strap
+* [ ] modify axios on server side
 
 
 ## Important links
