@@ -42,17 +42,11 @@ app.get ('/agencies/ttc/vehicles', (req, res) => {
     axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/vehicles`) // vehicles for 505
   ])
   .then(axios.spread((vehicle506, vehicle505) => {
-    const x = {};
-    // x[vehicle505.data[0].routeId] = vehicle505.data
-    // x[vehicle506.data[0].routeId] = vehicle506.data // Processing time is insignificant
-    
-    x[vehicle505.data[0].routeId] = busMapping(vehicle505.data) 
-    x[vehicle506.data[0].routeId] = busMapping(vehicle506.data)
-    
-    const vehicleAll = [];
-    vehicleAll.push(x)
+    const vehicleAll = {};
+    vehicleAll[`v${vehicle505.data[0].routeId}`] = vehicle505.data
+    vehicleAll[`v${vehicle506.data[0].routeId}`] = vehicle506.data // Processing time is insignificant
 
-    // fs.writeFile('./data/data.json', JSON.stringify(vehicleAll), function (err) {console.log(err)})
+    fs.writeFile('./data/data.json', JSON.stringify(vehicleAll), function (err) {console.log(err)})
     res.json(vehicleAll);
     console.timeEnd('process time ');
   }))

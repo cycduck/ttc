@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+}
+
+.map {
+  height: 100%;
+
+  &__bus-icon {
+    border: 1px solid blueviolet;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__bus-icon-inner{
+    color: red;
+    margin: 0;
+  }
+
+  &__user-icon {
+    border: 20px solid rgba(19, 153, 153, 0.3);
+    border-radius: 50%;
+  }
+
+  &__user-icon-inner{
+    border: 1px solid black;
+    border-radius: 50%;
+    background: grey;
+    width: 10px;
+    height: 10px;
+  }
+}

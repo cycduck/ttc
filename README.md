@@ -16,9 +16,14 @@ https://react-leaflet.js.org/docs/en/installation
 * https://www.geoapify.com/create-custom-map-marker-icon/
 https://leafletjs.com/reference-1.6.0.html#divicon
 * [x] get the users location
-* [ ] axios get on client app.js
+* [x] axios get on client app.js
 * [ ] floating form??? 54:10 w/ react strap
-* [ ] modify axios on server side
+* [x] modify axios on server side
+* [ ] retrieve data every 15seconds
+https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
+* [ ] transition css
+* [ ] style the markers better (route on dot)
+  * [x] text on dot, centered
 
 
 ## Important links
@@ -29,3 +34,11 @@ The Proposal: https://docs.google.com/document/d/17fAyQCbwSMdWYp26JmlW-_FRY5YQ6A
 ### Leaflet JS
 https://reactstrap.github.io/components/tabs/
 https://www.youtube.com/watch?v=J7pFiXh-ydA
+
+### Intervals
+https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
+
+### Sockets
+https://socket.io/
+https://medium.com/front-end-weekly/what-are-websockets-7bf0e2e1af2
+https://www.youtube.com/watch?v=ggVsXljT0MI

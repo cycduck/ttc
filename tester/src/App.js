@@ -1,6 +1,6 @@
 import React from "react";
 import axios from 'axios';
-import BusMap from "../component/BusMap";
+import BusMap from "./component/BusMap";
 import './App.scss';
 
 const baseUrl = `http://localhost:8080/agencies/ttc/vehicles`
@@ -12,9 +12,8 @@ export default class App extends React.Component {
       lng: -79.38,
     },
     haveUserLocation: false, // intital state is userIcon doesn't show
-    zoom: 13,
+    zoom: 14,
     vehicle: {}
-    
   }
 
   // getVehicle = () => { // keep it here for now for testing purposes
@@ -50,8 +49,7 @@ export default class App extends React.Component {
   }
 
   render () {
-    // set the position 
-
+    
     return (
       <>
         <BusMap state={this.state} />
