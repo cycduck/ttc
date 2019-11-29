@@ -21,11 +21,13 @@ app.use(cors());
 
 busMapping = (axiosdata) => {
   let x = axiosdata.map(info => {
-    // console.log('axiosdata', info.id)
+    console.log('info.directionId', info)
+    // console.log('info.directionId', info.directionId)
+    // console.log(info.directionId ? (info.directionId[4] == 0 ? "E" : "W") : "nada")
     return {
       busId: info.id,
       routeId: info.routeId,
-      directionId: (info.directionId ? (info.directionId[4] == 0 ? "E" : "W") : "nada"), // E/S: 0 W/N: 1
+      directionId: (info.directionId ? (info.directionId[4] == 0 ? "E" : "W") : null), // E/S: 0 W/N: 1
       kph: info.kph,
       lat: info.lat,
       lng: info.lon
@@ -43,8 +45,8 @@ app.get ('/agencies/ttc/vehicles', (req, res) => {
   ])
   .then(axios.spread((vehicle506, vehicle505) => {
     const vehicleAll = {};
-    vehicleAll[`v${vehicle505.data[0].routeId}`] = vehicle505.data
-    vehicleAll[`v${vehicle506.data[0].routeId}`] = vehicle506.data // Processing time is insignificant
+    vehicleAll[`v${vehicle505.data[0].routeId}`] = busMapping(vehicle505.data)
+    vehicleAll[`v${vehicle506.data[0].routeId}`] = busMapping(vehicle506.data) // Processing time is insignificant
 
     fs.writeFile('./data/data.json', JSON.stringify(vehicleAll), function (err) {console.log(err)})
     res.json(vehicleAll);

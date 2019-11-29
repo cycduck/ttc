@@ -45,7 +45,8 @@ export default class App extends React.Component {
         haveUserLocation: true, // update after getting the locaiton
       });
     })
-    this.getVehicle();
+      this.getVehicle(); // gets it at 0s, then every 30s
+      setInterval(()=>this.getVehicle(), 10000); // the API changes every 30s
   }
 
   render () {

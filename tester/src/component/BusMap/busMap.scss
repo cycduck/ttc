@@ -11,17 +11,32 @@ body {
 .map {
   height: 100%;
 
-  &__bus-icon {
-    border: 1px solid blueviolet;
+  &__bus-icon-505 {
+    border: 1.5px solid #802A30;
     border-radius: 50%;
-    background: black;
+    background: #FF5460;
     display: flex;
     align-items: center;
     justify-content: center;
+    // w/h does not apply here
+    transition: all 7s ease-in-out
   }
-  
-  &__bus-icon-inner{
-    color: red;
+  &__bus-icon-inner-505{
+    color: rgb(92, 34, 38);
+    margin: 0;
+  }
+  &__bus-icon-506 {
+    border: 1.5px solid #2A7180;
+    border-radius: 50%;
+    background: #A1EFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // w/h does not apply here
+    transition: all 5s ease-in-out
+  }
+  &__bus-icon-inner-506{
+    color: #3C7880;
     margin: 0;
   }
 

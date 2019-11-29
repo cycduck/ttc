@@ -22,27 +22,28 @@ export default class BusMap extends React.Component {
   // console.log(this.props.state.userLocation, this.props.state.zoom)
 
   markerRender = (data) =>{
-
+    console.log(data)
     if (data){
       // console.log('before map', data.v505)
       return data.map(info=> {
-
+        console.log('making Marker', data)
         const busIcon = L.divIcon({
-          className: 'map__bus-icon',
-          html: `<p class='map__bus-icon-inner'>${info.routeId}</p>`,
-          iconAnchor: [25,25]
+          className: `map__bus-icon-${info.routeId}`,
+          html: `<p class='map__bus-icon-inner-${info.routeId}'>${info.routeId}</p>`,
+          iconSize: [30,30],
+          iconAnchor: [15,15]
         });
 
         return (
         <Marker 
         icon={busIcon}
-        position={[info.lat, info.lon]}
+        position={[info.lat, info.lng]}
         className="test"
         >
           <Popup>
             <div>{info.routeId}</div>
+        {info.directionId ? <div>Direction: {info.directionId}</div> : null}
           </Popup>
-          test
         </Marker>
         )
       })
@@ -51,16 +52,16 @@ export default class BusMap extends React.Component {
   render (){
     const {userLocation, zoom, haveUserLocation, vehicle:{data}} = this.props.state;
     
+    console.log('checking if data 505 exists', this.props.state.vehicle.data)
     const userPosition = [userLocation.lat, userLocation.lng];
     return(
       <Map className="map" center={userPosition} zoom={zoom}>
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {/* {console.log(this.props.state.vehicle.data.v505)} */}
-        {this.props.state.vehicle.data ? this.markerRender(this.props.state.vehicle.data.v505) : null}
-        {this.props.state.vehicle.data ? this.markerRender(this.props.state.vehicle.data.v506) : null}
+          />
+        {this.props.state.vehicle.data ? this.markerRender(data.v505) : null}
+        {this.props.state.vehicle.data ? this.markerRender(data.v506) : null}
         {
           haveUserLocation ?
           <Marker 

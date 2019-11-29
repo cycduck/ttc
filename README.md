@@ -1,4 +1,5 @@
 # Todo list for TTC.get
+### Keeping the game plan organized!!
 
 * App detects users location (from broswer or IP)
 * Add a pin to the map with the users location 
@@ -19,11 +20,16 @@ https://leafletjs.com/reference-1.6.0.html#divicon
 * [x] axios get on client app.js
 * [ ] floating form??? 54:10 w/ react strap
 * [x] modify axios on server side
-* [ ] retrieve data every 15seconds
+* [x] retrieve data every 10s
+  * [ ] PROBLEM: API sends new data every 30s
 https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
-* [ ] transition css
+* [ ] turn on/off routes
+* [ ] animation transition css
+* [ ] grey overlay on the map
 * [ ] style the markers better (route on dot)
   * [x] text on dot, centered
+  * [x] size of the dots
+  * [ ] PROBLEM: some routes are null; SOLUTION: pass route # to the params, make a null specific style?
 
 
 ## Important links
@@ -31,14 +37,18 @@ Read me formatting: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheats
 Blog your process: https://medium.com/
 The Proposal: https://docs.google.com/document/d/17fAyQCbwSMdWYp26JmlW-_FRY5YQ6AarVLegegtdxJc/edit#
 
-### Leaflet JS
+### Leaflet JS - May need to come back for styling
 https://reactstrap.github.io/components/tabs/
 https://www.youtube.com/watch?v=J7pFiXh-ydA
 
-### Intervals
+### Intervals - DONE
 https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
+https://javascript.info/settimeout-setinterval
 
-### Sockets
-https://socket.io/
+### Hooks - Priority 1 
+https://reactjs.org/docs/hooks-intro.html
+
+### Sockets  - Priority 2
+https://socket.io/get-started/chat/
 https://medium.com/front-end-weekly/what-are-websockets-7bf0e2e1af2
 https://www.youtube.com/watch?v=ggVsXljT0MI
