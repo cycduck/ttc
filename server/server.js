@@ -21,7 +21,7 @@ app.use(cors());
 
 busMapping = (axiosdata) => {
   let x = axiosdata.map(info => {
-    console.log('info.directionId', info)
+    // console.log('info.directionId', info)
     // console.log('info.directionId', info.directionId)
     // console.log(info.directionId ? (info.directionId[4] == 0 ? "E" : "W") : "nada")
     return {
