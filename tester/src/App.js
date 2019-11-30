@@ -5,7 +5,7 @@ import ioClient from "socket.io-client";
 import BusMap from "./component/BusMap";
 import './App.scss';
 
-const socket = ioClient('http://localhost:8080/') // or localhost???
+const socket = ioClient('http://localhost:8080/') // change to localhost
 //  exposes a io global
 const baseUrl = `http://localhost:8080/agencies/ttc/vehicles`
 
