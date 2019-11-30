@@ -56,20 +56,24 @@ test = (socket) => {
     try{
       let vehicle505 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/vehicles`) // vehicles for 505
       let vehicle506 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/506/vehicles`) // vehicles for 506
-      console.log('right after spread', vehicle506.data[0].routeId)
+
       vehicleAll[`v${vehicle505.data[0].routeId}`] = busMapping(vehicle505.data)
       vehicleAll[`v${vehicle506.data[0].routeId}`] = busMapping(vehicle506.data) // Processing time is insignificant
   
       // fs.writeFile('./data/data.json', JSON.stringify(vehicleAll), function (err) {console.log(err)})
-      socket.emit('busUpdate', vehicleAll)
-
-      console.log('after emit', vehicleAll.v506[0]) // it does get it
-    } catch  (err) {
+      socket.binary(false).emit('busUpdate', vehicleAll);
+      // JSON isn't binary
+    } catch (err) {
         console.log(err)
-    }
+    };
     console.timeEnd('process time ');
-  }
-  setInterval(x, 5000) // ??? Problem.... it doesn't start until 5s later
+  };
+  x(); // start it once then every 15s
+  setInterval(x, 15000);
+
+  socket.on('disconnect', ()=>{
+    console.log('someone disconnected');
+  })
 }
 
   ////////

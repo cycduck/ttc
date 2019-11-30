@@ -46,19 +46,30 @@ https://www.youtube.com/watch?v=J7pFiXh-ydA
 ### Intervals - DONE
 https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
 https://javascript.info/settimeout-setinterval
+Do I need to set a stop or just let the server run???
 
 ### Hooks - Priority 1 
 https://reactjs.org/docs/hooks-intro.html
 https://medium.com/@rossbulat/react-hooks-managing-web-sockets-with-useeffect-and-usestate-2dfc30eeceec
 
-### Sockets  - Priority 2
+### Sockets  - DONE +5 on performance audit
 https://socket.io/get-started/chat/
+https://socket.io/docs/
 https://medium.com/front-end-weekly/what-are-websockets-7bf0e2e1af2
 https://www.youtube.com/watch?v=ggVsXljT0MI
 .emit is send
 .emit('custom named event' func)
 .on is receive
 .on('custom named event' func)
+Server side: it sppears that it has to start with io.on('connection', function(socket){your func}
+Client side: const socket = io.connect('link')
+socket.on()// socket.emit() 
+
+### More stuff about async and await
+https://scotch.io/tutorials/asynchronous-javascript-using-async-await 
+https://gist.github.com/wesbos/1866f918824936ffb73d8fd0b02879b4
+https://www.valentinog.com/blog/socket-react/
+Verdict: After an hour of trying I guess I don't need axios.all/spread if I am using this
 
 ### Optimization
 https://eloquentjavascript.net/11_async.html
