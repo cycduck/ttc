@@ -55,6 +55,10 @@ https://medium.com/@rossbulat/react-hooks-managing-web-sockets-with-useeffect-an
 https://socket.io/get-started/chat/
 https://medium.com/front-end-weekly/what-are-websockets-7bf0e2e1af2
 https://www.youtube.com/watch?v=ggVsXljT0MI
+.emit is send
+.emit('custom named event' func)
+.on is receive
+.on('custom named event' func)
 
 ### Optimization
 https://eloquentjavascript.net/11_async.html

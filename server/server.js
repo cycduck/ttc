@@ -28,10 +28,9 @@ app.use('/restbus', restbus.middleware());
 app.use(cors());
 
 
-busMapping = (axiosdata) => {
-  let x = axiosdata.map(info => {
-    console.log('info.directionId', info)
-    // console.log('info.directionId', info.directionId)
+const busMapping = (axiosdata) => {
+  // console.log('info.directionId', axiosdata) // OK
+  let conversion = axiosdata.map(info => {
     // console.log(info.directionId ? (info.directionId[4] == 0 ? "E" : "W") : "nada")
     return {
       busId: info.id,
@@ -42,28 +41,34 @@ busMapping = (axiosdata) => {
       lng: info.lon
     }
   })
-  return x
+  return conversion
 }
 
-const vehicleAll = {};
-const test = () => {
-  console.time('process time ');
+io.on('connect', 
+test = (socket) => {
+  console.log('You have been shocketed, id: ', socket.id) // OK
+  const vehicleAll = {};
   // axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/vehicles`) // all vehicles
-  axios.all([
-    axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/506/vehicles`), // vehicles for 506
-    axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/vehicles`) // vehicles for 505
-  ])
-  .then(axios.spread((vehicle506, vehicle505) => {
-    vehicleAll[`v${vehicle505.data[0].routeId}`] = busMapping(vehicle505.data)
-    vehicleAll[`v${vehicle506.data[0].routeId}`] = busMapping(vehicle506.data) // Processing time is insignificant
+  const x = async () => {
+    console.time('process time ');
+    try{
+      let vehicle505 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/vehicles`) // vehicles for 505
+      let vehicle506 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/506/vehicles`) // vehicles for 506
+      console.log('right after spread', vehicle506.data[0].routeId)
+      vehicleAll[`v${vehicle505.data[0].routeId}`] = busMapping(vehicle505.data)
+      vehicleAll[`v${vehicle506.data[0].routeId}`] = busMapping(vehicle506.data) // Processing time is insignificant
+  
+      // fs.writeFile('./data/data.json', JSON.stringify(vehicleAll), function (err) {console.log(err)})
+      socket.emit('busUpdate', vehicleAll)
 
-    // fs.writeFile('./data/data.json', JSON.stringify(vehicleAll), function (err) {console.log(err)})
-    res.json(vehicleAll);
+      console.log('after emit', vehicleAll.v506[0]) // it does get it
+    } catch  (err) {
+        console.log(err)
+    }
     console.timeEnd('process time ');
-  }))
-  .catch(err => {
-    console.log(err)
-  })
+  }
+  setInterval(x, 5000)
+}
 
   ////////
   // console.time('process time to filter through vehicle list for 506 ');
@@ -85,15 +90,4 @@ const test = () => {
   //   console.log(err);
   // })
   ////////
-}
-
-setInterval(()=>test(), 10000)
-
-io.on('connection', (socket)=>{
-  console.log('You have been shocketed, id: ', socket.id)
-  // the server emits it as a busUpdate event
-  io.sockets.emit('busUpdate', vehicleAll)
-});
-
-// TODO: move the interval, because you can't use an app.get as a function
-// may not need the app.get even just get it form the locl host 8080
+)
