@@ -28,9 +28,11 @@ app.use('/restbus', restbus.middleware());
 app.use(cors());
 
 
+
 const busMapping = (axiosdata) => {
   // console.log('info.directionId', axiosdata) // OK
   let conversion = axiosdata.map(info => {
+
     // console.log(info.directionId ? (info.directionId[4] == 0 ? "E" : "W") : "nada")
     return {
       busId: info.id,
