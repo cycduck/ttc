@@ -22,11 +22,9 @@ export default class BusMap extends React.Component {
   // console.log(this.props.state.userLocation, this.props.state.zoom)
 
   markerRender = (data) =>{
-    console.log(data)
     if (data){
       // console.log('before map', data.v505)
       return data.map(info=> {
-        console.log('making Marker', data)
         const busIcon = L.divIcon({
           className: `map__bus-icon-${info.routeId}`,
           html: `<p class='map__bus-icon-inner-${info.routeId}'>${info.routeId}</p>`,
@@ -50,9 +48,9 @@ export default class BusMap extends React.Component {
     } 
   }
   render (){
-    const {userLocation, zoom, haveUserLocation, vehicle:{data}} = this.props.state;
+    const {userLocation, zoom, haveUserLocation, vehicle:{v505, v506}} = this.props.state;
     
-    console.log('checking if data 505 exists', this.props.state.vehicle.data)
+    console.log('checking if data 505 exists', this.props.state.vehicle)
     const userPosition = [userLocation.lat, userLocation.lng];
     return(
       <Map className="map" center={userPosition} zoom={zoom}>
@@ -60,8 +58,8 @@ export default class BusMap extends React.Component {
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-        {this.props.state.vehicle.data ? this.markerRender(data.v505) : null}
-        {this.props.state.vehicle.data ? this.markerRender(data.v506) : null}
+        {this.props.state.vehicle ? this.markerRender(v505) : null}
+        {this.props.state.vehicle ? this.markerRender(v506) : null}
         {
           haveUserLocation ?
           <Marker 
