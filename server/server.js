@@ -67,7 +67,7 @@ test = (socket) => {
     }
     console.timeEnd('process time ');
   }
-  setInterval(x, 5000)
+  setInterval(x, 5000) // ??? Problem.... it doesn't start until 5s later
 }
 
   ////////
