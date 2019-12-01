@@ -24,6 +24,8 @@ https://leafletjs.com/reference-1.6.0.html#divicon
   * [ ] PROBLEM: API sends new data every 30s
 https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
 * [ ] turn on/off routes
+https://leafletjs.com/examples/extending/extending-3-controls.html
+https://stackoverflow.com/questions/31924890/leaflet-js-custom-control-button-add-text-hover
 * [ ] animation transition css
 * [ ] grey overlay on the map
 * [ ] style the markers better (route on dot)
@@ -38,10 +40,12 @@ Read me formatting: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheats
 Blog your process: https://medium.com/
 The Proposal: https://docs.google.com/document/d/17fAyQCbwSMdWYp26JmlW-_FRY5YQ6AarVLegegtdxJc/edit#
 Nano React App https://github.com/adrianmcli/nano-react-app
+https://reactstrap.github.io/
 
 ### Leaflet JS - May need to come back for styling
 https://reactstrap.github.io/components/tabs/
 https://www.youtube.com/watch?v=J7pFiXh-ydA
+https://leaflet-extras.github.io/leaflet-providers/preview/
 
 ### Intervals - DONE
 https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
@@ -53,6 +57,7 @@ https://reactjs.org/docs/hooks-intro.html
 https://medium.com/@rossbulat/react-hooks-managing-web-sockets-with-useeffect-and-usestate-2dfc30eeceec
 
 ### Sockets  - DONE +5 on performance audit
+https://socket.io/blog/socket-io-1-4-0/ (compression)
 https://socket.io/get-started/chat/
 https://socket.io/docs/
 https://medium.com/front-end-weekly/what-are-websockets-7bf0e2e1af2
