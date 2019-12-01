@@ -1,7 +1,7 @@
 import React from "react";
 import ioClient from "socket.io-client";
 // endpoint GET /socket.io/socket.io.js
-// import axios from 'axios';
+
 import BusMap from "./component/BusMap";
 import './App.scss';
 
@@ -67,6 +67,8 @@ export default class App extends React.Component {
     
     return (
       <>
+        <button onClick={this.addLayer()}></button>
+        {/* <button onClick={this.removeLayer()}></button> */}
         <BusMap state={this.state} />
       </>
     )
