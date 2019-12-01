@@ -9,10 +9,8 @@ body {
 }
 
 .map {
-  position: absolute;
-        top: 0px;
-        bottom: 0;
-        left: 0;
+  height: 100%;
+
   // background-color: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 
   &__bus-icon-505 {

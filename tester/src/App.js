@@ -1,10 +1,10 @@
 import React from "react";
 import ioClient from "socket.io-client";
-const socket = ioClient('http://localhost:8080/') // change to localhost
 // endpoint GET /socket.io/socket.io.js
 import BusMap from "./component/BusMap";
 import './App.scss';
 
+const socket = ioClient('http://localhost:8080/') // change to localhost
 
 export default class App extends React.Component {
   state = {
