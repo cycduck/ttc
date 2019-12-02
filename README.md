@@ -21,6 +21,7 @@ https://leafletjs.com/reference-1.6.0.html#divicon
 * [ ] floating form??? 54:10 w/ react strap
 * [x] modify axios on server side
 * [x] retrieve data every 10s
+* [ ] Optimize with Hooks 
   * [ ] PROBLEM: API sends new data every 30s
 https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
 * [ ] turn on/off routes
@@ -32,6 +33,8 @@ https://stackoverflow.com/questions/31924890/leaflet-js-custom-control-button-ad
   * [x] text on dot, centered
   * [x] size of the dots
   * [ ] PROBLEM: some routes are null; SOLUTION: pass route # to the params, make a null specific style?
+  * [ ] Can I make the checkboxes bigger?
+    https://gis.stackexchange.com/questions/268651/change-the-default-checkbox-in-leaflet
 * [ ] END: MinJS your file!
 
 
@@ -61,6 +64,8 @@ Do I need to set a stop or just let the server run???
 ### Hooks - Priority 1 
 https://reactjs.org/docs/hooks-intro.html
 https://medium.com/@rossbulat/react-hooks-managing-web-sockets-with-useeffect-and-usestate-2dfc30eeceec
+https://www.youtube.com/watch?v=sBws8MSXN7A
+https://scotch.io/tutorials/build-a-react-to-do-app-with-react-hooks-no-class-components
 
 ### Sockets  - DONE +5 on performance audit
 https://socket.io/blog/socket-io-1-4-0/ (compression)

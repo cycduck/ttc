@@ -73,10 +73,14 @@ export default class BusMap extends React.Component {
           </BaseLayer>
 
           <Overlay  name="505">
-            <FeatureGroup>{this.props.state.vehicle ? markerRender(v505) : null}</FeatureGroup>
+            <FeatureGroup alt="check this box to turn on the layer for route 505">
+              {this.props.state.vehicle ? markerRender(v505) : null}
+            </FeatureGroup>
           </Overlay>
           <Overlay  name="506">
-            <FeatureGroup>{this.props.state.vehicle ? markerRender(v506) : null}</FeatureGroup>
+            <FeatureGroup alt="check this box to turn on the layer for route 506">
+              {this.props.state.vehicle ? markerRender(v506) : null}
+            </FeatureGroup>
           </Overlay>
           
           <Overlay checked name="Your Location">
