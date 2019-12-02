@@ -20,12 +20,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1rem;
     // w/h does not apply here
     transition: all 7s ease-in-out
   }
   &__bus-icon-inner-505{
     color: rgb(92, 34, 38);
     margin: 0;
+    text-align: center;
+    line-height: 1;
+    font-size: 0.8rem;
   }
   &__bus-icon-506 {
     border: 1.5px solid #2A7180;
@@ -34,12 +38,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1rem;
     // w/h does not apply here
     transition: all 5s ease-in-out
   }
   &__bus-icon-inner-506{
     color: #3C7880;
     margin: 0;
+    text-align: center;
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+  &__bus-icon-span {
+    font-weight: bold;
   }
 
   &__user-icon {

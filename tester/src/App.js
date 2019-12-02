@@ -45,8 +45,7 @@ export default class App extends React.Component {
     
     return (
       <>
-        <button onClick={this.addLayer()}></button>
-        {/* <button onClick={this.removeLayer()}></button> */}
+
         <BusMap state={this.state} />
       </>
     )

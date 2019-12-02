@@ -41,11 +41,17 @@ Blog your process: https://medium.com/
 The Proposal: https://docs.google.com/document/d/17fAyQCbwSMdWYp26JmlW-_FRY5YQ6AarVLegegtdxJc/edit#
 Nano React App https://github.com/adrianmcli/nano-react-app
 https://reactstrap.github.io/
+https://sparkgeo.com/blog/the-accessibility-of-web-maps/
 
 ### Leaflet JS - May need to come back for styling
 https://reactstrap.github.io/components/tabs/
 https://www.youtube.com/watch?v=J7pFiXh-ydA
 https://leaflet-extras.github.io/leaflet-providers/preview/
+http://bl.ocks.org/andyreagan/c81461c8a8ce52d103fc92decf9650b6
+Layer control
+https://github.com/PaulLeCam/react-leaflet/blob/master/example/components/layers-control.js
+Group markers together
+https://github.com/PaulLeCam/react-leaflet/blob/master/example/components/custom-component.js
 
 ### Intervals - DONE
 https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
