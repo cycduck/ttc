@@ -16,17 +16,9 @@ const server = app.listen(PORT, (err) =>{
 });
 const io = require('socket.io')(server); // https://www.youtube.com/watch?v=UwS3wJoi7fY 2:22
 
-// // Find out which routes to use first
-// restbus.listen(PORT, (err) =>{
-//   if(err) {
-//     console.log(`Server Error: ${err}`)
-//   }
-//   console.log(`listening on PORT: ${PORT}`)
-// })
 
 app.use('/restbus', restbus.middleware()); 
 app.use(cors());
-
 
 
 const busMapping = (axiosdata) => {
@@ -50,7 +42,6 @@ io.on('connect',
 test = (socket) => {
   console.log('You have been shocketed, id: ', socket.id) // OK
   const vehicleAll = {};
-  // axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/vehicles`) // all vehicles
   const x = async () => {
     console.time('process time ');
     try{
