@@ -83,6 +83,12 @@ test = (socket) => {
   };
   x(); // start it once then every 15s
   setInterval(x, 15000);
+  // when it's connect the socket will run the first timer constantly check the time new Date
+  // if time is between 5am to 3am then start x and set the flag 
+  // if the time is not between the two times, will stop x and set to flag false 
+  // will start x only flag is false 
+  // flag T/F to keep track if x has been called
+  // a second one is the x()
 
   socket.on('disconnect', ()=>{
     console.log('someone disconnected');

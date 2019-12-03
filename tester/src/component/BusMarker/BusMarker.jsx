@@ -23,9 +23,11 @@ const userIcon = L.divIcon({
 });
 
 const markerRender = (data) =>{
-  if (data){
-    // console.log('before map', data.v505)
-    return data.map(info=> {
+
+    const {bus, clickMe}=data
+    if (bus){
+      return bus.map(info=> {
+
       const direction = `${info.directionId ? info.directionId : ""}`
       const busIcon = L.divIcon({
         className: `map__bus-icon-${info.routeId}`,
@@ -39,6 +41,8 @@ const markerRender = (data) =>{
         icon={busIcon}
         position={[info.lat, info.lng]}
         className="test"
+        onClick={()=>{clickMe(info.routeId)}}
+        // can't do clickMe(), mask it in an arrow
       >
         <Popup>
           <p>Route: {info.routeId}</p>
@@ -53,9 +57,8 @@ const markerRender = (data) =>{
 
 export default function BusMarker(props) {
 
-  console.log(props)
     return (
-      <>{props.bus ? markerRender(props.bus) : null}</>
+      <>{props.bus ? markerRender(props) : null}</>
     )
 
 }

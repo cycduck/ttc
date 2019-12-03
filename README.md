@@ -48,6 +48,8 @@ Nano React App https://github.com/adrianmcli/nano-react-app
 https://reactstrap.github.io/
 https://sparkgeo.com/blog/the-accessibility-of-web-maps/
 https://www.framer.com/api/motion/animation/#variants
+https://greensock.com/
+https://codepen.io/maheshambure21/pen/QwXaRw
 
 ### Leaflet JS - May need to come back for styling
 https://reactstrap.github.io/components/tabs/
@@ -79,6 +81,7 @@ https://socket.io/get-started/chat/
 https://socket.io/docs/
 https://medium.com/front-end-weekly/what-are-websockets-7bf0e2e1af2
 https://www.youtube.com/watch?v=ggVsXljT0MI
+Games build with slither.io, https://agar.io/
 .emit is send
 .emit('custom named event' func)
 .on is receive
