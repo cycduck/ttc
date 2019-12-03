@@ -1,6 +1,6 @@
 import React from 'react';
 // import Control from 'react-leaflet-control';
-import {Map, TileLayer, Marker, Popup, LayersControl, FeatureGroup} from 'react-leaflet';
+import {Map, TileLayer, Marker, Popup, LayersControl, FeatureGroup, Polyline} from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './busMap.scss';
@@ -16,6 +16,14 @@ const userIcon = L.divIcon({
   iconAnchor: [25,25]
 });
 
+const polyline = [
+  [43.65194, -79.40236],
+  [43.65202,-79.40225],
+  [43.65278, -79.39834],
+  [43.65294, -79.39804],
+  [43.65307, -79.39742],
+  [43.65325, -79.39625]
+]
 
 
 
@@ -44,7 +52,7 @@ export default function BusMap(props) {
             />
           </BaseLayer>
           
-          
+          <Polyline color="lime" positions={polyline}/>
 
           <Overlay checked name="505">
             <FeatureGroup alt="check this box to turn on the layer for route 505">

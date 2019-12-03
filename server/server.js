@@ -20,6 +20,28 @@ const io = require('socket.io')(server); // https://www.youtube.com/watch?v=UwS3
 app.use('/restbus', restbus.middleware()); 
 app.use(cors());
 
+app.get('/agencies/ttc/routes/505', (req, res) => {
+
+  axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/`)
+  .then(response=>{
+
+    // console.log('test', response.data)
+    res.json(response.data.stops)
+    res.json(response.data.paths)
+  }
+
+  )
+  // async function routePath() {
+  //   try {
+
+  //     let route505 = axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/`)
+  //     console.log('test', route505)
+  //     res.json(route505.data)
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
+})
 
 const busMapping = (axiosdata) => {
   // console.log('info.directionId', axiosdata) // OK
@@ -66,7 +88,6 @@ test = (socket) => {
     console.log('someone disconnected');
   })
 }
-
   ////////
   // console.time('process time to filter through vehicle list for 506 ');
   // axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/vehicles`) // all vehicles
