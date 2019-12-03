@@ -4,34 +4,36 @@
 * App detects users location (from broswer or IP)
 * Add a pin to the map with the users location 
 
-* [x] create-react-app
-* [x] install react-leaflet
+* [x] create-react-app 11/27/2019
+* [x] install react-leaflet 11/27/2019
 Have to install
 * https://www.npmjs.com/package/leaflet, which has the css files from 
 * https://leafletjs.com/
 * https://leafletjs.com/examples/custom-icons/
 Then install the JS files  19:59
 https://react-leaflet.js.org/docs/en/installation 
-* [x] get the map on the page
-* [x] Icon... currently it has a margin
+* [x] get the map on the page 11/27/2019
+* [x] Icon... currently it has a margin 11/27/2019
 * https://www.geoapify.com/create-custom-map-marker-icon/
 https://leafletjs.com/reference-1.6.0.html#divicon
-* [x] get the users location
-* [x] axios get on client app.js
+* [x] get the users location 11/28/2019
+* [x] axios get on client app.js 11/28/2019
 * [ ] floating form??? 54:10 w/ react strap
-* [x] modify axios on server side
-* [x] retrieve data every 10s
-* [ ] Optimize with Hooks 
+* [x] modify axios on server side 11/28/2019
+* [x] Optimize with Sockets 11/30/2019
+* [x] Optimize with Hooks 12/2/2019
+* [x] Compontized markers 12/2/2019
+* [x] retrieve data every 15s 11/28/2019
   * [ ] PROBLEM: API sends new data every 30s
 https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
 * [ ] turn on/off routes
 https://leafletjs.com/examples/extending/extending-3-controls.html
 https://stackoverflow.com/questions/31924890/leaflet-js-custom-control-button-add-text-hover
-* [ ] animation transition css
+* [ ] animation transition css 11/29/2019
 * [ ] grey overlay on the map
 * [ ] style the markers better (route on dot)
-  * [x] text on dot, centered
-  * [x] size of the dots
+  * [x] text on dot, centered 11/29/2019
+  * [x] size of the dots 11/29/2019
   * [ ] PROBLEM: some routes are null; SOLUTION: pass route # to the params, make a null specific style?
   * [ ] Can I make the checkboxes bigger?
     https://gis.stackexchange.com/questions/268651/change-the-default-checkbox-in-leaflet
@@ -45,6 +47,7 @@ The Proposal: https://docs.google.com/document/d/17fAyQCbwSMdWYp26JmlW-_FRY5YQ6A
 Nano React App https://github.com/adrianmcli/nano-react-app
 https://reactstrap.github.io/
 https://sparkgeo.com/blog/the-accessibility-of-web-maps/
+https://www.framer.com/api/motion/animation/#variants
 
 ### Leaflet JS - May need to come back for styling
 https://reactstrap.github.io/components/tabs/
@@ -61,11 +64,14 @@ https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds
 https://javascript.info/settimeout-setinterval
 Do I need to set a stop or just let the server run???
 
-### Hooks - Priority 1 
+### Hooks - Priority 1 - DONE +0 on performance audit (probably because I added new things :|)
 https://reactjs.org/docs/hooks-intro.html
 https://medium.com/@rossbulat/react-hooks-managing-web-sockets-with-useeffect-and-usestate-2dfc30eeceec
 https://www.youtube.com/watch?v=sBws8MSXN7A
 https://scotch.io/tutorials/build-a-react-to-do-app-with-react-hooks-no-class-components
+useEffect https://www.youtube.com/watch?v=nAuWOnFMlOw
+https://enmascript.com/articles/2018/10/26/react-conf-2018-understanding-react-hooks-proposal-with-simple-examples
+Updating a state variable with useState always replaces the previous state, this is a key difference when compared to setState that merges states.
 
 ### Sockets  - DONE +5 on performance audit
 https://socket.io/blog/socket-io-1-4-0/ (compression)
@@ -90,3 +96,10 @@ Verdict: After an hour of trying I guess I don't need axios.all/spread if I am u
 ### Optimization
 https://eloquentjavascript.net/11_async.html
 Load map and markers separately?
+
+  https://www.tutorialspoint.com/leafletjs/leafletjs_controls.htm
+  https://gis.stackexchange.com/questions/60576/custom-leaflet-controls
+  https://codepen.io/adammertel/pen/MYVRZE
+  http://bl.ocks.org/andyreagan/c81461c8a8ce52d103fc92decf9650b6
+  https://github.com/bozdoz/wp-plugin-leaflet-map#leaflet-map-options
+  https://www.youtube.com/watch?v=NA5xcQSM5GA
