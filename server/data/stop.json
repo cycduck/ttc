@@ -1,0 +1,844 @@
+{
+  "v504": [
+      {
+          "id": "10325",
+          "code": "4582",
+          "title": "Roncesvalles Ave At Queen St West",
+          "lat": 43.63893,
+          "lon": -79.4462899
+      },
+      {
+          "id": "1878",
+          "code": "4194",
+          "title": "King St West At Wilson Park Rd",
+          "lat": 43.6369399,
+          "lon": -79.44245
+      },
+      {
+          "id": "1398",
+          "code": "4164",
+          "title": "King St West At Dowling Ave",
+          "lat": 43.6365499,
+          "lon": -79.43872
+      },
+      {
+          "id": "10278",
+          "code": "4173",
+          "title": "King St West At Jameson Ave",
+          "lat": 43.63691,
+          "lon": -79.4361699
+      },
+      {
+          "id": "5447",
+          "code": "4168",
+          "title": "King St West At Dunn Ave",
+          "lat": 43.6376499,
+          "lon": -79.43338
+      },
+      {
+          "id": "945",
+          "code": "4186",
+          "title": "King St West At Spencer Ave",
+          "lat": 43.63813,
+          "lon": -79.4309999
+      },
+      {
+          "id": "4568",
+          "code": "4167",
+          "title": "King St West At Dufferin St",
+          "lat": 43.63882,
+          "lon": -79.4274899
+      },
+      {
+          "id": "6129",
+          "code": "2072",
+          "title": "Dufferin St At Liberty St",
+          "lat": 43.63715,
+          "lon": -79.42675
+      },
+      {
+          "id": "4396",
+          "code": "2092",
+          "title": "Dufferin St At Springhurst Ave",
+          "lat": 43.63501,
+          "lon": -79.42593
+      },
+      {
+          "id": "6113_ar",
+          "code": null,
+          "title": "Dufferin Gate Loop",
+          "lat": 43.6343999,
+          "lon": -79.42587
+      },
+      {
+          "id": "15145",
+          "code": "15353",
+          "title": "King St West At Joe Shuster Way",
+          "lat": 43.6395899,
+          "lon": -79.42372
+      },
+      {
+          "id": "5467",
+          "code": "4155",
+          "title": "King St West At Atlantic Ave",
+          "lat": 43.6400499,
+          "lon": -79.42141
+      },
+      {
+          "id": "8998",
+          "code": "13344",
+          "title": "King St West At Sudbury St",
+          "lat": 43.6408499,
+          "lon": -79.41748
+      },
+      {
+          "id": "5422",
+          "code": "4162",
+          "title": "King St West At Shaw St",
+          "lat": 43.64131,
+          "lon": -79.4152199
+      },
+      {
+          "id": "437",
+          "code": "4187",
+          "title": "King St West At Strachan Ave",
+          "lat": 43.64194,
+          "lon": -79.4120899
+      },
+      {
+          "id": "3039",
+          "code": "4178",
+          "title": "King St West At Niagara St",
+          "lat": 43.6428099,
+          "lon": -79.40776
+      },
+      {
+          "id": "2452",
+          "code": "4189",
+          "title": "King St West At Tecumseth St",
+          "lat": 43.6433,
+          "lon": -79.4053599
+      },
+      {
+          "id": "23897",
+          "code": "15650",
+          "title": "King St West At Bathurst St East Side",
+          "lat": 43.6439399,
+          "lon": -79.40203
+      },
+      {
+          "id": "23896",
+          "code": "15649",
+          "title": "King St West At Portland St East Side",
+          "lat": 43.64446,
+          "lon": -79.3994999
+      },
+      {
+          "id": "23895",
+          "code": "15648",
+          "title": "King St West At Spadina Ave East Side",
+          "lat": 43.64551,
+          "lon": -79.3942999
+      },
+      {
+          "id": "23893",
+          "code": "15646",
+          "title": "King St West At Blue Jays Way East Side",
+          "lat": 43.6460999,
+          "lon": -79.39164
+      },
+      {
+          "id": "23891",
+          "code": "15644",
+          "title": "King St West At John St East Side",
+          "lat": 43.64661,
+          "lon": -79.3892699
+      },
+      {
+          "id": "23889",
+          "code": "15642",
+          "title": "King St West At University Ave East Side (St Andrew Station)",
+          "lat": 43.64773,
+          "lon": -79.3841699
+      },
+      {
+          "id": "23887",
+          "code": "15640",
+          "title": "King St West At Bay St East Side",
+          "lat": 43.64872,
+          "lon": -79.3796199
+      },
+      {
+          "id": "23885",
+          "code": "15638",
+          "title": "King St West At Yonge St East Side (King Station)",
+          "lat": 43.6492299,
+          "lon": -79.37726
+      },
+      {
+          "id": "23898",
+          "code": "12537",
+          "title": "King St East At Church St East Side",
+          "lat": 43.6499799,
+          "lon": -79.37383
+      },
+      {
+          "id": "23883",
+          "code": "15636",
+          "title": "King St West At Jarvis St East Side",
+          "lat": 43.65054,
+          "lon": -79.3712899
+      },
+      {
+          "id": "8338",
+          "code": "4145",
+          "title": "King St East At Sherbourne St",
+          "lat": 43.6511699,
+          "lon": -79.36837
+      },
+      {
+          "id": "15143",
+          "code": "15352",
+          "title": "King St East At Ontario St",
+          "lat": 43.6516499,
+          "lon": -79.36617
+      },
+      {
+          "id": "8207",
+          "code": "4140",
+          "title": "King St East At Parliament St",
+          "lat": 43.6525599,
+          "lon": -79.36336
+      },
+      {
+          "id": "1712",
+          "code": "4143",
+          "title": "King St East At Sackville St",
+          "lat": 43.6542999,
+          "lon": -79.36038
+      },
+      {
+          "id": "1909",
+          "code": "4148",
+          "title": "King St East At Sumach St",
+          "lat": 43.6552799,
+          "lon": -79.3587
+      },
+      {
+          "id": "15355",
+          "code": "15461",
+          "title": "Cherry St At Front St East",
+          "lat": 43.6528399,
+          "lon": -79.3580899
+      },
+      {
+          "id": "15356_ar",
+          "code": null,
+          "title": "Distillery Loop",
+          "lat": 43.6508599,
+          "lon": -79.35682
+      },
+      {
+          "id": "310",
+          "code": "9855",
+          "title": "Edna Ave At Dundas St West",
+          "lat": 43.6571299,
+          "lon": -79.45303
+      },
+      {
+          "id": "295",
+          "code": "9856",
+          "title": "Dundas St West At Bloor St West",
+          "lat": 43.65644,
+          "lon": -79.45257
+      },
+      {
+          "id": "1115",
+          "code": "4569",
+          "title": "Roncesvalles Ave At Boustead Ave South Side",
+          "lat": 43.65308,
+          "lon": -79.45167
+      },
+      {
+          "id": "14808",
+          "code": "15039",
+          "title": "Roncesvalles Ave At Howard Park Ave South Side",
+          "lat": 43.6509399,
+          "lon": -79.45093
+      },
+      {
+          "id": "14728",
+          "code": "14994",
+          "title": "Roncesvalles Ave At Grenadier Rd",
+          "lat": 43.64889,
+          "lon": -79.45012
+      },
+      {
+          "id": "14727",
+          "code": "14993",
+          "title": "Roncesvalles Ave At High Park Blvd South Side",
+          "lat": 43.6459199,
+          "lon": -79.4489799
+      },
+      {
+          "id": "7949",
+          "code": "4573",
+          "title": "Roncesvalles Ave At Galley Ave",
+          "lat": 43.6429799,
+          "lon": -79.4478399
+      },
+      {
+          "id": "14726",
+          "code": "14992",
+          "title": "Roncesvalles Ave At Marion St South Side",
+          "lat": 43.64065,
+          "lon": -79.44694
+      },
+      {
+          "id": "15142",
+          "code": "15351",
+          "title": "King St East At River St",
+          "lat": 43.65673,
+          "lon": -79.3562499
+      },
+      {
+          "id": "6678",
+          "code": "3038",
+          "title": "Queen St East At Carroll St",
+          "lat": 43.6582,
+          "lon": -79.3524499
+      },
+      {
+          "id": "3443",
+          "code": "3032",
+          "title": "Queen St East At Broadview Ave",
+          "lat": 43.6587499,
+          "lon": -79.35006
+      },
+      {
+          "id": "1966",
+          "code": "3372",
+          "title": "Broadview Ave At Dundas St East",
+          "lat": 43.6622499,
+          "lon": -79.35117
+      },
+      {
+          "id": "3886",
+          "code": "9317",
+          "title": "Broadview Ave At Mount Stephen St",
+          "lat": 43.66394,
+          "lon": -79.35187
+      },
+      {
+          "id": "6205",
+          "code": "1757",
+          "title": "Broadview Ave At Gerrard St East",
+          "lat": 43.6652699,
+          "lon": -79.3524399
+      },
+      {
+          "id": "4891",
+          "code": "1759",
+          "title": "Broadview Ave At Langley Ave-Bridgepoint Health Ctr",
+          "lat": 43.66766,
+          "lon": -79.35331
+      },
+      {
+          "id": "10098",
+          "code": "1766",
+          "title": "Broadview Ave At Withrow Ave",
+          "lat": 43.66964,
+          "lon": -79.35303
+      },
+      {
+          "id": "3720",
+          "code": "1761",
+          "title": "Broadview Ave At Millbrook Cres",
+          "lat": 43.6718999,
+          "lon": -79.3547299
+      },
+      {
+          "id": "9752",
+          "code": "1768",
+          "title": "Broadview Ave At Wolfrey Ave",
+          "lat": 43.67419,
+          "lon": -79.3569
+      },
+      {
+          "id": "6517",
+          "code": "1755",
+          "title": "Broadview Ave At Danforth Ave",
+          "lat": 43.6760499,
+          "lon": -79.3585999
+      },
+      {
+          "id": "14186",
+          "code": "14665",
+          "title": "Dundas West Station",
+          "lat": 43.6566699,
+          "lon": -79.4536
+      },
+      {
+          "id": "6113",
+          "code": "2032",
+          "title": "Dufferin Gate Loop",
+          "lat": 43.6343999,
+          "lon": -79.42587
+      },
+      {
+          "id": "8860",
+          "code": "2071",
+          "title": "Dufferin St At Liberty St",
+          "lat": 43.6369499,
+          "lon": -79.4264999
+      },
+      {
+          "id": "15344",
+          "code": "15516",
+          "title": "Dufferin St At King St West",
+          "lat": 43.63868,
+          "lon": -79.42715
+      },
+      {
+          "id": "14161_ar",
+          "code": null,
+          "title": "Broadview Station",
+          "lat": 43.6770099,
+          "lon": -79.35815
+      },
+      {
+          "id": "10089",
+          "code": "12158",
+          "title": "Charlotte St At Oxley St",
+          "lat": 43.6465599,
+          "lon": -79.394
+      },
+      {
+          "id": "14161",
+          "code": "14639",
+          "title": "Broadview Station",
+          "lat": 43.6770099,
+          "lon": -79.35815
+      },
+      {
+          "id": "4402",
+          "code": "2428",
+          "title": "Erindale Ave At Broadview Ave",
+          "lat": 43.6775299,
+          "lon": -79.35842
+      },
+      {
+          "id": "2800",
+          "code": "3371",
+          "title": "Broadview Ave At Danforth Ave",
+          "lat": 43.6763399,
+          "lon": -79.3590399
+      },
+      {
+          "id": "3442",
+          "code": "1769",
+          "title": "Broadview Ave At Wolfrey Ave",
+          "lat": 43.67446,
+          "lon": -79.35734
+      },
+      {
+          "id": "8499",
+          "code": "1762",
+          "title": "Broadview Ave At Millbrook Cres",
+          "lat": 43.6721399,
+          "lon": -79.3551599
+      },
+      {
+          "id": "7801",
+          "code": "1767",
+          "title": "Broadview Ave At Withrow Ave",
+          "lat": 43.6698599,
+          "lon": -79.3534299
+      },
+      {
+          "id": "4197",
+          "code": "1760",
+          "title": "Broadview Ave At Langley Ave-Bridgepoint Health Ctr",
+          "lat": 43.66808,
+          "lon": -79.3533199
+      },
+      {
+          "id": "7809",
+          "code": "1763",
+          "title": "Broadview Ave At Jack Layton Way",
+          "lat": 43.6664799,
+          "lon": -79.3531299
+      },
+      {
+          "id": "10353",
+          "code": "1758",
+          "title": "Broadview Ave At Gerrard St East",
+          "lat": 43.66566,
+          "lon": -79.35279
+      },
+      {
+          "id": "8223",
+          "code": "9318",
+          "title": "Broadview Ave At Mount Stephen St",
+          "lat": 43.6640999,
+          "lon": -79.3521399
+      },
+      {
+          "id": "7690",
+          "code": "1756",
+          "title": "Broadview Ave At Dundas St East",
+          "lat": 43.6625999,
+          "lon": -79.3515099
+      },
+      {
+          "id": "4041",
+          "code": "3374",
+          "title": "Broadview Ave At Queen St East",
+          "lat": 43.6591099,
+          "lon": -79.3500199
+      },
+      {
+          "id": "1070",
+          "code": "3039",
+          "title": "Queen St East At Carroll St",
+          "lat": 43.6584199,
+          "lon": -79.3521
+      },
+      {
+          "id": "1159",
+          "code": "4142",
+          "title": "King St East At River St",
+          "lat": 43.6570799,
+          "lon": -79.35597
+      },
+      {
+          "id": "10198",
+          "code": "4149",
+          "title": "King St East At Sumach St",
+          "lat": 43.65566,
+          "lon": -79.3583399
+      },
+      {
+          "id": "7621",
+          "code": "4144",
+          "title": "King St East At Sackville St",
+          "lat": 43.6545999,
+          "lon": -79.36016
+      },
+      {
+          "id": "1389",
+          "code": "4141",
+          "title": "King St East At Parliament St",
+          "lat": 43.6529099,
+          "lon": -79.36302
+      },
+      {
+          "id": "1581",
+          "code": "4139",
+          "title": "King St East At Ontario St",
+          "lat": 43.6518599,
+          "lon": -79.36588
+      },
+      {
+          "id": "1962",
+          "code": "4146",
+          "title": "King St East At Sherbourne St",
+          "lat": 43.6513499,
+          "lon": -79.36813
+      },
+      {
+          "id": "23882",
+          "code": "15635",
+          "title": "King St West At Jarvis St West Side",
+          "lat": 43.6503899,
+          "lon": -79.37245
+      },
+      {
+          "id": "23899",
+          "code": "12538",
+          "title": "King St East At Church St West Side",
+          "lat": 43.6498399,
+          "lon": -79.37497
+      },
+      {
+          "id": "23884",
+          "code": "15637",
+          "title": "King St West At Yonge St West Side (King Station)",
+          "lat": 43.6490599,
+          "lon": -79.37856
+      },
+      {
+          "id": "23886",
+          "code": "15639",
+          "title": "King St West At Bay St West Side",
+          "lat": 43.6486199,
+          "lon": -79.38062
+      },
+      {
+          "id": "23888",
+          "code": "15641",
+          "title": "King St West At University Ave West Side (St Andrew Station)",
+          "lat": 43.64758,
+          "lon": -79.3854299
+      },
+      {
+          "id": "23890",
+          "code": "15643",
+          "title": "King St West At John St West Side",
+          "lat": 43.64654,
+          "lon": -79.3901599
+      },
+      {
+          "id": "23892",
+          "code": "15645",
+          "title": "King St West At Peter St West Side",
+          "lat": 43.6459699,
+          "lon": -79.39289
+      },
+      {
+          "id": "23894",
+          "code": "15647",
+          "title": "King St West At Spadina Ave West Side",
+          "lat": 43.6453699,
+          "lon": -79.39581
+      },
+      {
+          "id": "5279",
+          "code": "10176",
+          "title": "King St West At Portland St",
+          "lat": 43.64453,
+          "lon": -79.3999399
+      },
+      {
+          "id": "7211",
+          "code": "4156",
+          "title": "King St West At Bathurst St",
+          "lat": 43.64405,
+          "lon": -79.4023099
+      },
+      {
+          "id": "954",
+          "code": "4190",
+          "title": "King St West At Tecumseth St",
+          "lat": 43.6434899,
+          "lon": -79.40505
+      },
+      {
+          "id": "2333",
+          "code": "4179",
+          "title": "King St West At Niagara St",
+          "lat": 43.6429899,
+          "lon": -79.40754
+      },
+      {
+          "id": "2462",
+          "code": "4188",
+          "title": "King St West At Strachan Ave",
+          "lat": 43.6421299,
+          "lon": -79.41178
+      },
+      {
+          "id": "8560",
+          "code": "4163",
+          "title": "King St West At Shaw St",
+          "lat": 43.6415299,
+          "lon": -79.41477
+      },
+      {
+          "id": "2217",
+          "code": "11021",
+          "title": "King St West At Sudbury St",
+          "lat": 43.6410599,
+          "lon": -79.41718
+      },
+      {
+          "id": "5091",
+          "code": "4175",
+          "title": "King St West At Jefferson Ave",
+          "lat": 43.6400699,
+          "lon": -79.42208
+      },
+      {
+          "id": "10438",
+          "code": "14400",
+          "title": "King St West At Joe Shuster Way",
+          "lat": 43.6398,
+          "lon": -79.4234099
+      },
+      {
+          "id": "4341",
+          "code": "4166",
+          "title": "King St West At Dufferin St",
+          "lat": 43.63909,
+          "lon": -79.4269999
+      },
+      {
+          "id": "6129_IB",
+          "code": "2072",
+          "title": "Dufferin St At Liberty St",
+          "lat": 43.6371499,
+          "lon": -79.42675
+      },
+      {
+          "id": "4396_IB",
+          "code": "2092",
+          "title": "Dufferin St At Springhurst Ave",
+          "lat": 43.63501,
+          "lon": -79.42593
+      },
+      {
+          "id": "5890",
+          "code": "13890",
+          "title": "King St West At Spencer Ave",
+          "lat": 43.6383099,
+          "lon": -79.43076
+      },
+      {
+          "id": "5141",
+          "code": "4169",
+          "title": "King St West At Dunn Ave",
+          "lat": 43.63784,
+          "lon": -79.4330599
+      },
+      {
+          "id": "7460",
+          "code": "4174",
+          "title": "King St West At Jameson Ave",
+          "lat": 43.6372599,
+          "lon": -79.43586
+      },
+      {
+          "id": "10237",
+          "code": "4165",
+          "title": "King St West At Dowling Ave",
+          "lat": 43.6367699,
+          "lon": -79.43838
+      },
+      {
+          "id": "9878",
+          "code": "4193",
+          "title": "King St West At Wilson Park Rd West Side",
+          "lat": 43.6370399,
+          "lon": -79.4421099
+      },
+      {
+          "id": "8975",
+          "code": "11596",
+          "title": "King St West At Queen St West",
+          "lat": 43.63854,
+          "lon": -79.44576
+      },
+      {
+          "id": "14837",
+          "code": "15059",
+          "title": "Roncesvalles Ave At Queen St West North Side",
+          "lat": 43.6392299,
+          "lon": -79.44617
+      },
+      {
+          "id": "14807",
+          "code": "15038",
+          "title": "Roncesvalles Ave At Marion St North Side",
+          "lat": 43.6414299,
+          "lon": -79.4470899
+      },
+      {
+          "id": "9854",
+          "code": "4574",
+          "title": "Roncesvalles Ave At Garden Ave",
+          "lat": 43.64354,
+          "lon": -79.4479
+      },
+      {
+          "id": "987",
+          "code": "4571",
+          "title": "Roncesvalles Ave At Fermanagh Ave",
+          "lat": 43.64617,
+          "lon": -79.44892
+      },
+      {
+          "id": "8244",
+          "code": "4576",
+          "title": "Roncesvalles Ave At Grenadier Rd",
+          "lat": 43.6486399,
+          "lon": -79.4498699
+      },
+      {
+          "id": "9383",
+          "code": "4578",
+          "title": "Roncesvalles Ave At Howard Park Ave",
+          "lat": 43.6511599,
+          "lon": -79.4508399
+      },
+      {
+          "id": "1222",
+          "code": "4568",
+          "title": "Roncesvalles Ave At Boustead Ave North Side",
+          "lat": 43.6531699,
+          "lon": -79.45155
+      },
+      {
+          "id": "7898",
+          "code": "2150",
+          "title": "Dundas St West At Bloor St West",
+          "lat": 43.6561,
+          "lon": -79.45233
+      },
+      {
+          "id": "14186_ar",
+          "code": null,
+          "title": "Dundas West Station",
+          "lat": 43.6566699,
+          "lon": -79.4536
+      },
+      {
+          "id": "6113_IB",
+          "code": "2032",
+          "title": "Dufferin Gate Loop",
+          "lat": 43.6343999,
+          "lon": -79.42587
+      },
+      {
+          "id": "8860_IB",
+          "code": "2071",
+          "title": "Dufferin St At Liberty St",
+          "lat": 43.6369499,
+          "lon": -79.4264999
+      },
+      {
+          "id": "15344_IB",
+          "code": "15516",
+          "title": "Dufferin St At King St West",
+          "lat": 43.63868,
+          "lon": -79.42715
+      },
+      {
+          "id": "15356",
+          "code": "15462",
+          "title": "Distillery Loop",
+          "lat": 43.6508599,
+          "lon": -79.35682
+      },
+      {
+          "id": "15354",
+          "code": "15460",
+          "title": "Cherry St At Front St East",
+          "lat": 43.6525099,
+          "lon": -79.3578399
+      },
+      {
+          "id": "310_ar",
+          "code": null,
+          "title": "Edna Ave At Dundas St West",
+          "lat": 43.6571299,
+          "lon": -79.45303
+      },
+      {
+          "id": "10089_ar",
+          "code": null,
+          "title": "Charlotte St At Oxley St",
+          "lat": 43.6465599,
+          "lon": -79.394
+      }
+  ]
+}

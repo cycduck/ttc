@@ -20,27 +20,55 @@ const io = require('socket.io')(server); // https://www.youtube.com/watch?v=UwS3
 app.use('/restbus', restbus.middleware()); 
 app.use(cors());
 
-app.get('/agencies/ttc/routes/505', (req, res) => {
+app.get('/agencies/ttc/routes/', (req, res) => {
 
-  axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/`)
-  .then(response=>{
+  async function routePath() {
+    try {
+      // let allRoute = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/`)
+      // let routeId = await allRoute.data.map(info=> info.id) // returns an array of route id
+      let routeId = [68, 510, 504]
+      let url = await routeId.map(info=> `http://localhost:${PORT}/restbus/agencies/ttc/routes/${info}/`)
+      console.log(url)
+      let x = await axios.all([
+        url.forEach(info => {
+          console.log(info)
+          axios.get(info)
+        })
+      ])
+      // console.log(x)
+      res.send(x)
 
-    // console.log('test', response.data)
-    res.json(response.data.stops)
-    res.json(response.data.paths)
+      url.forEach(info => {
+          console.log(info)
+          axios.get(info).then(response => {
+            
+            // console.log(response.data)
+            res.send(response.data)
+          })
+        })
+      
+        // method 
+      
+      let stops = await routeId.forEach(info => {
+        axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/${info}/`)
+        .then(response => {
+          let x = [response.data] // convert it to an array
+          let y = {}
+          let z = x.map(info => {
+            y[`v${info.id}`]= info.stops
+            res.send(y)
+            fs.writeFile('./data/stop.json', JSON.stringify(y), function (err) {console.log(err)})
+          })
+
+        }).catch(err => console.log(err))
+
+      })
+      // console.log('what is stops', stops)
+    } catch (err) {
+      console.log(err)
+    }
   }
-
-  )
-  // async function routePath() {
-  //   try {
-
-  //     let route505 = axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/`)
-  //     console.log('test', route505)
-  //     res.json(route505.data)
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
+  routePath()
 })
 
 const busMapping = (axiosdata) => {
@@ -81,8 +109,9 @@ test = (socket) => {
     };
     console.timeEnd('process time ');
   };
-  x(); // start it once then every 15s
-  setInterval(x, 15000);
+  // x(); // start it once then every 15s
+  // setInterval(x, 15000);
+  // TODO
   // when it's connect the socket will run the first timer constantly check the time new Date
   // if time is between 5am to 3am then start x and set the flag 
   // if the time is not between the two times, will stop x and set to flag false 
