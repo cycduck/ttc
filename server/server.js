@@ -14,6 +14,7 @@ const server = app.listen(PORT, (err) =>{
   }
   console.log(`listening on PORT: ${PORT}`)
 });
+
 const io = require('socket.io')(server); // https://www.youtube.com/watch?v=UwS3wJoi7fY 2:22
 
 
@@ -24,58 +25,37 @@ app.get('/agencies/ttc/routes/', (req, res) => {
 
   async function routePath() {
     try {
-      // let allRoute = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/`)
-      // let routeId = await allRoute.data.map(info=> info.id) // returns an array of route id
-      let routeId = [68, 510, 504]
-      let url = await routeId.map(info=> `http://localhost:${PORT}/restbus/agencies/ttc/routes/${info}/`)
-      console.log(url)
-      let x = await axios.all([
-        url.forEach(info => {
-          console.log(info)
-          axios.get(info)
-        })
-      ])
-      // console.log(x)
-      res.send(x)
-
-      url.forEach(info => {
-          console.log(info)
-          axios.get(info).then(response => {
-            
-            // console.log(response.data)
-            res.send(response.data)
-          })
-        })
+      let allRoute = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/`)
+      let routeId = await allRoute.data.map(info=> info.id) // returns an array of route id
       
-        // method 
-      
-      let stops = await routeId.forEach(info => {
-        axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/${info}/`)
-        .then(response => {
-          let x = [response.data] // convert it to an array
-          let y = {}
-          let z = x.map(info => {
-            y[`v${info.id}`]= info.stops
-            res.send(y)
-            fs.writeFile('./data/stop.json', JSON.stringify(y), function (err) {console.log(err)})
-          })
-
-        }).catch(err => console.log(err))
-
+      let url = routeId.map((info, index) => {
+        return new Promise((res, rej) => {
+          setTimeout(() => {
+            res(axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/${info}/`));
+          }, 500 * index);
+        });
       })
-      // console.log('what is stops', stops)
+      console.log('Length of the url promise',url.length)
+      axios.all(url).then(axios.spread((...arguments) => {
+        console.log('all done');
+        let allRouteInfo = arguments.map(resp => resp.data)
+        res.json(allRouteInfo);
+          fs.writeFile('./data/stop.json', JSON.stringify(allRouteInfo))
+      }))
+      .catch(err => {
+        res.json({ success: false, error: 'Could not make axios all requests' })
+      })
     } catch (err) {
-      console.log(err)
+      console.log('axios all error test 2 ', err)
     }
   }
   routePath()
 })
 
+
 const busMapping = (axiosdata) => {
   // console.log('info.directionId', axiosdata) // OK
   let conversion = axiosdata.map(info => {
-
-    // console.log(info.directionId ? (info.directionId[4] == 0 ? "E" : "W") : "nada")
     return {
       busId: info.id,
       routeId: info.routeId,
@@ -105,12 +85,12 @@ test = (socket) => {
       socket.binary(false).emit('busUpdate', vehicleAll);
       // JSON isn't binary
     } catch (err) {
-        console.log(err)
+        console.log('socket error: ', err)
     };
     console.timeEnd('process time ');
   };
-  // x(); // start it once then every 15s
-  // setInterval(x, 15000);
+  x(); // start it once then every 15s
+  setInterval(x, 15000);
   // TODO
   // when it's connect the socket will run the first timer constantly check the time new Date
   // if time is between 5am to 3am then start x and set the flag 
