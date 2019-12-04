@@ -6,15 +6,38 @@ import 'leaflet/dist/leaflet.css';
 import './busMap.scss';
 import BusMarker from '../BusMarker/BusMarker';
 const { BaseLayer, Overlay } = LayersControl;
+const r505 = require('../../r505');
 // https://leafletjs.com/reference-1.5.0.html#featuregroup
 
+const {paths} = r505
 
+// const stuff = {...paths, points :[...paths[0].points]}
+// console.log(stuff)
+// const test = paths.map(info => {
+//   console.log(...info.points)
+//   return [...info.points, info.points.lat, info.points.lon ] 
+// })
+const test = paths.map(path => 
+  // console.log(path)
+  path.points.map(points => {
+    
+    // console.log(points.lat, points.lon)
+    return [points.lat, points.lon]
+  }
+  )
+)
+// const pathsArr = paths.map(lineVal => lineVal.points.map(pointVal => [pointVal.lat, pointVal.lon]));
+
+
+console.log(test)
 
 const userIcon = L.divIcon({
   className: 'map__user-icon',
   html: `<div class='map__user-icon-inner'></div>`,
   iconAnchor: [25,25]
 });
+
+
 
 const polyline = [
   [43.65194, -79.40236],
@@ -24,6 +47,13 @@ const polyline = [
   [43.65307, -79.39742],
   [43.65325, -79.39625]
 ]
+
+// paths = [
+//   [
+//     [lat, long],
+//     []
+//   ]
+// ]
 
 const routePaths = {
   505: [
@@ -79,7 +109,7 @@ export default function BusMap(props) {
             />
           </BaseLayer>
           
-          {pathSwitch && currRouteId? <Polyline color="lime" positions={routePaths[currRouteId]}/> : null}
+          {pathSwitch && currRouteId? <Polyline color="lime" positions={test}/> : null}
           
           <Overlay checked name="505">
             <FeatureGroup alt="check this box to turn on the layer for route 506">

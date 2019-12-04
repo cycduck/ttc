@@ -4,6 +4,7 @@ import ioClient from "socket.io-client";
 import BusMap from "./component/BusMap";
 import './App.scss';
 
+
 const socket = ioClient('http://localhost:8080/') // change to localhost
 
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
   const [vehicle, setVehicle] = useState({})
 
   navigator.geolocation.getCurrentPosition((position)=>{
-    console.log(position); // RETURN {coords: Coordinates, timestamp: 1574897414197}
+    // console.log(position); // RETURN {coords: Coordinates, timestamp: 1574897414197}
     setUserLocation({
       lat: position.coords.latitude,
       lng: position.coords.longitude,

@@ -1,0 +1,2535 @@
+{
+    "id": "505",
+    "title": "505-Dundas",
+    "shortTitle": null,
+    "color": "#ff0000",
+    "textColor": "#ffffff",
+    "bounds": {
+        "sw": {
+            "lat": 43.64927,
+            "lon": -79.4536
+        },
+        "ne": {
+            "lat": 43.6775299,
+            "lon": -79.35151
+        }
+    },
+    "stops": [
+        {
+            "id": "14186",
+            "code": "14665",
+            "title": "Dundas West Station",
+            "lat": 43.6566699,
+            "lon": -79.4536
+        },
+        {
+            "id": "6600",
+            "code": "2181",
+            "title": "Dundas St West At Roncesvalles Ave East Side",
+            "lat": 43.6534799,
+            "lon": -79.45126
+        },
+        {
+            "id": "2954",
+            "code": "2167",
+            "title": "Dundas St West At Howard Park Ave",
+            "lat": 43.6522299,
+            "lon": -79.4485199
+        },
+        {
+            "id": "2243",
+            "code": "0987",
+            "title": "Dundas St West At Sorauren Ave",
+            "lat": 43.6512499,
+            "lon": -79.44576
+        },
+        {
+            "id": "7506",
+            "code": "0991",
+            "title": "Dundas St West At Sterling Rd",
+            "lat": 43.6506299,
+            "lon": -79.4432499
+        },
+        {
+            "id": "1606",
+            "code": "2170",
+            "title": "Dundas St West At Lansdowne Ave",
+            "lat": 43.6501099,
+            "lon": -79.4401299
+        },
+        {
+            "id": "23981",
+            "code": "15682",
+            "title": "Dundas St West At Brock Ave East Side",
+            "lat": 43.6497999,
+            "lon": -79.43523
+        },
+        {
+            "id": "1385",
+            "code": "2186",
+            "title": "Dundas St West At Sheridan Ave",
+            "lat": 43.64972,
+            "lon": -79.43384
+        },
+        {
+            "id": "1063",
+            "code": "2160",
+            "title": "Dundas St West At Dufferin St",
+            "lat": 43.6495899,
+            "lon": -79.4315599
+        },
+        {
+            "id": "7289",
+            "code": "2164",
+            "title": "Dundas St West At Gladstone Ave",
+            "lat": 43.64952,
+            "lon": -79.4299699
+        },
+        {
+            "id": "9568",
+            "code": "2172",
+            "title": "Dundas St West At Lisgar St",
+            "lat": 43.64943,
+            "lon": -79.42688
+        },
+        {
+            "id": "1416",
+            "code": "2158",
+            "title": "Dundas St West At Dovercourt Rd",
+            "lat": 43.64937,
+            "lon": -79.42489
+        },
+        {
+            "id": "3702",
+            "code": "2175",
+            "title": "Dundas St West At Ossington Ave",
+            "lat": 43.64927,
+            "lon": -79.4209399
+        },
+        {
+            "id": "6324",
+            "code": "2185",
+            "title": "Dundas St West At Shaw St",
+            "lat": 43.6496999,
+            "lon": -79.41849
+        },
+        {
+            "id": "7139",
+            "code": "10181",
+            "title": "Dundas St West At Grace St",
+            "lat": 43.65058,
+            "lon": -79.4142199
+        },
+        {
+            "id": "15146",
+            "code": "15354",
+            "title": "Dundas St West At Manning Ave",
+            "lat": 43.6512,
+            "lon": -79.4110299
+        },
+        {
+            "id": "3665",
+            "code": "2140",
+            "title": "Dundas St West At Bathurst St (Toronto Western Hospital)",
+            "lat": 43.65216,
+            "lon": -79.4062599
+        },
+        {
+            "id": "6692",
+            "code": "2156",
+            "title": "Dundas St West At Denison Ave",
+            "lat": 43.6519399,
+            "lon": -79.40236
+        },
+        {
+            "id": "6046",
+            "code": "2189",
+            "title": "Dundas St West At Spadina Ave",
+            "lat": 43.6527799,
+            "lon": -79.39834
+        },
+        {
+            "id": "1479",
+            "code": "2168",
+            "title": "Dundas St West At Huron St",
+            "lat": 43.6532499,
+            "lon": -79.39625
+        },
+        {
+            "id": "7171",
+            "code": "2146",
+            "title": "Dundas St West At Beverley St",
+            "lat": 43.6537099,
+            "lon": -79.39396
+        },
+        {
+            "id": "9016",
+            "code": "2173",
+            "title": "Dundas St West At McCaul St",
+            "lat": 43.6542199,
+            "lon": -79.39155
+        },
+        {
+            "id": "7311",
+            "code": "2193",
+            "title": "Dundas St West At University Ave (St Patrick Station)",
+            "lat": 43.65468,
+            "lon": -79.38874
+        },
+        {
+            "id": "6459",
+            "code": "2153",
+            "title": "Dundas St West At Chestnut St",
+            "lat": 43.65514,
+            "lon": -79.3861299
+        },
+        {
+            "id": "2856",
+            "code": "2142",
+            "title": "Dundas St West At Bay St",
+            "lat": 43.65558,
+            "lon": -79.3840099
+        },
+        {
+            "id": "3874",
+            "code": "2197",
+            "title": "Dundas St West At Yonge St (Dundas Station)",
+            "lat": 43.6561899,
+            "lon": -79.38119
+        },
+        {
+            "id": "3471",
+            "code": "2116",
+            "title": "Dundas St East At Church St",
+            "lat": 43.6563699,
+            "lon": -79.37736
+        },
+        {
+            "id": "3184",
+            "code": "2118",
+            "title": "Dundas St East At Jarvis St",
+            "lat": 43.6569499,
+            "lon": -79.37471
+        },
+        {
+            "id": "2641",
+            "code": "2130",
+            "title": "Dundas St East At Sherbourne St",
+            "lat": 43.65822,
+            "lon": -79.3712999
+        },
+        {
+            "id": "2749",
+            "code": "2122",
+            "title": "Dundas St East At Ontario St",
+            "lat": 43.6587499,
+            "lon": -79.36865
+        },
+        {
+            "id": "5988",
+            "code": "2124",
+            "title": "Dundas St East At Parliament St",
+            "lat": 43.65928,
+            "lon": -79.3662899
+        },
+        {
+            "id": "6541",
+            "code": "2128",
+            "title": "Dundas St East At Sackville St",
+            "lat": 43.6599799,
+            "lon": -79.36312
+        },
+        {
+            "id": "1557",
+            "code": "2132",
+            "title": "Dundas St East At Sumach St",
+            "lat": 43.6605299,
+            "lon": -79.36068
+        },
+        {
+            "id": "6694",
+            "code": "2126",
+            "title": "Dundas St East At River St",
+            "lat": 43.6610499,
+            "lon": -79.35831
+        },
+        {
+            "id": "8632",
+            "code": "2120",
+            "title": "Dundas St East At Munro St",
+            "lat": 43.66194,
+            "lon": -79.3531399
+        },
+        {
+            "id": "8820",
+            "code": "2115",
+            "title": "Dundas St East At Broadview Ave",
+            "lat": 43.66225,
+            "lon": -79.3518099
+        },
+        {
+            "id": "3886",
+            "code": "9317",
+            "title": "Broadview Ave At Mount Stephen St",
+            "lat": 43.6639399,
+            "lon": -79.35187
+        },
+        {
+            "id": "6205",
+            "code": "1757",
+            "title": "Broadview Ave At Gerrard St East",
+            "lat": 43.66527,
+            "lon": -79.35244
+        },
+        {
+            "id": "4891",
+            "code": "1759",
+            "title": "Broadview Ave At Langley Ave-Bridgepoint Health Ctr",
+            "lat": 43.66766,
+            "lon": -79.35331
+        },
+        {
+            "id": "10098",
+            "code": "1766",
+            "title": "Broadview Ave At Withrow Ave",
+            "lat": 43.66964,
+            "lon": -79.35303
+        },
+        {
+            "id": "3720",
+            "code": "1761",
+            "title": "Broadview Ave At Millbrook Cres",
+            "lat": 43.6718999,
+            "lon": -79.3547299
+        },
+        {
+            "id": "9752",
+            "code": "1768",
+            "title": "Broadview Ave At Wolfrey Ave",
+            "lat": 43.67419,
+            "lon": -79.3569
+        },
+        {
+            "id": "14162_ar",
+            "code": null,
+            "title": "Broadview Station",
+            "lat": 43.6771299,
+            "lon": -79.35821
+        },
+        {
+            "id": "14162",
+            "code": "14640",
+            "title": "Broadview Station",
+            "lat": 43.6771299,
+            "lon": -79.35821
+        },
+        {
+            "id": "4402",
+            "code": "2428",
+            "title": "Erindale Ave At Broadview Ave",
+            "lat": 43.6775299,
+            "lon": -79.35842
+        },
+        {
+            "id": "3442",
+            "code": "1769",
+            "title": "Broadview Ave At Wolfrey Ave",
+            "lat": 43.67446,
+            "lon": -79.35734
+        },
+        {
+            "id": "8499",
+            "code": "1762",
+            "title": "Broadview Ave At Millbrook Cres",
+            "lat": 43.6721399,
+            "lon": -79.3551599
+        },
+        {
+            "id": "7801",
+            "code": "1767",
+            "title": "Broadview Ave At Withrow Ave",
+            "lat": 43.66986,
+            "lon": -79.35343
+        },
+        {
+            "id": "4197",
+            "code": "1760",
+            "title": "Broadview Ave At Langley Ave-Bridgepoint Health Ctr",
+            "lat": 43.6680799,
+            "lon": -79.35332
+        },
+        {
+            "id": "7809",
+            "code": "1763",
+            "title": "Broadview Ave At Jack Layton Way",
+            "lat": 43.6664799,
+            "lon": -79.3531299
+        },
+        {
+            "id": "10353",
+            "code": "1758",
+            "title": "Broadview Ave At Gerrard St East",
+            "lat": 43.6656599,
+            "lon": -79.3527899
+        },
+        {
+            "id": "8223",
+            "code": "9318",
+            "title": "Broadview Ave At Mount Stephen St",
+            "lat": 43.6641,
+            "lon": -79.35214
+        },
+        {
+            "id": "7690",
+            "code": "1756",
+            "title": "Broadview Ave At Dundas St East",
+            "lat": 43.6626,
+            "lon": -79.35151
+        },
+        {
+            "id": "3446",
+            "code": "2121",
+            "title": "Dundas St East At Munro St",
+            "lat": 43.6621599,
+            "lon": -79.35283
+        },
+        {
+            "id": "1061",
+            "code": "2127",
+            "title": "Dundas St East At River St",
+            "lat": 43.66128,
+            "lon": -79.3579999
+        },
+        {
+            "id": "23983",
+            "code": "15684",
+            "title": "Dundas St East At Sumach St West Side",
+            "lat": 43.6606199,
+            "lon": -79.3609
+        },
+        {
+            "id": "4427",
+            "code": "2129",
+            "title": "Dundas St East At Sackville St",
+            "lat": 43.66019,
+            "lon": -79.3628099
+        },
+        {
+            "id": "4155",
+            "code": "2125",
+            "title": "Dundas St East At Parliament St",
+            "lat": 43.6595099,
+            "lon": -79.36588
+        },
+        {
+            "id": "8277",
+            "code": "2123",
+            "title": "Dundas St East At Ontario St",
+            "lat": 43.6589599,
+            "lon": -79.36836
+        },
+        {
+            "id": "2704",
+            "code": "2131",
+            "title": "Dundas St East At Sherbourne St",
+            "lat": 43.6584099,
+            "lon": -79.37088
+        },
+        {
+            "id": "23986",
+            "code": "15685",
+            "title": "Dundas St East At Jarvis St West Side",
+            "lat": 43.6570199,
+            "lon": -79.37499
+        },
+        {
+            "id": "3092",
+            "code": "2117",
+            "title": "Dundas St East At Church St",
+            "lat": 43.65658,
+            "lon": -79.3769899
+        },
+        {
+            "id": "6839",
+            "code": "2136",
+            "title": "Dundas St East At Yonge St (Dundas Station)",
+            "lat": 43.6564299,
+            "lon": -79.38075
+        },
+        {
+            "id": "2261",
+            "code": "2143",
+            "title": "Dundas St West At Bay St",
+            "lat": 43.6558499,
+            "lon": -79.38349
+        },
+        {
+            "id": "7264",
+            "code": "2154",
+            "title": "Dundas St West At Chestnut St",
+            "lat": 43.6553399,
+            "lon": -79.38587
+        },
+        {
+            "id": "9824",
+            "code": "2194",
+            "title": "Dundas St West At University Ave (St Patrick Station)",
+            "lat": 43.6549199,
+            "lon": -79.38781
+        },
+        {
+            "id": "6087",
+            "code": "2174",
+            "title": "Dundas St West At McCaul St",
+            "lat": 43.65441,
+            "lon": -79.3912099
+        },
+        {
+            "id": "2368",
+            "code": "2147",
+            "title": "Dundas St West At Beverley St",
+            "lat": 43.6538899,
+            "lon": -79.39372
+        },
+        {
+            "id": "7867",
+            "code": "2169",
+            "title": "Dundas St West At Huron St",
+            "lat": 43.65341,
+            "lon": -79.3960399
+        },
+        {
+            "id": "1212",
+            "code": "2190",
+            "title": "Dundas St West At Spadina Ave",
+            "lat": 43.65306,
+            "lon": -79.3977099
+        },
+        {
+            "id": "4557",
+            "code": "2157",
+            "title": "Dundas St West At Denison Ave",
+            "lat": 43.6521099,
+            "lon": -79.40216
+        },
+        {
+            "id": "4491",
+            "code": "2141",
+            "title": "Dundas St West At Bathurst St (Toronto Western Hospital)",
+            "lat": 43.6524199,
+            "lon": -79.40587
+        },
+        {
+            "id": "15147",
+            "code": "15355",
+            "title": "Dundas St West At Manning Ave",
+            "lat": 43.6513799,
+            "lon": -79.41082
+        },
+        {
+            "id": "4551",
+            "code": "2166",
+            "title": "Dundas St West At Grace St",
+            "lat": 43.65078,
+            "lon": -79.4138099
+        },
+        {
+            "id": "15148",
+            "code": "15356",
+            "title": "Dundas St West At Shaw St",
+            "lat": 43.64991,
+            "lon": -79.4181199
+        },
+        {
+            "id": "9427",
+            "code": "2176",
+            "title": "Dundas St West At Ossington Ave",
+            "lat": 43.6494299,
+            "lon": -79.42049
+        },
+        {
+            "id": "2426",
+            "code": "2159",
+            "title": "Dundas St West At Dovercourt Rd",
+            "lat": 43.6495099,
+            "lon": -79.42455
+        },
+        {
+            "id": "23984",
+            "code": "15686",
+            "title": "Dundas St West At Rusholme Rd West Side",
+            "lat": 43.64956,
+            "lon": -79.4271
+        },
+        {
+            "id": "2342",
+            "code": "2165",
+            "title": "Dundas St West At Gladstone Ave",
+            "lat": 43.6496299,
+            "lon": -79.4296299
+        },
+        {
+            "id": "23985",
+            "code": "15687",
+            "title": "Dundas St West At Dufferin St West Side",
+            "lat": 43.6497099,
+            "lon": -79.4318699
+        },
+        {
+            "id": "7186",
+            "code": "2187",
+            "title": "Dundas St West At Sheridan Ave",
+            "lat": 43.6498399,
+            "lon": -79.4335099
+        },
+        {
+            "id": "2098",
+            "code": "2152",
+            "title": "Dundas St West At Brock Ave",
+            "lat": 43.6499399,
+            "lon": -79.4354999
+        },
+        {
+            "id": "2986",
+            "code": "2171",
+            "title": "Dundas St West At Lansdowne Ave",
+            "lat": 43.6502099,
+            "lon": -79.4394799
+        },
+        {
+            "id": "4902",
+            "code": "0990",
+            "title": "Dundas St West At Sterling Rd",
+            "lat": 43.6506799,
+            "lon": -79.44278
+        },
+        {
+            "id": "1195",
+            "code": "0988",
+            "title": "Dundas St West At Sorauren Ave",
+            "lat": 43.6511999,
+            "lon": -79.4450099
+        },
+        {
+            "id": "5094",
+            "code": "0986",
+            "title": "Dundas St West At Howard Park Ave",
+            "lat": 43.65192,
+            "lon": -79.44746
+        },
+        {
+            "id": "5074",
+            "code": "2182",
+            "title": "Dundas St West At Roncesvalles Ave",
+            "lat": 43.6536899,
+            "lon": -79.45136
+        },
+        {
+            "id": "7898",
+            "code": "2150",
+            "title": "Dundas St West At Bloor St West",
+            "lat": 43.6560999,
+            "lon": -79.45233
+        },
+        {
+            "id": "300",
+            "code": "13702",
+            "title": "Dundas St West At Dundas West Outer Platform",
+            "lat": 43.6567699,
+            "lon": -79.45325
+        },
+        {
+            "id": "14186_ar",
+            "code": null,
+            "title": "Dundas West Station",
+            "lat": 43.6566699,
+            "lon": -79.4536
+        },
+        {
+            "id": "2800",
+            "code": "3371",
+            "title": "Broadview Ave At Danforth Ave",
+            "lat": 43.67634,
+            "lon": -79.3590399
+        }
+    ],
+    "directions": [
+        {
+            "id": "505_0_505bus",
+            "title": "East - 505 Dundas towards Broadview Station via Dundas",
+            "shortTitle": "East",
+            "useForUi": true,
+            "stops": [
+                "14186",
+                "6600",
+                "2954",
+                "2243",
+                "7506",
+                "1606",
+                "23981",
+                "1385",
+                "1063",
+                "7289",
+                "9568",
+                "1416",
+                "3702",
+                "6324",
+                "7139",
+                "15146",
+                "3665",
+                "6692",
+                "6046",
+                "1479",
+                "7171",
+                "9016",
+                "7311",
+                "6459",
+                "2856",
+                "3874",
+                "3471",
+                "3184",
+                "2641",
+                "2749",
+                "5988",
+                "6541",
+                "1557",
+                "6694",
+                "8632",
+                "8820",
+                "3886",
+                "6205",
+                "4891",
+                "10098",
+                "3720",
+                "9752",
+                "14162_ar"
+            ]
+        },
+        {
+            "id": "505_1_505bus",
+            "title": "West - 505 Dundas towards Dundas West Station via Dundas",
+            "shortTitle": "West",
+            "useForUi": true,
+            "stops": [
+                "14162",
+                "4402",
+                "2800",
+                "3442",
+                "8499",
+                "7801",
+                "4197",
+                "7809",
+                "10353",
+                "8223",
+                "7690",
+                "3446",
+                "1061",
+                "23983",
+                "4427",
+                "4155",
+                "8277",
+                "2704",
+                "23986",
+                "3092",
+                "6839",
+                "2261",
+                "7264",
+                "9824",
+                "6087",
+                "2368",
+                "7867",
+                "1212",
+                "4557",
+                "4491",
+                "15147",
+                "4551",
+                "15148",
+                "9427",
+                "2426",
+                "23984",
+                "2342",
+                "23985",
+                "7186",
+                "2098",
+                "2986",
+                "4902",
+                "1195",
+                "5094",
+                "5074",
+                "7898",
+                "300",
+                "14186_ar"
+            ]
+        }
+    ],
+    "paths": [
+        {
+            "points": [
+                {
+                    "lat": 43.65194,
+                    "lon": -79.40236
+                },
+                {
+                    "lat": 43.65202,
+                    "lon": -79.40225
+                },
+                {
+                    "lat": 43.65278,
+                    "lon": -79.39834
+                },
+                {
+                    "lat": 43.65294,
+                    "lon": -79.39804
+                },
+                {
+                    "lat": 43.65307,
+                    "lon": -79.39742
+                },
+                {
+                    "lat": 43.65325,
+                    "lon": -79.39625
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.64951,
+                    "lon": -79.42455
+                },
+                {
+                    "lat": 43.64956,
+                    "lon": -79.4271
+                },
+                {
+                    "lat": 43.64963,
+                    "lon": -79.42963
+                },
+                {
+                    "lat": 43.64971,
+                    "lon": -79.43187
+                },
+                {
+                    "lat": 43.64984,
+                    "lon": -79.43351
+                },
+                {
+                    "lat": 43.6497699,
+                    "lon": -79.43368
+                },
+                {
+                    "lat": 43.64994,
+                    "lon": -79.4355
+                },
+                {
+                    "lat": 43.65021,
+                    "lon": -79.43948
+                },
+                {
+                    "lat": 43.65031,
+                    "lon": -79.44143
+                },
+                {
+                    "lat": 43.65068,
+                    "lon": -79.44278
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65998,
+                    "lon": -79.36312
+                },
+                {
+                    "lat": 43.66053,
+                    "lon": -79.36068
+                },
+                {
+                    "lat": 43.66067,
+                    "lon": -79.36047
+                },
+                {
+                    "lat": 43.66105,
+                    "lon": -79.35831
+                },
+                {
+                    "lat": 43.66165,
+                    "lon": -79.35608
+                },
+                {
+                    "lat": 43.66191,
+                    "lon": -79.35388
+                },
+                {
+                    "lat": 43.66194,
+                    "lon": -79.35314
+                },
+                {
+                    "lat": 43.66225,
+                    "lon": -79.35181
+                },
+                {
+                    "lat": 43.66246,
+                    "lon": -79.35135
+                },
+                {
+                    "lat": 43.6639399,
+                    "lon": -79.35187
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.6497,
+                    "lon": -79.41849
+                },
+                {
+                    "lat": 43.65058,
+                    "lon": -79.41422
+                },
+                {
+                    "lat": 43.6512,
+                    "lon": -79.41103
+                },
+                {
+                    "lat": 43.65216,
+                    "lon": -79.40626
+                },
+                {
+                    "lat": 43.65237,
+                    "lon": -79.40559
+                },
+                {
+                    "lat": 43.65232,
+                    "lon": -79.40523
+                },
+                {
+                    "lat": 43.65177,
+                    "lon": -79.4039899
+                },
+                {
+                    "lat": 43.65194,
+                    "lon": -79.40236
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.67713,
+                    "lon": -79.35821
+                },
+                {
+                    "lat": 43.67711,
+                    "lon": -79.35802
+                },
+                {
+                    "lat": 43.67743,
+                    "lon": -79.35795
+                },
+                {
+                    "lat": 43.67753,
+                    "lon": -79.35842
+                },
+                {
+                    "lat": 43.67748,
+                    "lon": -79.35845
+                },
+                {
+                    "lat": 43.6772599,
+                    "lon": -79.3587
+                },
+                {
+                    "lat": 43.6764,
+                    "lon": -79.35892
+                },
+                {
+                    "lat": 43.67446,
+                    "lon": -79.3573399
+                },
+                {
+                    "lat": 43.67337,
+                    "lon": -79.35621
+                },
+                {
+                    "lat": 43.67214,
+                    "lon": -79.35516
+                },
+                {
+                    "lat": 43.672,
+                    "lon": -79.35492
+                },
+                {
+                    "lat": 43.67099,
+                    "lon": -79.35437
+                },
+                {
+                    "lat": 43.66986,
+                    "lon": -79.35343
+                },
+                {
+                    "lat": 43.6697,
+                    "lon": -79.3532
+                },
+                {
+                    "lat": 43.66944,
+                    "lon": -79.35302
+                },
+                {
+                    "lat": 43.66907,
+                    "lon": -79.35298
+                },
+                {
+                    "lat": 43.66847,
+                    "lon": -79.35308
+                },
+                {
+                    "lat": 43.66825,
+                    "lon": -79.35315
+                },
+                {
+                    "lat": 43.66808,
+                    "lon": -79.35332
+                },
+                {
+                    "lat": 43.66775,
+                    "lon": -79.35337
+                },
+                {
+                    "lat": 43.66747,
+                    "lon": -79.35342
+                },
+                {
+                    "lat": 43.66648,
+                    "lon": -79.3531299
+                },
+                {
+                    "lat": 43.66566,
+                    "lon": -79.35279
+                },
+                {
+                    "lat": 43.6641,
+                    "lon": -79.35214
+                },
+                {
+                    "lat": 43.6626,
+                    "lon": -79.35151
+                },
+                {
+                    "lat": 43.66246,
+                    "lon": -79.35135
+                },
+                {
+                    "lat": 43.66216,
+                    "lon": -79.35283
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65369,
+                    "lon": -79.4513599
+                },
+                {
+                    "lat": 43.6537099,
+                    "lon": -79.45157
+                },
+                {
+                    "lat": 43.65388,
+                    "lon": -79.45183
+                },
+                {
+                    "lat": 43.6561,
+                    "lon": -79.45233
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65619,
+                    "lon": -79.38119
+                },
+                {
+                    "lat": 43.65645,
+                    "lon": -79.38035
+                },
+                {
+                    "lat": 43.65645,
+                    "lon": -79.38031
+                },
+                {
+                    "lat": 43.65645,
+                    "lon": -79.38027
+                },
+                {
+                    "lat": 43.65644,
+                    "lon": -79.38017
+                },
+                {
+                    "lat": 43.65617,
+                    "lon": -79.37913
+                },
+                {
+                    "lat": 43.65626,
+                    "lon": -79.3783
+                },
+                {
+                    "lat": 43.65637,
+                    "lon": -79.37736
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65643,
+                    "lon": -79.38075
+                },
+                {
+                    "lat": 43.65585,
+                    "lon": -79.38349
+                },
+                {
+                    "lat": 43.65534,
+                    "lon": -79.38587
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65637,
+                    "lon": -79.37736
+                },
+                {
+                    "lat": 43.65649,
+                    "lon": -79.3771299
+                },
+                {
+                    "lat": 43.65664,
+                    "lon": -79.37655
+                },
+                {
+                    "lat": 43.65695,
+                    "lon": -79.3747099
+                },
+                {
+                    "lat": 43.6573,
+                    "lon": -79.37345
+                },
+                {
+                    "lat": 43.65751,
+                    "lon": -79.3732
+                },
+                {
+                    "lat": 43.65797,
+                    "lon": -79.3727399
+                },
+                {
+                    "lat": 43.65816,
+                    "lon": -79.37238
+                },
+                {
+                    "lat": 43.65825,
+                    "lon": -79.37205
+                },
+                {
+                    "lat": 43.65822,
+                    "lon": -79.3713
+                },
+                {
+                    "lat": 43.65829,
+                    "lon": -79.37102
+                },
+                {
+                    "lat": 43.65875,
+                    "lon": -79.36865
+                },
+                {
+                    "lat": 43.65928,
+                    "lon": -79.36629
+                },
+                {
+                    "lat": 43.65998,
+                    "lon": -79.36312
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65068,
+                    "lon": -79.44278
+                },
+                {
+                    "lat": 43.6512,
+                    "lon": -79.44501
+                },
+                {
+                    "lat": 43.65158,
+                    "lon": -79.4468
+                },
+                {
+                    "lat": 43.6519199,
+                    "lon": -79.44746
+                },
+                {
+                    "lat": 43.65369,
+                    "lon": -79.4513599
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.6561,
+                    "lon": -79.45233
+                },
+                {
+                    "lat": 43.65631,
+                    "lon": -79.45244
+                },
+                {
+                    "lat": 43.6569999,
+                    "lon": -79.45262
+                },
+                {
+                    "lat": 43.6569,
+                    "lon": -79.4526999
+                },
+                {
+                    "lat": 43.65686,
+                    "lon": -79.45278
+                },
+                {
+                    "lat": 43.6567999,
+                    "lon": -79.45314
+                },
+                {
+                    "lat": 43.65677,
+                    "lon": -79.45325
+                },
+                {
+                    "lat": 43.65675,
+                    "lon": -79.45367
+                },
+                {
+                    "lat": 43.65667,
+                    "lon": -79.4536
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65125,
+                    "lon": -79.44576
+                },
+                {
+                    "lat": 43.65063,
+                    "lon": -79.44325
+                },
+                {
+                    "lat": 43.65031,
+                    "lon": -79.44143
+                },
+                {
+                    "lat": 43.65011,
+                    "lon": -79.44013
+                },
+                {
+                    "lat": 43.6498,
+                    "lon": -79.43523
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65211,
+                    "lon": -79.40216
+                },
+                {
+                    "lat": 43.65202,
+                    "lon": -79.40225
+                },
+                {
+                    "lat": 43.65173,
+                    "lon": -79.40373
+                },
+                {
+                    "lat": 43.65195,
+                    "lon": -79.4044
+                },
+                {
+                    "lat": 43.65232,
+                    "lon": -79.40523
+                },
+                {
+                    "lat": 43.65237,
+                    "lon": -79.40558
+                },
+                {
+                    "lat": 43.65242,
+                    "lon": -79.4058699
+                },
+                {
+                    "lat": 43.65138,
+                    "lon": -79.41082
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65896,
+                    "lon": -79.36836
+                },
+                {
+                    "lat": 43.65841,
+                    "lon": -79.37088
+                },
+                {
+                    "lat": 43.65829,
+                    "lon": -79.37102
+                },
+                {
+                    "lat": 43.65825,
+                    "lon": -79.37205
+                },
+                {
+                    "lat": 43.65816,
+                    "lon": -79.37238
+                },
+                {
+                    "lat": 43.65797,
+                    "lon": -79.3727399
+                },
+                {
+                    "lat": 43.65732,
+                    "lon": -79.3734
+                },
+                {
+                    "lat": 43.65702,
+                    "lon": -79.37499
+                },
+                {
+                    "lat": 43.65664,
+                    "lon": -79.37655
+                },
+                {
+                    "lat": 43.65658,
+                    "lon": -79.37699
+                },
+                {
+                    "lat": 43.65649,
+                    "lon": -79.3771299
+                },
+                {
+                    "lat": 43.65614,
+                    "lon": -79.37886
+                },
+                {
+                    "lat": 43.65644,
+                    "lon": -79.38017
+                },
+                {
+                    "lat": 43.65645,
+                    "lon": -79.38027
+                },
+                {
+                    "lat": 43.65645,
+                    "lon": -79.38031
+                },
+                {
+                    "lat": 43.65645,
+                    "lon": -79.38035
+                },
+                {
+                    "lat": 43.65643,
+                    "lon": -79.38075
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65534,
+                    "lon": -79.38587
+                },
+                {
+                    "lat": 43.65492,
+                    "lon": -79.38781
+                },
+                {
+                    "lat": 43.65478,
+                    "lon": -79.3883
+                },
+                {
+                    "lat": 43.6548,
+                    "lon": -79.38842
+                },
+                {
+                    "lat": 43.65481,
+                    "lon": -79.38852
+                },
+                {
+                    "lat": 43.65451,
+                    "lon": -79.38999
+                },
+                {
+                    "lat": 43.6545,
+                    "lon": -79.39037
+                },
+                {
+                    "lat": 43.65441,
+                    "lon": -79.39121
+                },
+                {
+                    "lat": 43.65433,
+                    "lon": -79.39145
+                },
+                {
+                    "lat": 43.6538899,
+                    "lon": -79.39372
+                },
+                {
+                    "lat": 43.65341,
+                    "lon": -79.39604
+                },
+                {
+                    "lat": 43.65307,
+                    "lon": -79.39742
+                },
+                {
+                    "lat": 43.65306,
+                    "lon": -79.39771
+                },
+                {
+                    "lat": 43.65294,
+                    "lon": -79.39804
+                },
+                {
+                    "lat": 43.65211,
+                    "lon": -79.40216
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.66216,
+                    "lon": -79.35283
+                },
+                {
+                    "lat": 43.66196,
+                    "lon": -79.3536
+                },
+                {
+                    "lat": 43.66165,
+                    "lon": -79.35608
+                },
+                {
+                    "lat": 43.66128,
+                    "lon": -79.358
+                },
+                {
+                    "lat": 43.66068,
+                    "lon": -79.3604299
+                },
+                {
+                    "lat": 43.66062,
+                    "lon": -79.3609
+                },
+                {
+                    "lat": 43.66019,
+                    "lon": -79.36281
+                },
+                {
+                    "lat": 43.65951,
+                    "lon": -79.36588
+                },
+                {
+                    "lat": 43.65896,
+                    "lon": -79.36836
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65138,
+                    "lon": -79.41082
+                },
+                {
+                    "lat": 43.65078,
+                    "lon": -79.41381
+                },
+                {
+                    "lat": 43.64991,
+                    "lon": -79.41812
+                },
+                {
+                    "lat": 43.64943,
+                    "lon": -79.42049
+                },
+                {
+                    "lat": 43.64933,
+                    "lon": -79.42077
+                },
+                {
+                    "lat": 43.64951,
+                    "lon": -79.42455
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.67713,
+                    "lon": -79.35821
+                },
+                {
+                    "lat": 43.67711,
+                    "lon": -79.35802
+                },
+                {
+                    "lat": 43.67743,
+                    "lon": -79.35795
+                },
+                {
+                    "lat": 43.67753,
+                    "lon": -79.35842
+                },
+                {
+                    "lat": 43.67748,
+                    "lon": -79.35845
+                },
+                {
+                    "lat": 43.6772599,
+                    "lon": -79.3587
+                },
+                {
+                    "lat": 43.6764,
+                    "lon": -79.35892
+                },
+                {
+                    "lat": 43.67634,
+                    "lon": -79.3590399
+                },
+                {
+                    "lat": 43.67446,
+                    "lon": -79.3573399
+                },
+                {
+                    "lat": 43.67337,
+                    "lon": -79.35621
+                },
+                {
+                    "lat": 43.67214,
+                    "lon": -79.35516
+                },
+                {
+                    "lat": 43.672,
+                    "lon": -79.35492
+                },
+                {
+                    "lat": 43.67099,
+                    "lon": -79.35437
+                },
+                {
+                    "lat": 43.66986,
+                    "lon": -79.35343
+                },
+                {
+                    "lat": 43.6697,
+                    "lon": -79.3532
+                },
+                {
+                    "lat": 43.66944,
+                    "lon": -79.35302
+                },
+                {
+                    "lat": 43.66907,
+                    "lon": -79.35298
+                },
+                {
+                    "lat": 43.66847,
+                    "lon": -79.35308
+                },
+                {
+                    "lat": 43.66825,
+                    "lon": -79.35315
+                },
+                {
+                    "lat": 43.66808,
+                    "lon": -79.35332
+                },
+                {
+                    "lat": 43.66775,
+                    "lon": -79.35337
+                },
+                {
+                    "lat": 43.66747,
+                    "lon": -79.35342
+                },
+                {
+                    "lat": 43.66648,
+                    "lon": -79.3531299
+                },
+                {
+                    "lat": 43.66566,
+                    "lon": -79.35279
+                },
+                {
+                    "lat": 43.6641,
+                    "lon": -79.35214
+                },
+                {
+                    "lat": 43.6626,
+                    "lon": -79.35151
+                },
+                {
+                    "lat": 43.66246,
+                    "lon": -79.35135
+                },
+                {
+                    "lat": 43.66216,
+                    "lon": -79.35283
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65348,
+                    "lon": -79.45126
+                },
+                {
+                    "lat": 43.65223,
+                    "lon": -79.44852
+                },
+                {
+                    "lat": 43.65158,
+                    "lon": -79.4468
+                },
+                {
+                    "lat": 43.65125,
+                    "lon": -79.44576
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65325,
+                    "lon": -79.39625
+                },
+                {
+                    "lat": 43.6537099,
+                    "lon": -79.39396
+                },
+                {
+                    "lat": 43.65422,
+                    "lon": -79.39155
+                },
+                {
+                    "lat": 43.65447,
+                    "lon": -79.3906499
+                },
+                {
+                    "lat": 43.65448,
+                    "lon": -79.39028
+                },
+                {
+                    "lat": 43.65468,
+                    "lon": -79.38921
+                },
+                {
+                    "lat": 43.65468,
+                    "lon": -79.38874
+                },
+                {
+                    "lat": 43.65481,
+                    "lon": -79.38852
+                },
+                {
+                    "lat": 43.6548,
+                    "lon": -79.38842
+                },
+                {
+                    "lat": 43.65478,
+                    "lon": -79.3883
+                },
+                {
+                    "lat": 43.65514,
+                    "lon": -79.38613
+                },
+                {
+                    "lat": 43.65558,
+                    "lon": -79.38401
+                },
+                {
+                    "lat": 43.65619,
+                    "lon": -79.38119
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.6498,
+                    "lon": -79.43523
+                },
+                {
+                    "lat": 43.64972,
+                    "lon": -79.43384
+                },
+                {
+                    "lat": 43.64959,
+                    "lon": -79.43156
+                },
+                {
+                    "lat": 43.64952,
+                    "lon": -79.42997
+                },
+                {
+                    "lat": 43.64958,
+                    "lon": -79.42982
+                },
+                {
+                    "lat": 43.64943,
+                    "lon": -79.42688
+                },
+                {
+                    "lat": 43.64937,
+                    "lon": -79.42489
+                },
+                {
+                    "lat": 43.64927,
+                    "lon": -79.42094
+                },
+                {
+                    "lat": 43.64933,
+                    "lon": -79.42077
+                },
+                {
+                    "lat": 43.6497,
+                    "lon": -79.41849
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.6639399,
+                    "lon": -79.35187
+                },
+                {
+                    "lat": 43.66527,
+                    "lon": -79.35244
+                },
+                {
+                    "lat": 43.6674099,
+                    "lon": -79.35341
+                },
+                {
+                    "lat": 43.66766,
+                    "lon": -79.3533099
+                },
+                {
+                    "lat": 43.66775,
+                    "lon": -79.35337
+                },
+                {
+                    "lat": 43.66825,
+                    "lon": -79.35315
+                },
+                {
+                    "lat": 43.66847,
+                    "lon": -79.35308
+                },
+                {
+                    "lat": 43.66907,
+                    "lon": -79.35298
+                },
+                {
+                    "lat": 43.66935,
+                    "lon": -79.35299
+                },
+                {
+                    "lat": 43.66959,
+                    "lon": -79.3531
+                },
+                {
+                    "lat": 43.66964,
+                    "lon": -79.35303
+                },
+                {
+                    "lat": 43.67084,
+                    "lon": -79.35424
+                },
+                {
+                    "lat": 43.6712599,
+                    "lon": -79.3545199
+                },
+                {
+                    "lat": 43.6719,
+                    "lon": -79.35473
+                },
+                {
+                    "lat": 43.672,
+                    "lon": -79.35492
+                },
+                {
+                    "lat": 43.67419,
+                    "lon": -79.3569
+                },
+                {
+                    "lat": 43.6754,
+                    "lon": -79.35807
+                },
+                {
+                    "lat": 43.6762,
+                    "lon": -79.35886
+                },
+                {
+                    "lat": 43.67677,
+                    "lon": -79.35883
+                },
+                {
+                    "lat": 43.67695,
+                    "lon": -79.35835
+                },
+                {
+                    "lat": 43.67713,
+                    "lon": -79.35821
+                }
+            ]
+        },
+        {
+            "points": [
+                {
+                    "lat": 43.65667,
+                    "lon": -79.4536
+                },
+                {
+                    "lat": 43.65675,
+                    "lon": -79.45367
+                },
+                {
+                    "lat": 43.65676,
+                    "lon": -79.45374
+                },
+                {
+                    "lat": 43.65678,
+                    "lon": -79.45379
+                },
+                {
+                    "lat": 43.65683,
+                    "lon": -79.4538
+                },
+                {
+                    "lat": 43.65704,
+                    "lon": -79.45385
+                },
+                {
+                    "lat": 43.6571799,
+                    "lon": -79.4532
+                },
+                {
+                    "lat": 43.65728,
+                    "lon": -79.4526999
+                },
+                {
+                    "lat": 43.6569999,
+                    "lon": -79.45262
+                },
+                {
+                    "lat": 43.65631,
+                    "lon": -79.45244
+                },
+                {
+                    "lat": 43.65388,
+                    "lon": -79.45183
+                },
+                {
+                    "lat": 43.6537099,
+                    "lon": -79.45157
+                },
+                {
+                    "lat": 43.65348,
+                    "lon": -79.45126
+                }
+            ]
+        }
+    ],
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/restbus/agencies/ttc/routes/505",
+            "type": "application/json",
+            "rel": "self",
+            "rt": "route",
+            "title": "Full configuration for ttc route 505-Dundas."
+        },
+        "to": [
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/vehicles",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "vehicle",
+                "title": "A collection of vehicles for ttc route 505-Dundas."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/14186/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 14186 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/6600/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 6600 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2954/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2954 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2243/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2243 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7506/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7506 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/1606/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 1606 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/23981/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 23981 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/1385/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 1385 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/1063/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 1063 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7289/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7289 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/9568/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 9568 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/1416/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 1416 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/3702/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 3702 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/6324/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 6324 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7139/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7139 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/15146/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 15146 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/3665/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 3665 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/6692/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 6692 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/6046/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 6046 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/1479/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 1479 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7171/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7171 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/9016/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 9016 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7311/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7311 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/6459/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 6459 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2856/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2856 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/3874/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 3874 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/3471/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 3471 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/3184/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 3184 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2641/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2641 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2749/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2749 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/5988/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 5988 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/6541/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 6541 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/1557/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 1557 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/6694/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 6694 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/8632/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 8632 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/8820/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 8820 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/3886/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 3886 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/6205/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 6205 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/4891/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 4891 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/10098/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 10098 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/3720/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 3720 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/9752/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 9752 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/14162_ar/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 14162_ar on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/14162/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 14162 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/4402/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 4402 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/3442/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 3442 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/8499/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 8499 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7801/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7801 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/4197/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 4197 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7809/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7809 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/10353/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 10353 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/8223/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 8223 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7690/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7690 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/3446/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 3446 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/1061/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 1061 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/23983/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 23983 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/4427/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 4427 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/4155/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 4155 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/8277/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 8277 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2704/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2704 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/23986/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 23986 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/3092/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 3092 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/6839/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 6839 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2261/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2261 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7264/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7264 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/9824/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 9824 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/6087/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 6087 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2368/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2368 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7867/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7867 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/1212/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 1212 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/4557/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 4557 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/4491/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 4491 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/15147/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 15147 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/4551/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 4551 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/15148/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 15148 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/9427/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 9427 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2426/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2426 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/23984/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 23984 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2342/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2342 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/23985/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 23985 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7186/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7186 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2098/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2098 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2986/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2986 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/4902/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 4902 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/1195/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 1195 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/5094/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 5094 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/5074/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 5074 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/7898/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 7898 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/300/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 300 on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/14186_ar/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 14186_ar on ttc route 505."
+            },
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes/505/stops/2800/predictions",
+                "type": "application/json",
+                "rel": "related",
+                "rt": "prediction",
+                "title": "A collection of predictions for stop 2800 on ttc route 505."
+            }
+        ],
+        "from": [
+            {
+                "href": "http://localhost:8080/restbus/agencies/ttc/routes",
+                "type": "application/json",
+                "rel": "via",
+                "rt": "route",
+                "title": "A collection of routes for transit agency ttc."
+            }
+        ]
+    }
+}
