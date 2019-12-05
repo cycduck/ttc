@@ -3,9 +3,11 @@ const app = express();
 const restbus = require('restbus');
 const cors = require('cors');
 const axios = require('axios');
-const fs = require('file-system');
-const pathData = require('./data/path.json');
-const stopData = require('./data/stop.json');
+// const fs = require('file-system');
+const fs = require('fs');
+
+// const pathData = requiref('./data/path.json');
+// const stopData = require('./data/stop.json');
 const PORT = process.env.PORT || 8080;
 // use the port from the environment variable, else use 8080 https://stackoverflow.com/questions/18864677/what-is-process-env-port-in-node-js
 
@@ -28,7 +30,6 @@ const routePath = async () => {
   try {
     let allRoute = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/`)
     let routeId = await allRoute.data.map(info=> info.id) // returns an array of all route id
-
     // for each of the url
     let url = routeId.map((info, index) => {
       // create a new promise (at state pending)
@@ -40,25 +41,31 @@ const routePath = async () => {
         }, 500 * index);
       });
     })
+    
     console.log('# of the axios request for stops and paths',url.length)
     // .then will unwrap the info in the promise
     // arguments is a JS object that is dynamic, you have to spread the arguments in order to use in an arrow function
     axios.all(url).then(axios.spread((...arguments) => {
-      const allPath= {}; // route dictionary
       const allStop={}
+      const allPath= {}; // route dictionary
       // for each of the promises
       arguments.forEach(response => {
         let item = response.data;
+        let pathGPS = item.paths.map(path => 
+          path.points.map(
+            points => [points.lat, points.lon]
+          )
+        )
         // make a key and pair it with the stop and path value
-        allPath[`v${item.id}`] = {paths: item.paths};
         allStop[`v${item.id}`] = {stops:item.stops}
+        allPath[`v${item.id}`] = pathGPS;
       });
-      fs.writeFile('./data/path.json', JSON.stringify(allPath))
-      fs.writeFile('./data/stop.json', JSON.stringify(allStop));
+      fs.writeFile('./data/stop.json', JSON.stringify(allStop), function(err) {console.log(err)});
+      fs.writeFile('./data/path.json', JSON.stringify(allPath), function(err) {console.log(err)} )
       console.log('stops and paths DONE');
     }))
     .catch(err => {
-      res.json({ success: false, error: 'Could not make axios all requests' })
+      console.log('failt at writing file ', err)
     })
   } catch (err) {
     console.log('axios all error test 2 ', err)
@@ -66,12 +73,13 @@ const routePath = async () => {
 }
 const routePathTimed = () => {
   let date = new Date()
-  if (date.getHours()=== 23 && date.getMinutes() === 47 ) {
+  if (date.getHours()=== 15 && date.getMinutes() > 56 && date.getMinutes() < 58 ) {
     console.log(`it's ${date.getHours()}:${date.getMinutes()}, wakey wakey. getting data`);
     routePath(); // calling the route path funtion 
   }
 }
-setInterval(routePathTimed, 80000);
+
+setInterval(routePathTimed, 100000);
 
 
 const busMapping = (axiosdata) => {
@@ -118,8 +126,20 @@ io.on('connect', (socket) => {
   // will start x only flag is false 
   // flag T/F to keep track if x has been called
   // a second one is the x()
-  socket.binary(false).emit('busPath', pathData);
+  let pathData;
+  let stopData;
+  try {
+    stopData = JSON.parse(fs.readFileSync('./data/path.json'));
+    pathData = JSON.parse(fs.readFileSync('./data/stop.json'));
+    // https://flaviocopes.com/node-reading-files/
+ 
+  } catch (err) {
+    pathData = {};
+    stopData = {};
+  }
+
   socket.binary(false).emit('busStop', stopData);
+  socket.binary(false).emit('busPath', pathData);
   socket.on('disconnect', ()=>{
     console.log('someone disconnected');
   })
