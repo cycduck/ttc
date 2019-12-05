@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-// import Control from 'react-leaflet-control';
 import {Map, TileLayer, Marker, Popup, LayersControl, Polyline, FeatureGroup} from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -28,17 +27,6 @@ const userIcon = L.divIcon({
 
 
 
-const polyline = [
-  [43.65194, -79.40236],
-  [43.65202,-79.40225],
-  [43.65278, -79.39834],
-  [43.65294, -79.39804],
-  [43.65307, -79.39742],
-  [43.65325, -79.39625]
-]
-
-
-
 const routePaths = {
   v505: [
     [43.65194, -79.40236],
@@ -56,22 +44,21 @@ const routePaths = {
 
 
 export default function BusMap(props) {
-  console.log('what is here' , props.busPath)
   // console.log('what is here' , props.busStop)
-    const [pathSwitch, setPathSwitch] = useState(false);
-    const [currRouteId, setCurrRouteId] = useState(null);
-    const {userLocation: {lat, lng, zoom, haveUserLocation}, vehicle} = props;
+  const [pathSwitch, setPathSwitch] = useState(false);
+  const [currRouteId, setCurrRouteId] = useState(null);
+  const {userLocation: {lat, lng, zoom, haveUserLocation}, vehicle} = props;
+  
+  const pathTrigger = (routeId) =>{
+
+    new Promise((res, rej)=> {
+      res(setCurrRouteId(routeId))
+    }).then((response)=> {
+      setPathSwitch(!pathSwitch)
+    })
     
-    const pathTrigger = (routeId) =>{
-      // e.preventDefault();
-      // console.log('being clicked;=', e.target)
-      setCurrRouteId(routeId)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-      if (routeId ===  currRouteId ) {
-        setPathSwitch(!pathSwitch)
-      } else {
-        setPathSwitch(true)
-      }
-      console.log(routeId)
+    console.log('props.busPath.routeId' , routeId, props.busPath[routeId])
+    console.log('props.busPath.currRouteId' , props.busPath[currRouteId])
     }
     
     
@@ -95,7 +82,7 @@ export default function BusMap(props) {
             />
           </BaseLayer>
           
-          {pathSwitch && currRouteId? <Polyline color="lime" positions={test}/> : null}
+          {pathSwitch? <Polyline color="white" positions={props.busPath[currRouteId]}/> : null}
           {/* <Polyline positions={this takes the coordinates related to the route ID}/> */}
           
           <Overlay checked name="505">

@@ -32,7 +32,7 @@ export default function App() {
   // })
 
   socket.on('busUpdate', data=>{
-    console.log('bus marker updating from socket', data);
+    console.log('bus marker updating from socket');
     setVehicle(data); // Not need to put data into it's {} or will become props.vehicle.data.v505
   });
   socket.on('busPath', data => {

@@ -30,7 +30,6 @@ https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds
 https://leafletjs.com/examples/extending/extending-3-controls.html
 https://stackoverflow.com/questions/31924890/leaflet-js-custom-control-button-add-text-hover
 * [ ] animation transition css 11/29/2019
-* [ ] grey overlay on the map
 * [ ] style the markers better (route on dot)
   * [x] text on dot, centered 11/29/2019
   * [x] size of the dots 11/29/2019
@@ -96,25 +95,34 @@ https://gist.github.com/wesbos/1866f918824936ffb73d8fd0b02879b4
 https://www.valentinog.com/blog/socket-react/
 Verdict: After an hour of trying I guess I don't need axios.all/spread if I am using this
 
+### Bus Route generator, thought process
+clickMe on marker sends routeID, for each of the vROUTEID, generate a polyline, but if I generate them how do I turn them off? OVERLOAD
+
+Instead get the data from the Map.js (DONE) pass the coordinates to the path.
+When marker is clicked send ID (retrived from the vehicledata), but where to store the ID?
+to event listener?
+runs a function that grabs the path array
+But how to turn it off? 	
+make a switch with state 
+
+to state?
+When a marker is clicked, send ID to state which stores ID and use an event listen to swtich on
+if pathSwitch is T, generate Polyline by grabbing the ID from the state
+Q: do I need to set state for ID?
+
+
 ### Optimization
 https://eloquentjavascript.net/11_async.html
 Load map and markers separately?
 
-  https://www.tutorialspoint.com/leafletjs/leafletjs_controls.htm
-  https://gis.stackexchange.com/questions/60576/custom-leaflet-controls
-  https://codepen.io/adammertel/pen/MYVRZE
-  http://bl.ocks.org/andyreagan/c81461c8a8ce52d103fc92decf9650b6
-  https://github.com/bozdoz/wp-plugin-leaflet-map#leaflet-map-options
-  https://www.youtube.com/watch?v=NA5xcQSM5GA
-  https://alligator.io/js/settimeout-setinterval/
+https://www.tutorialspoint.com/leafletjs/leafletjs_controls.htm
+https://gis.stackexchange.com/questions/60576/custom-leaflet-controls
+https://codepen.io/adammertel/pen/MYVRZE
+http://bl.ocks.org/andyreagan/c81461c8a8ce52d103fc92decf9650b6
+https://github.com/bozdoz/wp-plugin-leaflet-map#leaflet-map-options
+https://www.youtube.com/watch?v=NA5xcQSM5GA
+https://alligator.io/js/settimeout-setinterval/
 
-  const addTodo = text => {
-    const newTodos = [...todos, { text }];
-    setTodos(newTodos);
-  };
 
-updating todo
-...todo (copying todo, and then simply add in the text here
-then setstate by using setTodos()
 
 

@@ -126,8 +126,8 @@ io.on('connect', (socket) => {
   let pathData;
   let stopData;
   try {
-    stopData = JSON.parse(fs.readFileSync('./data/path.json'));
-    pathData = JSON.parse(fs.readFileSync('./data/stop.json'));
+    pathData = JSON.parse(fs.readFileSync('./data/path.json'));
+    stopData = JSON.parse(fs.readFileSync('./data/stop.json'));
     // https://flaviocopes.com/node-reading-files/
  
   } catch (err) {
