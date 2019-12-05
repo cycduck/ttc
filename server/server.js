@@ -4,6 +4,8 @@ const restbus = require('restbus');
 const cors = require('cors');
 const axios = require('axios');
 const fs = require('file-system');
+const pathData = require('./data/path.json');
+const stopData = require('./data/stop.json');
 const PORT = process.env.PORT || 8080;
 // use the port from the environment variable, else use 8080 https://stackoverflow.com/questions/18864677/what-is-process-env-port-in-node-js
 
@@ -14,40 +16,67 @@ const server = app.listen(PORT, (err) =>{
   }
   console.log(`listening on PORT: ${PORT}`)
 });
+
 const io = require('socket.io')(server); // https://www.youtube.com/watch?v=UwS3wJoi7fY 2:22
 
 
 app.use('/restbus', restbus.middleware()); 
 app.use(cors());
 
-app.get('/agencies/ttc/routes/505', (req, res) => {
 
-  axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/`)
-  .then(response=>{
+const routePath = async () => {
+  try {
+    let allRoute = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/`)
+    let routeId = await allRoute.data.map(info=> info.id) // returns an array of all route id
 
-    // console.log('test', response.data)
-    res.json(response.data.stops)
-    res.json(response.data.paths)
+    // for each of the url
+    let url = routeId.map((info, index) => {
+      // create a new promise (at state pending)
+      return new Promise((res, rej) => {
+        // for every 0.5 seconds 
+        setTimeout(() => {
+          // covert the result values 
+          res(axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/${info}/`));
+        }, 500 * index);
+      });
+    })
+    console.log('# of the axios request for stops and paths',url.length)
+    // .then will unwrap the info in the promise
+    // arguments is a JS object that is dynamic, you have to spread the arguments in order to use in an arrow function
+    axios.all(url).then(axios.spread((...arguments) => {
+      const allPath= {}; // route dictionary
+      const allStop={}
+      // for each of the promises
+      arguments.forEach(response => {
+        let item = response.data;
+        // make a key and pair it with the stop and path value
+        allPath[`v${item.id}`] = {paths: item.paths};
+        allStop[`v${item.id}`] = {stops:item.stops}
+      });
+      fs.writeFile('./data/path.json', JSON.stringify(allPath))
+      fs.writeFile('./data/stop.json', JSON.stringify(allStop));
+      console.log('stops and paths DONE');
+    }))
+    .catch(err => {
+      res.json({ success: false, error: 'Could not make axios all requests' })
+    })
+  } catch (err) {
+    console.log('axios all error test 2 ', err)
   }
+}
+const routePathTimed = () => {
+  let date = new Date()
+  if (date.getHours()=== 23 && date.getMinutes() === 47 ) {
+    console.log(`it's ${date.getHours()}:${date.getMinutes()}, wakey wakey. getting data`);
+    routePath(); // calling the route path funtion 
+  }
+}
+setInterval(routePathTimed, 80000);
 
-  )
-  // async function routePath() {
-  //   try {
-
-  //     let route505 = axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/`)
-  //     console.log('test', route505)
-  //     res.json(route505.data)
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-})
 
 const busMapping = (axiosdata) => {
   // console.log('info.directionId', axiosdata) // OK
   let conversion = axiosdata.map(info => {
-
-    // console.log(info.directionId ? (info.directionId[4] == 0 ? "E" : "W") : "nada")
     return {
       busId: info.id,
       routeId: info.routeId,
@@ -60,8 +89,7 @@ const busMapping = (axiosdata) => {
   return conversion
 }
 
-io.on('connect', 
-test = (socket) => {
+io.on('connect', (socket) => {
   console.log('You have been shocketed, id: ', socket.id) // OK
   const vehicleAll = {};
   const x = async () => {
@@ -77,19 +105,21 @@ test = (socket) => {
       socket.binary(false).emit('busUpdate', vehicleAll);
       // JSON isn't binary
     } catch (err) {
-        console.log(err)
+        console.log('socket error: ', err)
     };
     console.timeEnd('process time ');
   };
   x(); // start it once then every 15s
   setInterval(x, 15000);
+  // TODO
   // when it's connect the socket will run the first timer constantly check the time new Date
   // if time is between 5am to 3am then start x and set the flag 
   // if the time is not between the two times, will stop x and set to flag false 
   // will start x only flag is false 
   // flag T/F to keep track if x has been called
   // a second one is the x()
-
+  socket.binary(false).emit('busPath', pathData);
+  socket.binary(false).emit('busStop', stopData);
   socket.on('disconnect', ()=>{
     console.log('someone disconnected');
   })
@@ -115,3 +145,5 @@ test = (socket) => {
   // })
   ////////
 )
+
+
