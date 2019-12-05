@@ -106,6 +106,7 @@ Load map and markers separately?
   http://bl.ocks.org/andyreagan/c81461c8a8ce52d103fc92decf9650b6
   https://github.com/bozdoz/wp-plugin-leaflet-map#leaflet-map-options
   https://www.youtube.com/watch?v=NA5xcQSM5GA
+  https://alligator.io/js/settimeout-setinterval/
 
   const addTodo = text => {
     const newTodos = [...todos, { text }];
@@ -115,4 +116,5 @@ Load map and markers separately?
 updating todo
 ...todo (copying todo, and then simply add in the text here
 then setstate by using setTodos()
+
 

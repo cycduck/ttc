@@ -26,21 +26,33 @@ app.get('/agencies/ttc/routes/', (req, res) => {
   async function routePath() {
     try {
       let allRoute = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/`)
-      let routeId = await allRoute.data.map(info=> info.id) // returns an array of route id
-      
+      let routeId = await allRoute.data.map(info=> info.id) // returns an array of all route id
+
+      // for each of the url
       let url = routeId.map((info, index) => {
+        // create a new promise (at state pending)
         return new Promise((res, rej) => {
+          // for every 0.5 seconds 
           setTimeout(() => {
+            // covert the result values 
             res(axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/${info}/`));
           }, 500 * index);
         });
       })
-      console.log('Length of the url promise',url.length)
+      console.log('# of the axios request for stops and paths',url.length)
+      // .then will unwrap the info in the promise
+      // arguments is a JS object that is dynamic, you have to spread the arguments in order to use in an arrow function
       axios.all(url).then(axios.spread((...arguments) => {
-        console.log('all done');
-        let allRouteInfo = arguments.map(resp => resp.data)
-        res.json(allRouteInfo);
-          fs.writeFile('./data/stop.json', JSON.stringify(allRouteInfo))
+        const filterAllRouteInfo= {}; // route dictionary
+        // for each of the promises
+        arguments.forEach(response => {
+          let item = response.data;
+          // make a key and pair it with the stop and path value
+          filterAllRouteInfo[`v${item.id}`] = {stops:item.stops, paths: item.paths};
+        });
+        res.json(filterAllRouteInfo);
+        fs.writeFile('./data/stop.json', JSON.stringify(filterAllRouteInfo));
+        console.log('stops and paths DONE');
       }))
       .catch(err => {
         res.json({ success: false, error: 'Could not make axios all requests' })
@@ -124,3 +136,15 @@ test = (socket) => {
   // })
   ////////
 )
+
+
+const someFunc = () => {
+
+  let date = new Date()
+  if (date.getHours()=== 21 && date.getMinutes() > 56) {
+    console.log(`it's ${date.getHours()}:${date.getMinutes()}, wakey wakey`)
+  
+  }
+}
+
+setInterval(someFunc, 30000)
