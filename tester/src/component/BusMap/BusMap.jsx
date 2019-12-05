@@ -11,20 +11,9 @@ const r505 = require('../../r505');
 
 const {paths} = r505
 
-// const stuff = {...paths, points :[...paths[0].points]}
-// console.log(stuff)
-// const test = paths.map(info => {
-//   console.log(...info.points)
-//   return [...info.points, info.points.lat, info.points.lon ] 
-// })
+
 const test = paths.map(path => 
-  // console.log(path)
-  path.points.map(points => {
-    
-    // console.log(points.lat, points.lon)
-    return [points.lat, points.lon]
-  }
-  )
+  path.points.map(points =>  [points.lat, points.lon])
 )
 // const pathsArr = paths.map(lineVal => lineVal.points.map(pointVal => [pointVal.lat, pointVal.lon]));
 
@@ -48,15 +37,10 @@ const polyline = [
   [43.65325, -79.39625]
 ]
 
-// paths = [
-//   [
-//     [lat, long],
-//     []
-//   ]
-// ]
+
 
 const routePaths = {
-  505: [
+  v505: [
     [43.65194, -79.40236],
     [43.65202,-79.40225],
     [43.65278, -79.39834],
@@ -72,6 +56,8 @@ const routePaths = {
 
 
 export default function BusMap(props) {
+  console.log('what is here' , props.busPath)
+  // console.log('what is here' , props.busStop)
     const [pathSwitch, setPathSwitch] = useState(false);
     const [currRouteId, setCurrRouteId] = useState(null);
     const {userLocation: {lat, lng, zoom, haveUserLocation}, vehicle} = props;
@@ -79,7 +65,7 @@ export default function BusMap(props) {
     const pathTrigger = (routeId) =>{
       // e.preventDefault();
       // console.log('being clicked;=', e.target)
-      setCurrRouteId(routeId)
+      setCurrRouteId(routeId)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
       if (routeId ===  currRouteId ) {
         setPathSwitch(!pathSwitch)
       } else {
@@ -110,6 +96,7 @@ export default function BusMap(props) {
           </BaseLayer>
           
           {pathSwitch && currRouteId? <Polyline color="lime" positions={test}/> : null}
+          {/* <Polyline positions={this takes the coordinates related to the route ID}/> */}
           
           <Overlay checked name="505">
             <FeatureGroup alt="check this box to turn on the layer for route 506">

@@ -1,9 +1,7 @@
 import React from "react";
-import {Map, TileLayer, Marker, Popup, LayersControl, FeatureGroup} from 'react-leaflet';
+import {Marker, Popup} from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-// import './busMap.scss';
-const { BaseLayer, Overlay } = LayersControl;
 
 
 // https://stackoverflow.com/questions/48632123/what-do-the-angle-brackets-and-asterisk-mean-in-react
@@ -41,7 +39,7 @@ const markerRender = (data) =>{
         icon={busIcon}
         position={[info.lat, info.lng]}
         className="test"
-        onClick={()=>{clickMe(info.routeId)}}
+        onClick={()=>{clickMe(`v${info.routeId}`)}}
         // can't do clickMe(), mask it in an arrow
       >
         <Popup>

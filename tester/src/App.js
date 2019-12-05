@@ -15,6 +15,8 @@ export default function App() {
       zoom: 14,
   })
   const [vehicle, setVehicle] = useState({})
+  const [busPath, setBusPath] = useState({})
+  const [busStop, setBusStop] = useState({})
 
   navigator.geolocation.getCurrentPosition((position)=>{
     // console.log(position); // RETURN {coords: Coordinates, timestamp: 1574897414197}
@@ -30,20 +32,22 @@ export default function App() {
   // })
 
   socket.on('busUpdate', data=>{
-    console.log('does socket work on client side?', data)
-    setVehicle(data) // Not need to put data into it's {} or will become props.vehicle.data.v505
+    console.log('bus marker updating from socket', data);
+    setVehicle(data); // Not need to put data into it's {} or will become props.vehicle.data.v505
   });
   socket.on('busPath', data => {
-    console.log('getting paths from socket', data);
+    console.log('bus path updating from socket', data);
+    setBusPath(data);
   });
   socket.on('busStop', data=>{
-    console.log('getting stop data', data);
+    console.log('bus stop updating from socket', data);
+    setBusStop(data);
   })
 
-  const mulProps = { vehicle, userLocation };
+  const busProps = { vehicle, userLocation, busPath, busStop};
 
   return(
-    <BusMap {...mulProps} />
+    <BusMap {...busProps} />
   );
 }
 
