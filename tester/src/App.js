@@ -28,10 +28,16 @@ export default function App() {
   //   // sth runs every render
   // })
 
-  socket.on('busUpdate', (data)=>{
+  socket.on('busUpdate', data=>{
     console.log('does socket work on client side?', data)
     setVehicle(data) // Not need to put data into it's {} or will become props.vehicle.data.v505
   });
+  socket.on('busPath', data => {
+    console.log('getting paths from socket', data);
+  });
+  socket.on('busStop', data=>{
+    console.log('getting stop data', data);
+  })
 
   const mulProps = { vehicle, userLocation };
 
