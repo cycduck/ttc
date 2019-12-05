@@ -3,11 +3,8 @@ const app = express();
 const restbus = require('restbus');
 const cors = require('cors');
 const axios = require('axios');
-// const fs = require('file-system');
 const fs = require('fs');
 
-// const pathData = requiref('./data/path.json');
-// const stopData = require('./data/stop.json');
 const PORT = process.env.PORT || 8080;
 // use the port from the environment variable, else use 8080 https://stackoverflow.com/questions/18864677/what-is-process-env-port-in-node-js
 
@@ -83,7 +80,7 @@ setInterval(routePathTimed, 100000);
 
 
 const busMapping = (axiosdata) => {
-  // console.log('info.directionId', axiosdata) // OK
+
   let conversion = axiosdata.map(info => {
     return {
       busId: info.id,
@@ -98,7 +95,7 @@ const busMapping = (axiosdata) => {
 }
 
 io.on('connect', (socket) => {
-  console.log('You have been shocketed, id: ', socket.id) // OK
+  console.log('You have been shocketed, id: ', socket.id) 
   const vehicleAll = {};
   const x = async () => {
     console.time('process time ');
