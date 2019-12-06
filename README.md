@@ -54,6 +54,7 @@ https://www.framer.com/api/motion/animation/#variants
 https://greensock.com/
 https://codepen.io/maheshambure21/pen/QwXaRw
 https://graphql.org/
+https://tarekraafat.github.io/autoComplete.js/demo/
 
 ### Leaflet JS - May need to come back for styling
 https://reactstrap.github.io/components/tabs/
@@ -84,6 +85,7 @@ Updating a state variable with useState always replaces the previous state, this
 https://socket.io/blog/socket-io-1-4-0/ (compression)
 https://socket.io/get-started/chat/
 https://socket.io/docs/
+https://socket.io/docs/#Using-with-Node-http-server (sending data from client to server)
 https://medium.com/front-end-weekly/what-are-websockets-7bf0e2e1af2
 https://www.youtube.com/watch?v=ggVsXljT0MI
 Games build with slither.io, https://agar.io/

@@ -35,19 +35,24 @@ export default function App() {
     console.log('bus marker updating from socket', data);
     setBus(data); // Not need to put data into it's {} or will become props.vehicle.data.v505
   });
-  socket.on('busPath', data => {
+  socket.binary(false).on('busPath', data => {
     console.log('bus path updating from socket', data);
     setBusPath(data);
   });
-  socket.on('busStop', data=>{
-    console.log('bus stop updating from socket', data);
-    setBusStop(data);
-  })
+
+  const busQuery = (e)=> {
+    console.log(e.target.value)
+    // socket.emit('busStop', e.target.value)
+  }
+  
+  
 
   const busProps = { bus, userLocation, busPath, busStop};
 
   return(
-    <BusMap {...busProps} />
+    <>
+      <BusMap {...busProps} busQuery={busQuery}/>
+    </>
   );
 }
 

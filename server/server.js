@@ -141,18 +141,22 @@ io.on('connect', (socket) => {
   
   let pathData;
   let stopData;
+  // reading file to send data to client, if can't read send empty array
   try {
     pathData = JSON.parse(fs.readFileSync('./data/path.json'));
     stopData = JSON.parse(fs.readFileSync('./data/stop.json'));
     // https://flaviocopes.com/node-reading-files/
- 
   } catch (err) {
     pathData = {};
     stopData = {};
   }
-
-  socket.binary(false).emit('busStop', stopData);
   socket.binary(false).emit('busPath', pathData);
+  
+  socket.on('busStop', data => {
+    console.log(data)
+  });
+  // https://stackoverflow.com/questions/39296328/sending-mouse-click-events-using-socket-io
+
   socket.on('disconnect', ()=>{
     console.log('someone disconnected');
   })
