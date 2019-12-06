@@ -18,7 +18,7 @@ https://react-leaflet.js.org/docs/en/installation
 https://leafletjs.com/reference-1.6.0.html#divicon
 * [x] get the users location 11/28/2019
 * [x] axios get on client app.js 11/28/2019
-* [ ] floating form??? 54:10 w/ react strap
+* [ ] floating for mini welcome info 54:10 w/ react strap
 * [x] modify axios on server side 11/28/2019
 * [x] Optimize with Sockets 11/30/2019
 * [x] Optimize with Hooks 12/2/2019
@@ -26,14 +26,18 @@ https://leafletjs.com/reference-1.6.0.html#divicon
 * [x] retrieve data every 15s 11/28/2019
   * [ ] PROBLEM: API sends new data every 30s
 https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
-* [ ] turn on/off routes
+* [x] turn on/off routes 12/5/2019
 https://leafletjs.com/examples/extending/extending-3-controls.html
 https://stackoverflow.com/questions/31924890/leaflet-js-custom-control-button-add-text-hover
+* [ ] auto suggest bar that suggests stops by code/title
+* [ ] C: POST to server via socket
+* [x] S: restructure search params (3 versions) 12/6/2019
+* [ ] S: filter through the stop data return  coordinates, code, title (for making marker), id and route (key)for predictions
 * [ ] animation transition css 11/29/2019
 * [ ] style the markers better (route on dot)
   * [x] text on dot, centered 11/29/2019
   * [x] size of the dots 11/29/2019
-  * [ ] PROBLEM: some routes are null; SOLUTION: pass route # to the params, make a null specific style?
+  * [x] SOLVED: some routes are null; SOLUTION: pass route # to the params, make a null specific style? 12/5/2019
   * [ ] Can I make the checkboxes bigger?
     https://gis.stackexchange.com/questions/268651/change-the-default-checkbox-in-leaflet
 * [ ] END: MinJS your file!
@@ -49,6 +53,7 @@ https://sparkgeo.com/blog/the-accessibility-of-web-maps/
 https://www.framer.com/api/motion/animation/#variants
 https://greensock.com/
 https://codepen.io/maheshambure21/pen/QwXaRw
+https://graphql.org/
 
 ### Leaflet JS - May need to come back for styling
 https://reactstrap.github.io/components/tabs/
@@ -96,7 +101,7 @@ https://gist.github.com/wesbos/1866f918824936ffb73d8fd0b02879b4
 https://www.valentinog.com/blog/socket-react/
 Verdict: After an hour of trying I guess I don't need axios.all/spread if I am using this
 
-### Bus Route generator, thought process
+### Bus Route generator, thought process -DONE
 clickMe on marker sends routeID, for each of the vROUTEID, generate a polyline, but if I generate them how do I turn them off? OVERLOAD
 
 Instead get the data from the Map.js (DONE) pass the coordinates to the path.
@@ -126,4 +131,10 @@ https://venngage.com/blog/color-blind-friendly-palette/ ARIA
 
 
 
-
+// TODO
+  // when it's connect the socket will run the first timer constantly check the time new Date
+  // if time is between 5am to 3am then start x and set the flag 
+  // if the time is not between the two times, will stop x and set to flag false 
+  // will start x only flag is false 
+  // flag T/F to keep track if x has been called
+  // a second one is the x()

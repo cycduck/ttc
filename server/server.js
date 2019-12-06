@@ -43,16 +43,18 @@ const routePath = async () => {
     // .then will unwrap the info in the promise
     // arguments is a JS object that is dynamic, you have to spread the arguments in order to use in an arrow function
     axios.all(url).then(axios.spread((...arguments) => {
-      const allStop={}
-      const allPath= {}; // route dictionary
+      const queryStop ={};
+      const allStop ={};
+      const allPath = {};
       // for each of the promises
       arguments.forEach(response => {
         let item = response.data;
-        let pathGPS = item.paths.map(path => 
-          path.points.map(
-            points => [points.lat, points.lon]
-          )
-        )
+
+        const queryMapping = (axiosdata) => {
+          let conversion = []
+          axiosdata.forEach(info => info.title && info.code ? conversion.push(info.title, info.code): null)
+          return conversion
+        }
         const stopMapping = (axiosdata) => {
           let conversion = axiosdata.map(info => {
             return {
@@ -65,9 +67,15 @@ const routePath = async () => {
           return conversion
         }
         // make a key and pair it with the stop and path value
+        let pathGPS = item.paths.map(path =>  
+          path.points.map(points => [points.lat, points.lon])
+        )
+        
+        queryStop[item.id] = queryMapping(item.stops)
         allStop[item.id] = stopMapping(item.stops)
         allPath[`v${item.id}`] = pathGPS;
       });
+      fs.writeFile('./data/queryStop.json', JSON.stringify(queryStop), function(err) {console.log(err)})
       fs.writeFile('./data/stop.json', JSON.stringify(allStop), function(err) {console.log(err)});
       fs.writeFile('./data/path.json', JSON.stringify(allPath), function(err) {console.log(err)} )
       console.log('stops and paths DONE');
@@ -81,7 +89,7 @@ const routePath = async () => {
 }
 const routePathTimed = () => {
   let date = new Date()
-  if (date.getHours()=== 13 && date.getMinutes() > 25 && date.getMinutes() < 27 ) {
+  if (date.getHours()=== 14 && date.getMinutes() > 41 && date.getMinutes() < 43 ) {
     console.log(`it's ${date.getHours()}:${date.getMinutes()}, wakey wakey. getting data`);
     routePath(); // calling the route path funtion 
   }
@@ -109,7 +117,7 @@ const busMapping = (axiosdata) => {
 io.on('connect', (socket) => {
   console.log('You have been shocketed, id: ', socket.id) 
   const vehicleAll = {};
-  const x = async () => {
+  const vehicleUpdate = async () => {
     console.time('process time ');
     try{
       let vehicle505 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/vehicles`);
@@ -128,15 +136,9 @@ io.on('connect', (socket) => {
     };
     console.timeEnd('process time ');
   };
-  x(); // start it once then every 15s
-  setInterval(x, 20000);
-  // TODO
-  // when it's connect the socket will run the first timer constantly check the time new Date
-  // if time is between 5am to 3am then start x and set the flag 
-  // if the time is not between the two times, will stop x and set to flag false 
-  // will start x only flag is false 
-  // flag T/F to keep track if x has been called
-  // a second one is the x()
+  vehicleUpdate(); // start it once then every 15s
+  setInterval(vehicleUpdate, 20000);
+  
   let pathData;
   let stopData;
   try {
