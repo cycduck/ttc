@@ -53,8 +53,19 @@ const routePath = async () => {
             points => [points.lat, points.lon]
           )
         )
+        const stopMapping = (axiosdata) => {
+          let conversion = axiosdata.map(info => {
+            return {
+              id: info.id,
+              code: info.code,
+              title: info.title,
+              coordinate: [info.lat, info.lon]
+            }
+          })
+          return conversion
+        }
         // make a key and pair it with the stop and path value
-        allStop[`v${item.id}`] = {stops:item.stops}
+        allStop[item.id] = stopMapping(item.stops)
         allPath[`v${item.id}`] = pathGPS;
       });
       fs.writeFile('./data/stop.json', JSON.stringify(allStop), function(err) {console.log(err)});
@@ -70,12 +81,12 @@ const routePath = async () => {
 }
 const routePathTimed = () => {
   let date = new Date()
-  if (date.getHours()=== 15 && date.getMinutes() > 56 && date.getMinutes() < 58 ) {
+  if (date.getHours()=== 13 && date.getMinutes() > 25 && date.getMinutes() < 27 ) {
     console.log(`it's ${date.getHours()}:${date.getMinutes()}, wakey wakey. getting data`);
     routePath(); // calling the route path funtion 
   }
 }
-
+// routePathTimed()
 setInterval(routePathTimed, 100000);
 
 
