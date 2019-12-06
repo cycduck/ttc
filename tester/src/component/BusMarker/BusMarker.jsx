@@ -20,9 +20,9 @@ const userIcon = L.divIcon({
   iconAnchor: [25,25]
 });
 
-const markerRender = (data) =>{
+const markerRender = (props) =>{
 
-    const {bus, clickMe}=data
+    const {bus, clickMe}=props
     console.log('what is in bus ', bus)
     if (bus){
       return bus.map(info=> {

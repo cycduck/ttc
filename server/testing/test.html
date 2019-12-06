@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Functions 1 | Brainstation</title>
+	<meta charset="utf-8">
+	<title>
+		Demo auto complete
+	</title>
 </head>
 <body>
-  <h1>open the console to get started</h1>
-  <script src="./test.js" defer></script>
+    <h2>The form</h2>
+    <form onsubmit="return validateForm()">
+        <input type="text" name="name" id="name_input" list="huge_list">Name
+		<datalist id="huge_list">
+		</datalist>
+		<br/>
+		<input type="submit">
+	</form>
+
+	<script src="./test.js"></script>
+
 </body>
 </html>

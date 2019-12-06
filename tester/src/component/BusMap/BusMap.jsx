@@ -4,6 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './busMap.scss';
 import BusMarker from '../BusMarker/BusMarker';
+import StopMarker from '../StopMarker/StopMarker';
 const { BaseLayer, Overlay } = LayersControl;
 // https://leafletjs.com/reference-1.5.0.html#featuregroup
 
@@ -18,10 +19,10 @@ const userIcon = L.divIcon({
 
 
 export default function BusMap(props) {
-  console.log('what is here' , props.bus)
+  console.log('what is here' , props)
   const [pathSwitch, setPathSwitch] = useState(false);
   const [currRouteId, setCurrRouteId] = useState(null);
-  const {userLocation: {lat, lng, zoom, haveUserLocation}, bus} = props;
+  const {userLocation: {lat, lng, zoom, haveUserLocation}, bus, busPath, busStop} = props;
   
   const pathTrigger = (routeId) =>{
 
@@ -31,8 +32,6 @@ export default function BusMap(props) {
       setPathSwitch(!pathSwitch)
     })
     
-    console.log('props.busPath.routeId' , routeId, props.busPath[routeId])
-    console.log('props.busPath.currRouteId' , props.busPath[currRouteId])
     }
     
     
@@ -56,7 +55,7 @@ export default function BusMap(props) {
             />
           </BaseLayer>
           
-          {pathSwitch? <Polyline color="#601A4A" positions={props.busPath[currRouteId]}/> : null}
+          {pathSwitch? <Polyline color="#601A4A" positions={busPath[currRouteId]}/> : null}
           {/* <Polyline positions={this takes the coordinates related to the route ID}/> */}
           
           <Overlay checked name="505">
@@ -76,6 +75,11 @@ export default function BusMap(props) {
               <BusMarker bus={bus.v510} clickMe={pathTrigger}/>
             </FeatureGroup>
           </Overlay>
+
+          {/* <FeatureGroup> */}
+            {Object.keys(busStop).length>0 ? <StopMarker busStop={busStop} /> : null}
+            
+          {/* </FeatureGroup> */}
 
           <Overlay checked name="Your Location">
             {
