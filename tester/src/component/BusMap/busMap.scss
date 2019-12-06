@@ -11,12 +11,10 @@ body {
 .map {
   height: 100%;
 
-  // background-color: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-
-  &__bus-icon-505 {
-    border: 1.5px solid #802A30;
+  &__bus-icon-0 {
+    border: 1.5px solid #EE442F;
     border-radius: 50%;
-    background: #FF5460;
+    background: #F9F4EC;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,21 +22,18 @@ body {
     // w/h does not apply here
     transition: all 3s ease-in-out;    
   }
-      // &__bus-icon-505:hover {
-      //   width: 50px !important;
-      //   height: 50px !important;
-      // }
-  &__bus-icon-inner-505{
-    color: rgb(92, 34, 38);
+  // E/S: 0 W/N: 1
+  &__bus-icon-inner-0{
+    color: #EE442F;
     margin: 0;
     text-align: center;
     line-height: 1;
     font-size: 0.8rem;
   }
-  &__bus-icon-506 {
-    border: 1.5px solid #2A7180;
+  &__bus-icon-1 {
+    border: 1.5px solid #F9F4EC;
     border-radius: 50%;
-    background: #A1EFFF;
+    background: #EE442F;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,8 +41,8 @@ body {
     // w/h does not apply here
     transition: all 5s ease-in-out
   }
-  &__bus-icon-inner-506{
-    color: #3C7880;
+  &__bus-icon-inner-1{
+    color: #F9F4EC;
     margin: 0;
     text-align: center;
     line-height: 1;

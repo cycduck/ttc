@@ -23,32 +23,35 @@ const userIcon = L.divIcon({
 const markerRender = (data) =>{
 
     const {bus, clickMe}=data
+    console.log('what is in bus ', bus)
     if (bus){
       return bus.map(info=> {
 
-      const direction = `${info.directionId ? info.directionId : ""}`
-      const busIcon = L.divIcon({
-        className: `map__bus-icon-${info.routeId}`,
-        html: `<p class='map__bus-icon-inner-${info.routeId}'>${info.routeId} <span class="map__bus-icon-span">${direction}</span></p>`,
+        const direction = info.directionId
+        const busIcon = L.divIcon({
+        className: `map__bus-icon-${info.directionId}`,
+        html: `<p class='map__bus-icon-inner-${info.directionId}'>${info.routeId}</p>`,
         iconSize: [35,35],
         iconAnchor: [15,15]
       });
 
-      return (
-      <Marker 
-        icon={busIcon}
-        position={[info.lat, info.lng]}
-        className="test"
-        onClick={()=>{clickMe(`v${info.routeId}`)}}
-        // can't do clickMe(), mask it in an arrow
-      >
-        <Popup>
-          <p>Route: {info.routeId}</p>
-          <p>Direction: {info.directionId}</p>
-          <p>Coordinates: {info.lat}, {info.lng}</p>
-        </Popup>
-      </Marker>
-      )
+      if(info.directionId && info.routeId) { // render only if direction and bus route exist
+        return (
+          <Marker 
+            icon={busIcon}
+            position={[info.lat, info.lng]}
+            className="test"
+            onClick={()=>{clickMe(`v${info.routeId}`)}}
+            // can't do clickMe(), mask it in an arrow
+          >
+            <Popup>
+              <p>Route: {info.routeId}</p>
+              <p>Direction: {info.directionId}</p>
+              <p>Coordinates: {info.lat}, {info.lng}</p>
+            </Popup>
+          </Marker>
+          )
+      }
     })
   } 
 }

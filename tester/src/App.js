@@ -14,7 +14,7 @@ export default function App() {
       haveUserLocation: false, // intital state is userIcon doesn't show
       zoom: 14,
   })
-  const [vehicle, setVehicle] = useState({})
+  const [bus, setBus] = useState({})
   const [busPath, setBusPath] = useState({})
   const [busStop, setBusStop] = useState({})
 
@@ -33,7 +33,7 @@ export default function App() {
 
   socket.on('busUpdate', data=>{
     console.log('bus marker updating from socket');
-    setVehicle(data); // Not need to put data into it's {} or will become props.vehicle.data.v505
+    setBus(data); // Not need to put data into it's {} or will become props.vehicle.data.v505
   });
   socket.on('busPath', data => {
     console.log('bus path updating from socket', data);
@@ -44,7 +44,7 @@ export default function App() {
     setBusStop(data);
   })
 
-  const busProps = { vehicle, userLocation, busPath, busStop};
+  const busProps = { bus, userLocation, busPath, busStop};
 
   return(
     <BusMap {...busProps} />

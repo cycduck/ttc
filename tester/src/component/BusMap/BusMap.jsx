@@ -5,19 +5,9 @@ import 'leaflet/dist/leaflet.css';
 import './busMap.scss';
 import BusMarker from '../BusMarker/BusMarker';
 const { BaseLayer, Overlay } = LayersControl;
-const r505 = require('../../r505');
 // https://leafletjs.com/reference-1.5.0.html#featuregroup
 
-const {paths} = r505
 
-
-const test = paths.map(path => 
-  path.points.map(points =>  [points.lat, points.lon])
-)
-// const pathsArr = paths.map(lineVal => lineVal.points.map(pointVal => [pointVal.lat, pointVal.lon]));
-
-
-console.log(test)
 
 const userIcon = L.divIcon({
   className: 'map__user-icon',
@@ -27,27 +17,11 @@ const userIcon = L.divIcon({
 
 
 
-const routePaths = {
-  v505: [
-    [43.65194, -79.40236],
-    [43.65202,-79.40225],
-    [43.65278, -79.39834],
-    [43.65294, -79.39804],
-    [43.65307, -79.39742],
-    [43.65325, -79.39625]
-  ],
-  // 506: [
-
-  // ]
-}
-
-
-
 export default function BusMap(props) {
-  // console.log('what is here' , props.busStop)
+  console.log('what is here' , props.bus)
   const [pathSwitch, setPathSwitch] = useState(false);
   const [currRouteId, setCurrRouteId] = useState(null);
-  const {userLocation: {lat, lng, zoom, haveUserLocation}, vehicle} = props;
+  const {userLocation: {lat, lng, zoom, haveUserLocation}, bus} = props;
   
   const pathTrigger = (routeId) =>{
 
@@ -82,18 +56,24 @@ export default function BusMap(props) {
             />
           </BaseLayer>
           
-          {pathSwitch? <Polyline color="white" positions={props.busPath[currRouteId]}/> : null}
+          {pathSwitch? <Polyline color="#601A4A" positions={props.busPath[currRouteId]}/> : null}
           {/* <Polyline positions={this takes the coordinates related to the route ID}/> */}
           
           <Overlay checked name="505">
-            <FeatureGroup alt="check this box to turn on the layer for route 506">
-            <BusMarker bus={vehicle.v505} clickMe={pathTrigger}/>
+            <FeatureGroup>
+            <BusMarker bus={bus.v505} clickMe={pathTrigger}/>
             </FeatureGroup>
           </Overlay>
           
           <Overlay checked name="506">
-            <FeatureGroup alt="check this box to turn on the layer for route 506">
-              <BusMarker bus={vehicle.v506} clickMe={pathTrigger}/>
+            <FeatureGroup>
+              <BusMarker bus={bus.v506} clickMe={pathTrigger}/>
+            </FeatureGroup>
+          </Overlay>
+
+          <Overlay checked name="510">
+            <FeatureGroup>
+              <BusMarker bus={bus.v510} clickMe={pathTrigger}/>
             </FeatureGroup>
           </Overlay>
 

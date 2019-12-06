@@ -62,7 +62,7 @@ const routePath = async () => {
       console.log('stops and paths DONE');
     }))
     .catch(err => {
-      console.log('failt at writing file ', err)
+      console.log('fail at writing file ', err)
     })
   } catch (err) {
     console.log('axios all error test 2 ', err)
@@ -82,10 +82,11 @@ setInterval(routePathTimed, 100000);
 const busMapping = (axiosdata) => {
 
   let conversion = axiosdata.map(info => {
+    let i = info.directionId ? info.directionId.indexOf("_")+1 : -1
     return {
       busId: info.id,
       routeId: info.routeId,
-      directionId: (info.directionId ? (info.directionId[4] == 0 ? "E" : "W") : null), // E/S: 0 W/N: 1
+      directionId: (i > 0 ? info.directionId[i] : null), // E/S: 0 W/N: 1
       kph: info.kph,
       lat: info.lat,
       lng: info.lon
@@ -100,12 +101,14 @@ io.on('connect', (socket) => {
   const x = async () => {
     console.time('process time ');
     try{
-      let vehicle505 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/vehicles`) // vehicles for 505
-      let vehicle506 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/506/vehicles`) // vehicles for 506
+      let vehicle505 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/vehicles`);
+      let vehicle506 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/506/vehicles`);
+      let vehicle510 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/510/vehicles`);
 
-      vehicleAll[`v${vehicle505.data[0].routeId}`] = busMapping(vehicle505.data)
-      vehicleAll[`v${vehicle506.data[0].routeId}`] = busMapping(vehicle506.data) // Processing time is insignificant
-  
+      vehicleAll[`v${vehicle505.data[0].routeId}`] = busMapping(vehicle505.data);
+      vehicleAll[`v${vehicle506.data[0].routeId}`] = busMapping(vehicle506.data);
+      vehicleAll[`v${vehicle510.data[0].routeId}`] = busMapping(vehicle510.data);
+
       // fs.writeFile('./data/data.json', JSON.stringify(vehicleAll), function (err) {console.log(err)})
       socket.binary(false).emit('busUpdate', vehicleAll);
       // JSON isn't binary
@@ -115,7 +118,7 @@ io.on('connect', (socket) => {
     console.timeEnd('process time ');
   };
   x(); // start it once then every 15s
-  setInterval(x, 15000);
+  setInterval(x, 20000);
   // TODO
   // when it's connect the socket will run the first timer constantly check the time new Date
   // if time is between 5am to 3am then start x and set the flag 

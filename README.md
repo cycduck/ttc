@@ -63,6 +63,7 @@ https://github.com/PaulLeCam/react-leaflet/blob/master/example/components/custom
 ### Intervals - DONE
 https://stackoverflow.com/questions/55510809/axios-auto-refresh-every-60-seconds-with-reactjs
 https://javascript.info/settimeout-setinterval
+https://alligator.io/js/settimeout-setinterval/
 Do I need to set a stop or just let the server run???
 
 ### Hooks - Priority 1 - DONE +0 on performance audit (probably because I added new things :|)
@@ -121,7 +122,7 @@ https://codepen.io/adammertel/pen/MYVRZE
 http://bl.ocks.org/andyreagan/c81461c8a8ce52d103fc92decf9650b6
 https://github.com/bozdoz/wp-plugin-leaflet-map#leaflet-map-options
 https://www.youtube.com/watch?v=NA5xcQSM5GA
-https://alligator.io/js/settimeout-setinterval/
+https://venngage.com/blog/color-blind-friendly-palette/ ARIA
 
 
 
