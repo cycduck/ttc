@@ -3,6 +3,7 @@ import ioClient from "socket.io-client";
 // endpoint GET /socket.io/socket.io.js
 import BusMap from "./component/BusMap";
 import './App.scss';
+import Search from "./component/Search/Search";
 
 
 const socket = ioClient('http://localhost:8080/') // change to localhost
@@ -41,16 +42,22 @@ export default function App() {
   });
 
   const busQuery = (e)=> {
-    console.log(e.target.value)
-    // socket.emit('busStop', e.target.value)
+    if(e.target.value.length >3 ) {
+      console.log('searching... ', e.target.value);
+      socket.emit('busStop', e.target.value);
+    }
   }
-  
+  socket.on('search result', data => {
+    console.log(data);
+    // what's the action here?
+  })
   
 
   const busProps = { bus, userLocation, busPath, busStop};
 
   return(
     <>
+      <Search busQuery={busQuery}/>
       <BusMap {...busProps} busQuery={busQuery}/>
     </>
   );

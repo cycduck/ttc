@@ -1,56 +1,78 @@
-window.addEventListener("load", function(){
-	// Add a keyup event listener to our input element
-	document.getElementById('name_input').addEventListener("keyup", function(event){hinter(event)});
-	// create one global XHR object 
-	// so we can abort old requests when a new one is make
-	window.hinterXHR = new XMLHttpRequest();
-});
-
-// Autocomplete for form
-function hinter(event) {
-	var input = event.target;
-	var huge_list = document.getElementById('huge_list');
-	// minimum number of characters before we start to generate suggestions
-	var min_characters = 0;
-
-	if (!isNaN(input.value) || input.value.length < min_characters ) { 
-		return;
-	} else { 
-		window.hinterXHR.abort();
-		window.hinterXHR.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-				var response = JSON.parse( this.responseText ); 
-				huge_list.innerHTML = "";
-
-				response.forEach(function(item) {
-                    // Create a new <option> element.
-                    var option = document.createElement('option');
-                    option.value = item;
-                    huge_list.appendChild(option);
-                });
-			}
-		};
-		window.hinterXHR.open("GET", "/server/testing/query.php?query=" + input.value, true);
-		window.hinterXHR.send()
-	}
+let data = {
+  "5": [
+    "Eglinton Station",
+    "14668",
+    "Eglinton Ave West At Henning Ave",
+    "2360",
+    "Eglinton Ave West At Lascelles Blvd",
+    "2375",
+    "1461",
+    "Queen'S Park Cres West At Hart House",
+    "1457",
+    "Queen'S Park Cres West At University Library",
+    "1463",
+    "Queen'S Park Cres At College St (Queen'S Park Station)",
+    "1615",
+    "University Ave At Gerrard St West",
+    "1616",
+    "Elm St At University Ave East Side",
+    "1053",
+    "Gerrard St West At Elizabeth St West Side",
+    "1088",
+    "Gerrard St East At University Ave"
+  ],
+  "32": [
+    "Eglinton Ave West At Elmsthorpe Ave",
+    "2346",
+    "Eglinton Ave West At Avenue Rd East Side",
+    "11488",
+    "Eglinton Ave West At Oriole Pkwy East Side",
+    "2394",
+    "Eglinton Ave West At Lascelles Blvd East Side",
+    "2374",
+    "Eglinton Ave West At Duplex Ave",
+    "2342",
+    "Emmett Ave At Verona Ave",
+    "2423",
+    "Emmett Ave At Jane St",
+    "2427",
+    "Jane St At Goldwin Ave South Side",
+    "2735",
+    "Pine St At Lawrence Ave West",
+    "3021",
+    "Lawrence Ave West At Jane St",
+    "2824",
+    "Jane St At Wright Ave",
+    "2740",
+    "Jane St At Harding Ave",
+    "2375"
+  ]
 }
 
-function validateForm(){
+// FOR EACH RETURNS UNDEFINED
+let x = Object.values(data).forEach(info=> {
+	return info.filter(info => {
+		info === '14668'
+	})
+})
 
-	// Get the input element
-	var input = document.getElementById('name_input');
-	// Get the datalist
-	var huge_list = document.getElementById('huge_list');
+Object.values(data).forEach(info=> {
+	let x =  info.filter(info => {
+		info == '14668'
+	})
+	console.log(x) // even if you console here, there's no return up there...
+})
 
+Object.values(data).forEach(info=> {
+	let x =  info.filter(info => return {
+		info == '14668'
+	})
+})
 
-	// If we find the input inside our list, we submit the form
-	for (var element of huge_list.children) {
-		if(element.value == input.value) {
-			return true;
-		}
-	}
-
-	// we send an error message
-	alert("name input is invalid")
-	return false;
-}
+Object.values(data).forEach(info=> {
+	let x =  info.filter(info => {
+		console.log(info == '14668')
+		return info == '14668'
+	})
+	console.log(x)
+})

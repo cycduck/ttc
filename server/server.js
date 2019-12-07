@@ -137,7 +137,7 @@ io.on('connect', (socket) => {
     console.timeEnd('process time ');
   };
   vehicleUpdate(); // start it once then every 15s
-  setInterval(vehicleUpdate, 20000);
+  setInterval(vehicleUpdate, 30000);
   
   let pathData;
   let stopData;
@@ -145,6 +145,7 @@ io.on('connect', (socket) => {
   try {
     pathData = JSON.parse(fs.readFileSync('./data/path.json'));
     stopData = JSON.parse(fs.readFileSync('./data/stop.json'));
+    queryStop = JSON.parse(fs.readFileSync('./data/queryStop.json'));
     // https://flaviocopes.com/node-reading-files/
   } catch (err) {
     pathData = {};
@@ -153,7 +154,22 @@ io.on('connect', (socket) => {
   socket.binary(false).emit('busPath', pathData);
   
   socket.on('busStop', data => {
-    console.log(data)
+    data = data.trim();
+    if (typeof data === "string") {
+      data = data.toLowerCase()
+    }
+    console.log('search params', data);
+    Object.values(queryStop).forEach(route => {
+      let searchMatch = route.filter(word=> {
+        word = word.trim();
+        if(typeof word === "string") {
+          word = word.toLowerCase()
+        }
+        return word.includes(data)
+      })
+      socket.emit('search result', searchMatch)
+    }
+    )
   });
   // https://stackoverflow.com/questions/39296328/sending-mouse-click-events-using-socket-io
 
@@ -162,24 +178,7 @@ io.on('connect', (socket) => {
   })
 }
   ////////
-  // console.time('process time to filter through vehicle list for 506 ');
   // axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/vehicles`) // all vehicles
-  // .then(response => {
-    
-  //   // test filter through the route in the vehicle, average 0.001s
-  //   let vehicle506 = response.data.find(info => {
-  //     return info.routeId === '506'
-  //   })
-  //   let vehicle505 = response.data.find(info => {
-  //     return info.routeId === '505'
-  //   })
-  //   const vehicleAll = [vehicle505, vehicle506]
-  //   res.json(vehicleAll)
-  //   console.timeEnd('process time to filter through vehicle list for 506 ');
-  // })
-  // .catch(err => {
-  //   console.log(err);
-  // })
   ////////
 )
 
