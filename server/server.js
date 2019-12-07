@@ -153,7 +153,7 @@ io.on('connect', (socket) => {
   }
   socket.binary(false).emit('busPath', pathData);
   
-  socket.on('busStop', data => {
+  socket.on('search input', data => {
     data = data.trim();
     if (typeof data === "string") {
       data = data.toLowerCase()
@@ -167,10 +167,13 @@ io.on('connect', (socket) => {
         }
         return word.includes(data)
       })
-      socket.emit('search result', searchMatch)
-    }
-    )
+      socket.emit('search suggestion', searchMatch)
+    })
   });
+  socket.on('search submit', data => {
+    console.log('search submission received', data);
+    
+  })
   // https://stackoverflow.com/questions/39296328/sending-mouse-click-events-using-socket-io
 
   socket.on('disconnect', ()=>{

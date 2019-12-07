@@ -44,20 +44,24 @@ export default function App() {
   const busQuery = (e)=> {
     if(e.target.value.length >3 ) {
       console.log('searching... ', e.target.value);
-      socket.emit('busStop', e.target.value);
+      socket.emit('search input', e.target.value);
     }
   }
-  socket.on('search result', data => {
+  socket.on('search suggestion', data => {
     console.log(data);
     // what's the action here?
   })
-  
+  const searchPOST =(e) => {
+    e.preventDefault();
+    console.log('sending values ', e.target.search.value);
+    socket.emit('search submit', e.target.search.value)
+  }
 
   const busProps = { bus, userLocation, busPath, busStop};
 
   return(
     <>
-      <Search busQuery={busQuery}/>
+      <Search busQuery={busQuery} searchPOST={searchPOST}/>
       <BusMap {...busProps} busQuery={busQuery}/>
     </>
   );
