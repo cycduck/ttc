@@ -184,9 +184,13 @@ io.on('connect', (socket) => {
             direction.data.directions.forEach(dirTitle=> {
               direcitonArr.push(dirTitle.title);
               stopArr[dirTitle.title] = dirTitle.stops;
-              console.log(stopArr)
             });
-            socket.binary(false).emit('direction suggestion', [direcitonArr, stopArr]);
+            // socket.binary(false).emit('direction suggestion', [direcitonArr, stopArr]);
+            console.log(stopArr)
+            Object.values(stopArr).forEach(direction => {
+              direction.findIndex(info => info === direction.data)
+              // find all the indexes in direction.data.stops[i].code that matches with the array for stopArr
+            })
           }catch (err){
             console.log('axios not found', err);
           }
