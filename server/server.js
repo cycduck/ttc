@@ -180,17 +180,8 @@ io.on('connect', (socket) => {
             let routeIdUrl = routeAxios.data[i]._links.self.href;
             let direction = await axios(routeIdUrl);
             let direcitonArr = [];
-            let stopArr = {};
-            direction.data.directions.forEach(dirTitle=> {
-              direcitonArr.push(dirTitle.title);
-              stopArr[dirTitle.title] = dirTitle.stops;
-            });
-            // socket.binary(false).emit('direction suggestion', [direcitonArr, stopArr]);
-            console.log(stopArr)
-            Object.values(stopArr).forEach(direction => {
-              direction.findIndex(info => info === direction.data)
-              // find all the indexes in direction.data.stops[i].code that matches with the array for stopArr
-            })
+            direction.data.directions.forEach(dirTitle=> direcitonArr.push(dirTitle.title));
+            socket.binary(false).emit('direction suggestion', [direcitonArr, routeAxios.data[i].id])
           }catch (err){
             console.log('axios not found', err);
           }

@@ -19,7 +19,7 @@ export default function App() {
   const [busPath, setBusPath] = useState({});
   const [busSuggestion, setBusSuggestion] = useState([]);
   const [dirSuggestion, setDirSuggestion] = useState([]);
-  const [stopSuggestion, setStopSuggestion] = useState([]);
+  const [routeId, setRouteId] = useState("");
 
   navigator.geolocation.getCurrentPosition((position)=>{
     // console.log(position); // RETURN {coords: Coordinates, timestamp: 1574897414197}
@@ -59,17 +59,17 @@ export default function App() {
   }
   socket.on('direction suggestion', data => {
     setDirSuggestion(data[0]);
-    setStopSuggestion(data[1]);
+    setRouteId(data[1]);
   })
 
   const dirPOST =(e)=>{
     console.log('searching direction ', e.target.value);
-    socket.emit('direction input', e.target.value)
+    socket.emit('direction input', [e.target.value, routeId])
   }
   
 
   const busProps = {bus, userLocation, busPath};
-  const searchProps = {routeSearch, searchPOST, busSuggestion, dirSuggestion, dirPOST, stopSuggestion}
+  const searchProps = {routeSearch, searchPOST, busSuggestion, dirSuggestion, dirPOST, routeId}
 
   return(
     <>
