@@ -151,24 +151,7 @@ io.on('connect', (socket) => {
     let searchMatch = queryStop.filter(route => route.trim().includes(data.trim()));
     socket.emit('search suggestion', searchMatch.slice(0,5));
   })
-// });
-  // socket.on('search input', data => {
-  //   data = data.trim();
-  //   if (typeof data === "string") {
-  //     data = data.toLowerCase()
-  //   }
-  //   console.log('search params', data);
-  //   Object.values(queryStop).forEach(route => {
-  //     let searchMatch = route.filter(word=> {
-  //       word = word.trim();
-  //       if(typeof word === "string") {
-  //         word = word.toLowerCase()
-  //       }
-  //       return word.includes(data)
-  //     })
-  //     socket.emit('search suggestion', searchMatch)
-  //   })
-  // });
+  
   socket.on('search submit', data => {
     console.log('search submission received', data);
     queryStop.forEach(info => {
@@ -191,7 +174,28 @@ io.on('connect', (socket) => {
     }) 
   })
   socket.on('direction input', data => {
-    console.log('direction input', data)
+    console.log('direction input', data[0], data[1])
+    const routeIdUrl = async () => {
+      try {
+        let direction = await axios(`http://localhost:${PORT}/restbus/agencies/ttc/routes/${data[1]}`);
+        let i = direction.data.directions.findIndex(info => info.title === data[0]);
+        let stopArr = direction.data.directions[i].stops;
+        // console.log(stopArr)
+        direction.data.stops.forEach(stops => {
+          stopArr.forEach(info => {
+            // console.log("stops.code ", stops.id, 'info', info, 'compare', stops.code === info)
+            if (stops.id === info) {
+              console.log('hello')
+              // ok this works but apparent the code is ID so switching back for now
+            }
+
+          })
+        })
+      }catch (err) {
+        console.log('axios not found', err)
+      }
+    }
+    routeIdUrl()
   })
   // https://stackoverflow.com/questions/39296328/sending-mouse-click-events-using-socket-io
 
