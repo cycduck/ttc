@@ -15,9 +15,11 @@ export default function App() {
       haveUserLocation: false, // intital state is userIcon doesn't show
       zoom: 14,
   })
-  const [bus, setBus] = useState({})
-  const [busPath, setBusPath] = useState({})
-  const [busStop, setBusStop] = useState({})
+  const [bus, setBus] = useState({});
+  const [busPath, setBusPath] = useState({});
+  const [busSuggestion, setBusSuggestion] = useState([]);
+  const [dirSuggestion, setDirSuggestion] = useState([]);
+  const [stopSuggestion, setStopSuggestion] = useState([]);
 
   navigator.geolocation.getCurrentPosition((position)=>{
     // console.log(position); // RETURN {coords: Coordinates, timestamp: 1574897414197}
@@ -28,9 +30,6 @@ export default function App() {
       zoom: 16,
     })
   })
-  // useEffect(()=>{
-  //   // sth runs every render
-  // })
 
   socket.on('busUpdate', data=>{
     console.log('bus marker updating from socket', data);
@@ -41,28 +40,41 @@ export default function App() {
     setBusPath(data);
   });
 
-  const busQuery = (e)=> {
-    if(e.target.value.length >3 ) {
-      console.log('searching... ', e.target.value);
+  const routeSearch = (e)=> {
+      console.log('searching bus route ', e.target.value);
       socket.emit('search input', e.target.value);
-    }
   }
   socket.on('search suggestion', data => {
-    console.log(data);
-    // what's the action here?
+    setBusSuggestion(data)
   })
   const searchPOST =(e) => {
     e.preventDefault();
-    console.log('sending values ', e.target.search.value);
-    socket.emit('search submit', e.target.search.value)
-  }
+    if(e.target.value ) {
+      socket.emit('search submit', e.target.value)
+    } else if (e.target.routeSearch.value) {
+      socket.emit('search submit', e.target.routeSearch.value)
+    }
 
-  const busProps = { bus, userLocation, busPath, busStop};
+    // when typed u it breaks ???
+  }
+  socket.on('direction suggestion', data => {
+    setDirSuggestion(data[0]);
+    setStopSuggestion(data[1]);
+  })
+
+  const dirPOST =(e)=>{
+    console.log('searching direction ', e.target.value);
+    socket.emit('direction input', e.target.value)
+  }
+  
+
+  const busProps = {bus, userLocation, busPath};
+  const searchProps = {routeSearch, searchPOST, busSuggestion, dirSuggestion, dirPOST, stopSuggestion}
 
   return(
     <>
-      <Search busQuery={busQuery} searchPOST={searchPOST}/>
-      <BusMap {...busProps} busQuery={busQuery}/>
+      <Search searchProps={searchProps} />
+      <BusMap {...busProps} />
     </>
   );
 }

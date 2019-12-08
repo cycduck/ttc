@@ -19,7 +19,6 @@ const userIcon = L.divIcon({
 
 
 export default function BusMap(props) {
-  console.log('what is here' , props)
   const [pathSwitch, setPathSwitch] = useState(false);
   const [currRouteId, setCurrRouteId] = useState(null);
   const {userLocation: {lat, lng, zoom, haveUserLocation}, bus, busPath, busStop} = props;
@@ -77,7 +76,7 @@ export default function BusMap(props) {
           </Overlay>
 
           {/* <FeatureGroup> */}
-            {Object.keys(busStop).length>0 ? <StopMarker busStop={busStop} /> : null}
+            {/* {Object.keys(busStop).length>0 ? <StopMarker busStop={busStop} /> : null} */}
             
           {/* </FeatureGroup> */}
 

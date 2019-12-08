@@ -27,6 +27,9 @@ const routePath = async () => {
   try {
     let allRoute = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/`)
     let routeId = await allRoute.data.map(info=> info.id) // returns an array of all route id
+    let queryStop = [];
+    allRoute.data.forEach(info => queryStop.push(info.title))
+    fs.writeFile('./data/queryStop.json', JSON.stringify(queryStop), function(err) {console.log(err)})
     // for each of the url
     let url = routeId.map((info, index) => {
       // create a new promise (at state pending)
@@ -43,18 +46,12 @@ const routePath = async () => {
     // .then will unwrap the info in the promise
     // arguments is a JS object that is dynamic, you have to spread the arguments in order to use in an arrow function
     axios.all(url).then(axios.spread((...arguments) => {
-      const queryStop ={};
       const allStop ={};
       const allPath = {};
       // for each of the promises
       arguments.forEach(response => {
         let item = response.data;
 
-        const queryMapping = (axiosdata) => {
-          let conversion = []
-          axiosdata.forEach(info => info.title && info.code ? conversion.push(info.title, info.code): null)
-          return conversion
-        }
         const stopMapping = (axiosdata) => {
           let conversion = axiosdata.map(info => {
             return {
@@ -71,16 +68,13 @@ const routePath = async () => {
           path.points.map(points => [points.lat, points.lon])
         )
         
-        queryStop[item.id] = queryMapping(item.stops)
         allStop[item.id] = stopMapping(item.stops)
         allPath[`v${item.id}`] = pathGPS;
       });
-      fs.writeFile('./data/queryStop.json', JSON.stringify(queryStop), function(err) {console.log(err)})
       fs.writeFile('./data/stop.json', JSON.stringify(allStop), function(err) {console.log(err)});
       fs.writeFile('./data/path.json', JSON.stringify(allPath), function(err) {console.log(err)} )
       console.log('stops and paths DONE');
-    }))
-    .catch(err => {
+    })).catch(err => {
       console.log('fail at writing file ', err)
     })
   } catch (err) {
@@ -137,7 +131,7 @@ io.on('connect', (socket) => {
     console.timeEnd('process time ');
   };
   vehicleUpdate(); // start it once then every 15s
-  setInterval(vehicleUpdate, 30000);
+  // setInterval(vehicleUpdate, 30000);
   
   let pathData;
   let stopData;
@@ -154,25 +148,55 @@ io.on('connect', (socket) => {
   socket.binary(false).emit('busPath', pathData);
   
   socket.on('search input', data => {
-    data = data.trim();
-    if (typeof data === "string") {
-      data = data.toLowerCase()
-    }
-    console.log('search params', data);
-    Object.values(queryStop).forEach(route => {
-      let searchMatch = route.filter(word=> {
-        word = word.trim();
-        if(typeof word === "string") {
-          word = word.toLowerCase()
-        }
-        return word.includes(data)
-      })
-      socket.emit('search suggestion', searchMatch)
-    })
-  });
+    let searchMatch = queryStop.filter(route => route.trim().includes(data.trim()));
+    socket.emit('search suggestion', searchMatch.slice(0,5));
+  })
+// });
+  // socket.on('search input', data => {
+  //   data = data.trim();
+  //   if (typeof data === "string") {
+  //     data = data.toLowerCase()
+  //   }
+  //   console.log('search params', data);
+  //   Object.values(queryStop).forEach(route => {
+  //     let searchMatch = route.filter(word=> {
+  //       word = word.trim();
+  //       if(typeof word === "string") {
+  //         word = word.toLowerCase()
+  //       }
+  //       return word.includes(data)
+  //     })
+  //     socket.emit('search suggestion', searchMatch)
+  //   })
+  // });
   socket.on('search submit', data => {
     console.log('search submission received', data);
-    
+    queryStop.forEach(info => {
+      if(info.trim() === data.trim()) {
+        const route = async () => {
+          try {
+            let routeAxios = await axios(`http://localhost:${PORT}/restbus/agencies/ttc/routes/`);
+            let i = routeAxios.data.findIndex(info => info.title === data);
+            let routeIdUrl = routeAxios.data[i]._links.self.href;
+            let direction = await axios(routeIdUrl);
+            let direcitonArr = [];
+            let stopArr = {};
+            direction.data.directions.forEach(dirTitle=> {
+              direcitonArr.push(dirTitle.title);
+              stopArr[dirTitle.title] = dirTitle.stops;
+              console.log(stopArr)
+            });
+            socket.binary(false).emit('direction suggestion', [direcitonArr, stopArr]);
+          }catch (err){
+            console.log('axios not found', err);
+          }
+        }
+        route()
+      }
+    }) 
+  })
+  socket.on('direction input', data => {
+    console.log('direction input', data)
   })
   // https://stackoverflow.com/questions/39296328/sending-mouse-click-events-using-socket-io
 
@@ -180,9 +204,9 @@ io.on('connect', (socket) => {
     console.log('someone disconnected');
   })
 }
-  ////////
-  // axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/vehicles`) // all vehicles
-  ////////
+//   ////////
+//   // axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/vehicles`) // all vehicles
+//   ////////
 )
 
 

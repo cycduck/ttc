@@ -118,6 +118,17 @@ When a marker is clicked, send ID to state which stores ID and use an event list
 if pathSwitch is T, generate Polyline by grabbing the ID from the state
 Q: do I need to set state for ID?
 
+### Bus Stop generator
+* Proposal 1: -FAIL
+Save a flat array of of codes and stops, server returns suggestion, client POST selection, server finds a match of code/stop, return ID (key) and stop id (key:stop:id), apply to dynamic axios get route, send predictions 
+However, some stops have the same title and codes are also not unique
+
+*Proposal 2: 
+client POST bus number/name, server search through all routes find title key, returns 
+
+### Datalist
+onClick/onSelect do not work on option, put onInput to trigger event!
+https://stackoverflow.com/questions/30022728/perform-action-when-clicking-html5-datalist-option
 
 ### Optimization
 https://eloquentjavascript.net/11_async.html
