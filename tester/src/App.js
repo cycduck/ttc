@@ -9,11 +9,15 @@ import Search from "./component/Search/Search";
 const socket = ioClient('http://localhost:8080/') // change to localhost
 
 export default function App() {
-  const [userLocation, setUserLocation] = useState({
+  const [mapCenter, setMapCenter] = useState({
       lat: 43.66, // does this have to be array of object? 
       lng: -79.38,
-      haveUserLocation: false, // intital state is userIcon doesn't show
-      zoom: 14,
+      zoom: 14
+  })
+  const [userLocation, setUserLocation] = useState({
+    lat: 43.66,
+    lng: -79.38,
+    haveUserLocation: false // intital state is userIcon doesn't show
   })
   const [bus, setBus] = useState({});
   const [busPath, setBusPath] = useState({});
@@ -29,8 +33,12 @@ export default function App() {
     setUserLocation({
       lat: position.coords.latitude,
       lng: position.coords.longitude,
-      haveUserLocation: true, // intital state is userIcon doesn't show
-      zoom: 16,
+      haveUserLocation: true // intital state is userIcon doesn't show
+    })
+    setMapCenter({
+      lat: position.coords.latitude,
+      lng: position.coords.longitude,
+      zoom: 16
     })
   })
 
@@ -85,10 +93,14 @@ export default function App() {
     })
     setStopPredict(convert);
     setBusStop(data[1])
+    setMapCenter({
+      lat: data[1].lat,
+      lng: data[1].lon,
+      zoom: 18})
   })
   
 
-  const busProps = {bus, userLocation, busPath, busStop};
+  const busProps = {bus, mapCenter, userLocation, busPath, busStop};
   const searchProps = {routeSearch, searchPOST, busSuggestion, dirSuggestion, dirPOST, routeId, stopSuggestion, stopPOST, stopPredict}
 
   return(

@@ -18,12 +18,13 @@ export default function BusMap(props) {
   const [pathSwitch, setPathSwitch] = useState(false);
   const [currRouteId, setCurrRouteId] = useState(null);
   const {
-    userLocation: { lat, lng, zoom, haveUserLocation },
+    mapCenter: { lat, lng, zoom },
+    userLocation,
     bus,
     busPath,
     busStop
   } = props;
-
+  console.log(userLocation)
   const pathTrigger = routeId => {
     new Promise((res, rej) => {
       res(setCurrRouteId(routeId));
@@ -33,9 +34,9 @@ export default function BusMap(props) {
   };
 
   // console.log('checking if data 505 exists', vehicle.v505)
-  const userPosition = [lat, lng];
+  const mapCenter = [lat, lng];
   return (
-    <Map className="map" center={userPosition} zoom={zoom}>
+    <Map className="map" center={mapCenter} zoom={zoom}>
       <LayersControl collapsed={true} position="topleft">
         <BaseLayer checked name="Regular">
           <TileLayer
@@ -74,17 +75,16 @@ export default function BusMap(props) {
           </FeatureGroup>
         </Overlay>
 
-        {/* <FeatureGroup> */}
-        {/* {Object.keys(busStop).length>0 ? <StopMarker busStop={busStop} /> : null} */}
-
-        {/* </FeatureGroup> */}
+        <FeatureGroup>
+          {Object.keys(busStop).length>0 ? <StopMarker busStop={busStop} /> : null}
+        </FeatureGroup>
 
         <Overlay checked name="Your Location">
-          {haveUserLocation ? (
-            <Marker icon={userIcon} position={userPosition}>
+          {userLocation.haveUserLocation ? (
+            <Marker icon={userIcon} position={[userLocation.lat, userLocation.lng]}>
               <Popup>
                 <div>
-                  Your location is {userPosition[0]}, {userPosition[1]}
+                  Your location is {userLocation.lat}, {userLocation.lng}
                 </div>
               </Popup>
             </Marker>
