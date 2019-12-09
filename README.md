@@ -55,6 +55,7 @@ https://greensock.com/
 https://codepen.io/maheshambure21/pen/QwXaRw
 https://graphql.org/
 https://tarekraafat.github.io/autoComplete.js/demo/
+https://tobiasahlin.com/moving-letters/
 
 ### Leaflet JS - May need to come back for styling
 https://reactstrap.github.io/components/tabs/

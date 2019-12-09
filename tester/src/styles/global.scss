@@ -1,0 +1,12 @@
+// reset
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+} 
+li {
+list-style: none;
+}
+a {
+text-decoration: none;
+}
+
