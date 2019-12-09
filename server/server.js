@@ -159,12 +159,11 @@ io.on('connect', (socket) => {
         const route = async () => {
           try {
             let routeAxios = await axios(`http://localhost:${PORT}/restbus/agencies/ttc/routes/`);
-            let i = routeAxios.data.findIndex(info => info.title === data);
-            let routeIdUrl = routeAxios.data[i]._links.self.href;
-            let direction = await axios(routeIdUrl);
+            let routeIdUrl = routeAxios.data.find(({title}) => title === data);
+            let direction = await axios(routeIdUrl._links.self.href);
             let direcitonArr = [];
             direction.data.directions.forEach(dirTitle=> direcitonArr.push(dirTitle.title));
-            socket.binary(false).emit('direction suggestion', [direcitonArr, routeAxios.data[i].id])
+            socket.binary(false).emit('direction suggestion', [direcitonArr, routeIdUrl.id])
           }catch (err){
             console.log('axios not found', err);
           }
@@ -204,12 +203,15 @@ io.on('connect', (socket) => {
     const stopUrl = async () => {
       try {
         let prediction = await axios.get(`http://localhost:8080/restbus/agencies/ttc/routes/${data[1]}/stops/${data[0]}/predictions`);
+        let stopGPS = await axios.get(`http://localhost:8080/restbus/agencies/ttc/routes/${data[1]}`);
+        let stopObj = stopGPS.data.stops.find(({id})=> id === data[0])
         let predictArr = [];
         if(prediction.data[0]) {
           prediction.data[0].values.forEach(info => predictArr.push(info.epochTime));
-          socket.binary(false).emit('prediction', predictArr.slice(0, 3))
+          socket.binary(false).emit('prediction', [predictArr.slice(0, 3), stopObj])
         } else {
-          console.log('there are no predictions')
+          console.log('no predictions')
+          socket.binary(false).emit('prediction', ["There are currently no predctions"])
         }
       }catch (err) {
         console.log(err)

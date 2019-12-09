@@ -47,7 +47,9 @@
   box-shadow: 1px 1px 12px 1px rgba(16,27,30,0.4);
 }
 .leaflet-control-layers-toggle {
+  // layer control before open
   background-color: rgba(0,0,0, 0.75);
+  border-radius: 5px;
 }
 .leaflet-control-layers-expanded {
   // the layer selection

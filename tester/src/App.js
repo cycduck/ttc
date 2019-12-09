@@ -17,6 +17,7 @@ export default function App() {
   })
   const [bus, setBus] = useState({});
   const [busPath, setBusPath] = useState({});
+  const [busStop, setBusStop] = useState({})
   const [busSuggestion, setBusSuggestion] = useState([]);
   const [dirSuggestion, setDirSuggestion] = useState([]);
   const [routeId, setRouteId] = useState("");
@@ -74,19 +75,20 @@ export default function App() {
     socket.binary(false).emit('stop submit', [value[e.target.value], routeId]);
   }
   socket.on('prediction', data => {
-    console.log('getting predictions', data)
+    console.log('getting predictions')
     let convert = []
-    data.forEach(info => {
+    data[0].forEach(info => {
       let time = new Date(info)
       let date = new Date();
       let difference = Math.floor((time.getTime() - date.getTime())/1000/60);
       convert.push(difference);
     })
     setStopPredict(convert);
+    setBusStop(data[1])
   })
   
 
-  const busProps = {bus, userLocation, busPath};
+  const busProps = {bus, userLocation, busPath, busStop};
   const searchProps = {routeSearch, searchPOST, busSuggestion, dirSuggestion, dirPOST, routeId, stopSuggestion, stopPOST, stopPredict}
 
   return(
