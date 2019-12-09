@@ -1,15 +1,6 @@
-body {
-  margin: 0px;
-  width: 100vw;
-  height: 100vh;
-}
-
-#root {
-  height: 100%;
-}
-
 .map {
   height: 100%;
+  width: 100%;
 
   &__bus-icon-0 {
     border: 1.5px solid #EE442F;

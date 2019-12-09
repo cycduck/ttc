@@ -20,6 +20,8 @@ export default function App() {
   const [busSuggestion, setBusSuggestion] = useState([]);
   const [dirSuggestion, setDirSuggestion] = useState([]);
   const [routeId, setRouteId] = useState("");
+  const [stopSuggestion, setStopSuggestion] = useState([]);
+  const [stopPredict, setStopPredict] = useState([])
 
   navigator.geolocation.getCurrentPosition((position)=>{
     // console.log(position); // RETURN {coords: Coordinates, timestamp: 1574897414197}
@@ -54,28 +56,44 @@ export default function App() {
     } else if (e.target.routeSearch.value) {
       socket.emit('search submit', e.target.routeSearch.value)
     }
-
     // when typed u it breaks ???
   }
   socket.on('direction suggestion', data => {
     setDirSuggestion(data[0]);
     setRouteId(data[1]);
   })
-
   const dirPOST =(e)=>{
     console.log('searching direction ', e.target.value);
     socket.emit('direction input', [e.target.value, routeId])
   }
+  socket.on('stop suggestion', data => {
+    setStopSuggestion(data);
+  })
+  const stopPOST =(e)=>{
+    let value = stopSuggestion.find(info => Object.keys(info)[0]=== e.target.value);
+    socket.binary(false).emit('stop submit', [value[e.target.value], routeId]);
+  }
+  socket.on('prediction', data => {
+    console.log('getting predictions', data)
+    let convert = []
+    data.forEach(info => {
+      let time = new Date(info)
+      let date = new Date();
+      let difference = Math.floor((time.getTime() - date.getTime())/1000/60);
+      convert.push(difference);
+    })
+    setStopPredict(convert);
+  })
   
 
   const busProps = {bus, userLocation, busPath};
-  const searchProps = {routeSearch, searchPOST, busSuggestion, dirSuggestion, dirPOST, routeId}
+  const searchProps = {routeSearch, searchPOST, busSuggestion, dirSuggestion, dirPOST, routeId, stopSuggestion, stopPOST, stopPredict}
 
   return(
-    <>
+    <main className="main">
       <Search searchProps={searchProps} />
       <BusMap {...busProps} />
-    </>
+    </main>
   );
 }
 

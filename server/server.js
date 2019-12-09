@@ -180,22 +180,42 @@ io.on('connect', (socket) => {
         let direction = await axios(`http://localhost:${PORT}/restbus/agencies/ttc/routes/${data[1]}`);
         let i = direction.data.directions.findIndex(info => info.title === data[0]);
         let stopArr = direction.data.directions[i].stops;
-        // console.log(stopArr)
+        let stopTitle = []
+        // let stopAll = []
         direction.data.stops.forEach(stops => {
           stopArr.forEach(info => {
             // console.log("stops.code ", stops.id, 'info', info, 'compare', stops.code === info)
             if (stops.id === info) {
-              console.log('hello')
-              // ok this works but apparent the code is ID so switching back for now
+              // stopAll.push(stops)
+              stopTitle.push({[stops.title]: stops.id})
             }
-
           })
         })
+        socket.binary(false).emit('stop suggestion', stopTitle)
       }catch (err) {
         console.log('axios not found', err)
       }
     }
     routeIdUrl()
+  })
+
+  socket.on('stop submit', data => {
+    console.log('stop input ', data[0], data[1]);
+    const stopUrl = async () => {
+      try {
+        let prediction = await axios.get(`http://localhost:8080/restbus/agencies/ttc/routes/${data[1]}/stops/${data[0]}/predictions`);
+        let predictArr = [];
+        if(prediction.data[0]) {
+          prediction.data[0].values.forEach(info => predictArr.push(info.epochTime));
+          socket.binary(false).emit('prediction', predictArr.slice(0, 3))
+        } else {
+          console.log('there are no predictions')
+        }
+      }catch (err) {
+        console.log(err)
+      }
+    }
+    stopUrl()
   })
   // https://stackoverflow.com/questions/39296328/sending-mouse-click-events-using-socket-io
 
