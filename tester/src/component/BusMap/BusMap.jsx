@@ -15,6 +15,7 @@ const userIcon = L.divIcon({
 });
 
 export default function BusMap(props) {
+  console.log('busmap triggered');  
   const [pathSwitch, setPathSwitch] = useState(false);
   const [currRouteId, setCurrRouteId] = useState(null);
   const {
@@ -24,12 +25,13 @@ export default function BusMap(props) {
     busPath,
     busStop
   } = props;
-  console.log(userLocation)
   const pathTrigger = routeId => {
     new Promise((res, rej) => {
       res(setCurrRouteId(routeId));
     }).then(response => {
-      setPathSwitch(!pathSwitch);
+      if (routeId === currRouteId) {
+        setPathSwitch(!pathSwitch);
+      }
     });
   };
 

@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const restbus = require('restbus');
 const cors = require('cors');
+const path = require('path');
 const axios = require('axios');
 const fs = require('fs');
-
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 // use the port from the environment variable, else use 8080 https://stackoverflow.com/questions/18864677/what-is-process-env-port-in-node-js
 
 // Socket sertup
@@ -20,7 +20,15 @@ const io = require('socket.io')(server); // https://www.youtube.com/watch?v=UwS3
 
 
 app.use('/restbus', restbus.middleware()); 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')));
+}
 app.use(cors());
+if (process.env.NODE_ENV === 'production') {
+  app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, 'client/build/index.html'));
+  })
+}
 
 
 const routePath = async () => {

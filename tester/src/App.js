@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import ioClient from "socket.io-client";
 // endpoint GET /socket.io/socket.io.js
 import BusMap from "./component/BusMap";
@@ -6,7 +6,8 @@ import './App.scss';
 import Search from "./component/Search/Search";
 
 
-const socket = ioClient('http://localhost:8080/') // change to localhost
+// const socket = ioClient('http://localhost:8080/') // change to localhost
+const socket = ioClient(`${process.env.REACT_APP_SERVER || ''}`);
 
 export default function App() {
   const [mapCenter, setMapCenter] = useState({
@@ -60,9 +61,12 @@ export default function App() {
   })
   const searchPOST =(e) => {
     e.preventDefault();
-    if(e.target.value ) {
+    // if event came directly from the input
+    // console.log('the target for search POST was: ', e.target);
+    if(e.target.value.length) {
       socket.emit('search submit', e.target.value)
-    } else if (e.target.routeSearch.value) {
+    // it came from the form
+    } else if (e.target.routeSearch && e.target.routeSearch.value) {
       socket.emit('search submit', e.target.routeSearch.value)
     }
     // when typed u it breaks ???
@@ -80,7 +84,10 @@ export default function App() {
   })
   const stopPOST =(e)=>{
     let value = stopSuggestion.find(info => Object.keys(info)[0]=== e.target.value);
-    socket.binary(false).emit('stop submit', [value[e.target.value], routeId]);
+    // if no value don't emit 
+    if (value) { 
+      socket.binary(false).emit('stop submit', [value[e.target.value], routeId]);
+    } 
   }
   socket.on('prediction', data => {
     console.log('getting predictions')
