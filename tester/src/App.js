@@ -4,6 +4,7 @@ import ioClient from "socket.io-client";
 import BusMap from "./component/BusMap";
 import './App.scss';
 import Search from "./component/Search/Search";
+import Modal from "./component/Modal";
 
 
 // const socket = ioClient('http://localhost:8080/') // change to localhost
@@ -22,39 +23,49 @@ export default function App() {
   })
   const [bus, setBus] = useState({});
   const [busPath, setBusPath] = useState({});
-  const [busStop, setBusStop] = useState({})
+  const [busStop, setBusStop] = useState({});
   const [busSuggestion, setBusSuggestion] = useState([]);
   const [dirSuggestion, setDirSuggestion] = useState([]);
   const [routeId, setRouteId] = useState("");
   const [stopSuggestion, setStopSuggestion] = useState([]);
-  const [stopPredict, setStopPredict] = useState([])
+  const [stopPredict, setStopPredict] = useState([]);
+  const [modalSwitch, setModalSwitch] = useState(true);
 
-  navigator.geolocation.getCurrentPosition((position)=>{
-    // console.log(position); // RETURN {coords: Coordinates, timestamp: 1574897414197}
-    setUserLocation({
-      lat: position.coords.latitude,
-      lng: position.coords.longitude,
-      haveUserLocation: true // intital state is userIcon doesn't show
-    })
-    setMapCenter({
-      lat: position.coords.latitude,
-      lng: position.coords.longitude,
-      zoom: 16
-    })
-  })
+  const modalHandle = (e) => {
+    e.preventDefault();
+    console.log(e.target)
+    setModalSwitch(!modalSwitch);
+  }
+  
+  // console.log(position); // RETURN {coords: Coordinates, timestamp: 1574897414197}
+  if(!userLocation.haveUserLocation) {
+      navigator.geolocation.getCurrentPosition((position)=>{
+        setUserLocation({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+          haveUserLocation: true // intital state is userIcon doesn't show
+        })
+        setMapCenter({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+          zoom: 16
+        })
+      })
+  }
 
   socket.on('busUpdate', data=>{
     console.log('bus marker updating from socket', data);
     setBus(data); // Not need to put data into it's {} or will become props.vehicle.data.v505
   });
+
   socket.binary(false).on('busPath', data => {
     console.log('bus path updating from socket', data);
     setBusPath(data);
   });
 
   const routeSearch = (e)=> {
-      console.log('searching bus route ', e.target.value);
-      socket.emit('search input', e.target.value);
+    console.log('searching bus route ', e.target.value);
+    socket.emit('search input', e.target.value);
   }
   socket.on('search suggestion', data => {
     setBusSuggestion(data)
@@ -113,6 +124,8 @@ export default function App() {
   return(
     <main className="main">
       <Search searchProps={searchProps} />
+      <Modal modalHandle={modalHandle} modalSwitch={modalSwitch}/>
+      <button className="modal__open" onMouseOver={modalHandle}>INFO</button>
       <BusMap {...busProps} />
     </main>
   );

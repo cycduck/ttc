@@ -210,8 +210,8 @@ io.on('connect', (socket) => {
     console.log('stop input ', data[0], data[1]);
     const stopUrl = async () => {
       try {
-        let prediction = await axios.get(`http://localhost:8080/restbus/agencies/ttc/routes/${data[1]}/stops/${data[0]}/predictions`);
-        let stopGPS = await axios.get(`http://localhost:8080/restbus/agencies/ttc/routes/${data[1]}`);
+        let prediction = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/${data[1]}/stops/${data[0]}/predictions`);
+        let stopGPS = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/${data[1]}`);
         let stopObj = stopGPS.data.stops.find(({id})=> id === data[0])
         let predictArr = [];
         if(prediction.data[0]) {

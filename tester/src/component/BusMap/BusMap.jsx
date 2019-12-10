@@ -29,7 +29,7 @@ export default function BusMap(props) {
     new Promise((res, rej) => {
       res(setCurrRouteId(routeId));
     }).then(response => {
-      if (routeId === currRouteId) {
+      if (routeId === currRouteId || !currRouteId) {
         setPathSwitch(!pathSwitch);
       }
     });
