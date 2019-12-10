@@ -33,11 +33,11 @@ app.use(cors());
 app.options('*', cors())
 app.use('/restbus', restbus.middleware()); 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.use(express.static(path.join(__dirname, 'tester/build')));
 }
 if (process.env.NODE_ENV === 'production') {
   app.get('*', (req, res) => {
-      res.sendFile(path.join(__dirname, 'client/build/index.html'));
+      res.sendFile(path.join(__dirname, 'tester/build/index.html'));
   })
 }
 
@@ -108,7 +108,7 @@ const routePathTimed = () => {
   }
 }
 routePathTimed()
-setInterval(routePathTimed, 15000);
+// setInterval(routePathTimed, 100000);
 
 
 const busMapping = (axiosdata) => {
@@ -150,7 +150,7 @@ io.on('connect', (socket) => {
     console.timeEnd('process time ');
   };
   vehicleUpdate(); // start it once then every 15s
-  // setInterval(vehicleUpdate, 30000);
+  setInterval(vehicleUpdate, 15000);
   
   let pathData;
   let queryStop;

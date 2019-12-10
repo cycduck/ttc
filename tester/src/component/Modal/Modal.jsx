@@ -34,7 +34,7 @@ export default class Modal extends Component {
   };
 
   componentDidUpdate() {
-    // this.anime();
+    this.anime();
   }
   inputRefs = [];
   setRef = (ref) => {
