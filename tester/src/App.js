@@ -7,7 +7,6 @@ import Search from "./component/Search/Search";
 import Modal from "./component/Modal";
 import Tour2 from "./component/Tour";
 
-// const socket = ioClient('http://localhost:8080/') // change to localhost
 const socket = ioClient(`${process.env.REACT_APP_SERVER || ''}`);
 
 export default function App() {
@@ -82,15 +81,14 @@ export default function App() {
   })
   const searchPOST =(e) => {
     e.preventDefault();
-    // if event came directly from the input
-    // console.log('the target for search POST was: ', e.target);
+    
+    // two methods, from ENTER (input)
     if(e.target.value.length) {
       socket.emit('search submit', e.target.value)
-    // it came from the form
+    // from CLICK (datalist)
     } else if (e.target.routeSearch && e.target.routeSearch.value) {
       socket.emit('search submit', e.target.routeSearch.value)
     }
-    // when typed u it breaks ???
   }
   socket.on('direction suggestion', data => {
     setDirSuggestion(data[0]);
@@ -136,7 +134,7 @@ export default function App() {
       <Search searchProps={searchProps} />
       <Tour2 tourHandle={tourHandle} tourSwitch={tourSwitch} />
       <Modal modalHandle={modalHandle} modalSwitch={modalSwitch} tourHandle={tourHandle} />
-      <button className="modal__open" onMouseOver={modalHandle}>INFO</button>
+      <button className="modal__open" onMouseOver={modalHandle}>❕ INFO</button>
       <BusMap {...busProps} />
     </main>
   );

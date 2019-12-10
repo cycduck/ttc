@@ -15,6 +15,7 @@ export default function Search(props) {
   return (
     <section className="search">
       <div>
+        <h2 className="search__title">🔮 Bus predictions & stop info</h2>
         <form className="search__form" onSubmit={searchPOST}>
           <label htmlFor="routeSearch">1. Enter route name or number: </label>
           <input
