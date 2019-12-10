@@ -37,7 +37,7 @@ const markerRender = (props) =>{
       if(info.directionId && info.routeId) { // render only if direction and bus route exist
         return (
           <Marker 
-            icon={busIcon}
+            icon={yor}
             position={[info.lat, info.lng]}
             className="test"
             onClick={()=>{clickMe(`v${info.routeId}`)}}
