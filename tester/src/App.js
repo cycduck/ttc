@@ -47,7 +47,8 @@ export default function App() {
   }
   
   // console.log(position); // RETURN {coords: Coordinates, timestamp: 1574897414197}
-  if(!userLocation.haveUserLocation) {
+  // trigger when modal and tour are done
+  if(!userLocation.haveUserLocation && !modalSwitch && !tourSwitch) {
       navigator.geolocation.getCurrentPosition((position)=>{
         setUserLocation({
           lat: position.coords.latitude,

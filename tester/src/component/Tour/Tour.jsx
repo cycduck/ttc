@@ -1,5 +1,6 @@
 import React from "react";
 import Reactour from 'reactour';
+import './tour.scss';
 
 export default function Tour2(props) {
   console.log(props.tourSwitch)
@@ -7,7 +8,12 @@ export default function Tour2(props) {
   const tourConfig = [
     {
       selector: '.modal__open',
-      content: "Let's begin the tour! You can use the left and right keys to control this tour. Hover over this box to return to the tour!"
+      content: ()=>(
+
+        <div className="tour__background">
+          <p>"Let's begin the tour! You can use the left and right keys to control this tour. Hover over this box to return to the tour!</p>
+        </div>
+      )
     },
     {
       selector: '.leaflet-control-zoom',
@@ -23,14 +29,9 @@ export default function Tour2(props) {
     }
   ]
   return(
-    <div>
-      {/* <Demo
-        openTour={this.openTour}
-        toggleShowMore={this.toggleShowMore}
-        isShowingMore={isShowingMore}
-      /> */}
+    <div className="tour__div">
       <Reactour
-        onRequestClose={props.tourSwitch}
+        onRequestClose={props.tourHandle}
         steps={tourConfig}
         isOpen={props.tourSwitch}
         maskClassName="mask" // ???
