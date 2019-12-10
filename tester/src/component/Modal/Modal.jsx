@@ -81,13 +81,22 @@ export default class Modal extends Component {
           <p className="modal__intro">
             escape to your happy place
           </p>
-          <button
-            type="button"
-            className="modal__close"
-            onClick={this.props.modalHandle}
-          >
-            Show me the buses!
-          </button>
+          <div className="modal__buttons">
+            <button
+              type="button"
+              className="modal__close"
+              onClick={this.props.modalHandle}
+            >
+              Show me the buses!
+            </button>
+            <button
+              type="button"
+              className="modal__tour"
+              onClick={this.props.tourHandle}
+            >
+              Give me a tour!
+            </button>
+          </div>
         </div>
       </ReactModal>
     );

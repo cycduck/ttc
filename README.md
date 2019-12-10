@@ -56,8 +56,7 @@ https://codepen.io/maheshambure21/pen/QwXaRw
 https://graphql.org/
 https://tarekraafat.github.io/autoComplete.js/demo/
 https://tobiasahlin.com/moving-letters/
-https://www.npmjs.com/package/intro.js-react
-https://www.npmjs.com/package/reactour
+
 
 ### Leaflet JS - May need to come back for styling
 https://reactstrap.github.io/components/tabs/
@@ -120,6 +119,12 @@ to state?
 When a marker is clicked, send ID to state which stores ID and use an event listen to swtich on
 if pathSwitch is T, generate Polyline by grabbing the ID from the state
 Q: do I need to set state for ID?
+
+### Walkthrough
+https://www.npmjs.com/package/intro.js-react
+https://introjs.com/
+https://www.npmjs.com/package/reactour
+https://codesandbox.io/s/6z56m8x18k?module=%2FApp.js
 
 ### Bus Stop generator
 * Proposal 1: -FAIL

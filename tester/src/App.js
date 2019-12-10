@@ -5,7 +5,7 @@ import BusMap from "./component/BusMap";
 import './App.scss';
 import Search from "./component/Search/Search";
 import Modal from "./component/Modal";
-
+import Tour2 from "./component/Tour";
 
 // const socket = ioClient('http://localhost:8080/') // change to localhost
 const socket = ioClient(`${process.env.REACT_APP_SERVER || ''}`);
@@ -30,11 +30,20 @@ export default function App() {
   const [stopSuggestion, setStopSuggestion] = useState([]);
   const [stopPredict, setStopPredict] = useState([]);
   const [modalSwitch, setModalSwitch] = useState(true);
+  const [tourSwitch, setTourSwitch] = useState(false);
 
   const modalHandle = (e) => {
     e.preventDefault();
-    console.log(e.target)
     setModalSwitch(!modalSwitch);
+  }
+
+  const tourHandle = (e) => {
+    e.preventDefault();
+    setTourSwitch(!tourSwitch);
+    // turn off modal at the same time
+    if (modalSwitch){
+      setModalSwitch(!modalSwitch);
+    }
   }
   
   // console.log(position); // RETURN {coords: Coordinates, timestamp: 1574897414197}
@@ -124,7 +133,8 @@ export default function App() {
   return(
     <main className="main">
       <Search searchProps={searchProps} />
-      <Modal modalHandle={modalHandle} modalSwitch={modalSwitch}/>
+      <Tour2 tourHandle={tourHandle} tourSwitch={tourSwitch} />
+      <Modal modalHandle={modalHandle} modalSwitch={modalSwitch} tourHandle={tourHandle} />
       <button className="modal__open" onMouseOver={modalHandle}>INFO</button>
       <BusMap {...busProps} />
     </main>
