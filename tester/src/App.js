@@ -135,7 +135,11 @@ export default function App() {
       <Search searchProps={searchProps} />
       <Tour2 tourHandle={tourHandle} tourSwitch={tourSwitch} />
       <Modal modalHandle={modalHandle} modalSwitch={modalSwitch} tourHandle={tourHandle} />
-      <button className="modal__open" onMouseOver={modalHandle}>❕ INFO</button>
+      <div className="modal__open" onMouseOver={modalHandle}>❕ INFO</div>
+      {/* <div className="modal__open-bk"><div>
+        <div>N/W</div>
+        <div>SE</div>
+      </div> */}
       <BusMap {...busProps} />
     </main>
   );

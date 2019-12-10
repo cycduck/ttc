@@ -150,7 +150,7 @@ io.on('connect', (socket) => {
     console.timeEnd('process time ');
   };
   vehicleUpdate(); // start it once then every 15s
-  // setInterval(vehicleUpdate, 30000);
+  setInterval(vehicleUpdate, 15000);
   
   let pathData;
   let queryStop;
