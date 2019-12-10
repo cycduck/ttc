@@ -4,7 +4,7 @@ import {Marker, Popup} from 'react-leaflet';
 import ttcLogo from '../../assets/icon/stop.svg';
 
 const stopIcon = L.icon({
-  iconUrl: ttcLogo,
+  iconUrl: 'https://emoji.slack-edge.com/T3N0S87QD/joshtag1/da19d729628a9c44.png',
   iconSize: [80,80],
   popupAnchor: [-5, 15]
 })
