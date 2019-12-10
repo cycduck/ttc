@@ -16,14 +16,25 @@ const server = app.listen(PORT, (err) =>{
   console.log(`listening on PORT: ${PORT}`)
 });
 
-const io = require('socket.io')(server); // https://www.youtube.com/watch?v=UwS3wJoi7fY 2:22
+const io = require('socket.io')(server, {
+  handlePreflightRequest: (req, res) => {
+      const headers = {
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+          "Access-Control-Allow-Origin": req.headers.origin, //or the specific origin you want to give access to,
+          "Access-Control-Allow-Credentials": true
+      };
+      res.writeHead(200, headers);
+      res.end();
+  }
+}); // https://www.youtube.com/watch?v=UwS3wJoi7fY 2:22
 
 
+app.use(cors());
+app.options('*', cors())
 app.use('/restbus', restbus.middleware()); 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
 }
-app.use(cors());
 if (process.env.NODE_ENV === 'production') {
   app.get('*', (req, res) => {
       res.sendFile(path.join(__dirname, 'client/build/index.html'));
@@ -96,8 +107,8 @@ const routePathTimed = () => {
     routePath(); // calling the route path funtion 
   }
 }
-// routePathTimed()
-setInterval(routePathTimed, 100000);
+routePathTimed()
+setInterval(routePathTimed, 15000);
 
 
 const busMapping = (axiosdata) => {
@@ -142,26 +153,28 @@ io.on('connect', (socket) => {
   // setInterval(vehicleUpdate, 30000);
   
   let pathData;
-  let stopData;
+  let queryStop;
   // reading file to send data to client, if can't read send empty array
   try {
     pathData = JSON.parse(fs.readFileSync('./data/path.json'));
-    stopData = JSON.parse(fs.readFileSync('./data/stop.json'));
     queryStop = JSON.parse(fs.readFileSync('./data/queryStop.json'));
     // https://flaviocopes.com/node-reading-files/
   } catch (err) {
     pathData = {};
-    stopData = {};
+    queryStop = {}
+    console.log(err)
   }
   socket.binary(false).emit('busPath', pathData);
   
   socket.on('search input', data => {
+
     let searchMatch = queryStop.filter(route => route.trim().includes(data.trim()));
     socket.emit('search suggestion', searchMatch.slice(0,5));
   })
   
   socket.on('search submit', data => {
     console.log('search submission received', data);
+
     queryStop.forEach(info => {
       if(info.trim() === data.trim()) {
         const route = async () => {

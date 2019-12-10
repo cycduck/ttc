@@ -8,6 +8,7 @@ import Modal from "./component/Modal";
 import Tour2 from "./component/Tour";
 
 const socket = ioClient(`${process.env.REACT_APP_SERVER || ''}`);
+console.log(process.env.REACT_APP_SERVER)
 
 export default function App() {
   const [mapCenter, setMapCenter] = useState({
