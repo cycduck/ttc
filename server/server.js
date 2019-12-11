@@ -136,10 +136,16 @@ io.on('connect', (socket) => {
       let vehicle505 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/505/vehicles`);
       let vehicle506 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/506/vehicles`);
       let vehicle510 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/510/vehicles`);
+      let vehicle501 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/501/vehicles`);
+      let vehicle504 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/504/vehicles`);
+      let vehicle25 = await axios.get(`http://localhost:${PORT}/restbus/agencies/ttc/routes/25/vehicles`);
 
       vehicleAll[`v${vehicle505.data[0].routeId}`] = busMapping(vehicle505.data);
       vehicleAll[`v${vehicle506.data[0].routeId}`] = busMapping(vehicle506.data);
       vehicleAll[`v${vehicle510.data[0].routeId}`] = busMapping(vehicle510.data);
+      vehicleAll[`v${vehicle504.data[0].routeId}`] = busMapping(vehicle504.data);
+      vehicleAll[`v${vehicle25.data[0].routeId}`] = busMapping(vehicle25.data);
+      
 
       // fs.writeFile('./data/data.json', JSON.stringify(vehicleAll), function (err) {console.log(err)})
       socket.binary(false).emit('busUpdate', vehicleAll);

@@ -136,7 +136,7 @@ export default function App() {
       <Tour2 tourHandle={tourHandle} tourSwitch={tourSwitch} />
       <Modal modalHandle={modalHandle} modalSwitch={modalSwitch} tourHandle={tourHandle} />
         <div className="modal__open" onClick={modalHandle}>
-          <p className="modal__info">❕ INFO</p>
+          <p className="modal__info">❕❕ INFO</p>
           <p className="modal__NW modal__direction">N/W</p>
           <p className="modal__SE modal__direction">S/E</p>
         </div>
