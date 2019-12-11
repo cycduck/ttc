@@ -26,18 +26,44 @@
 
   }
   &__open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     right: 10px;
     bottom: 10px;
+    width: 70px;
+    height: 30px;
     padding: 10px 20px;
+
     color: white;
     font-size: 1rem;
+    text-align: center;
     font-weight: bold;
     background: rgba(0,0,0, 0.75);
-    border: none;
     border-radius: 5px;
     box-shadow: 1px 1px 12px 1px rgba(16,27,30,0.4);
     z-index: 2000;
+    
+    &:hover .modal__direction,
+    &:hover .modal__NW
+    &:hover .modal__SW {
+      display: flex;
+    }
+    &:hover .modal__info {
+      display: none;
+    }
+  }
+  &__direction {
+    display:none;
+  }
+
+  &__SE {
+    @include info-icon-style($southeast, $northwest);
+  }
+
+  &__NW {
+    @include info-icon-style($northwest, $southeast);
   }
 
   &__close {
