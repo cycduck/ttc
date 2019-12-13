@@ -86,6 +86,16 @@ export default function BusMap(props) {
             <BusMarker bus={bus.v25} clickMe={pathTrigger} />
           </FeatureGroup>
         </Overlay>
+        <Overlay checked name="60">
+          <FeatureGroup>
+            <BusMarker bus={bus.v60} clickMe={pathTrigger} />
+          </FeatureGroup>
+        </Overlay>
+        <Overlay checked name="53">
+          <FeatureGroup>
+            <BusMarker bus={bus.v53} clickMe={pathTrigger} />
+          </FeatureGroup>
+        </Overlay>
         
 
         <FeatureGroup>
