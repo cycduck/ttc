@@ -12,7 +12,7 @@ console.log(process.env.REACT_APP_SERVER)
 
 export default function App() {
   const [mapCenter, setMapCenter] = useState({
-      lat: 43.66, // does this have to be array of object? 
+      lat: 43.66,
       lng: -79.38,
       zoom: 14
   })
@@ -135,9 +135,13 @@ export default function App() {
       <Search searchProps={searchProps} />
       <Tour2 tourHandle={tourHandle} tourSwitch={tourSwitch} />
       <Modal modalHandle={modalHandle} modalSwitch={modalSwitch} tourHandle={tourHandle} />
-      <button className="modal__open" onMouseOver={modalHandle}>❕ INFO</button>
+        <div className="modal__open" onClick={modalHandle}>
+          <p className="modal__info">❕❕ INFO</p>
+          <p className="modal__NW modal__direction">N/W</p>
+          <p className="modal__SE modal__direction">S/E</p>
+        </div>
+
       <BusMap {...busProps} />
     </main>
   );
 }
-

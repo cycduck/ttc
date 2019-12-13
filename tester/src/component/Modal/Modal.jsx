@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactModal from "react-modal";
 import "./modal.scss";
-import ReactDOM from "react-dom";
 import anime from "animejs";
 
 let title = 'Transit.fetch( )';
@@ -14,11 +13,34 @@ const Span = React.forwardRef((props, ref) => (
 
 
 export default class Modal extends Component {
-  
+  anime = () => {
+    anime.timeline({loop: false})
+  .add({
+    targets: [...this.inputRefs],
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: this.title,
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 20000
+  });
+  };
+
+  componentDidUpdate() {
+    // setTimeout(this.anime(), 1000)
+    // anime will not work without crashing, despite settimeout/ no loop, this is because the set state refreshes the page and the refs gets refreshed?
+    console.log(typeof this.inputRefs);
+  }
+
   inputRefs = [];
   setRef = (ref) => {
     this.inputRefs.push(ref);
-    console.log(ref)
   };
 
   render() {
@@ -38,6 +60,21 @@ export default class Modal extends Component {
                 {letter}
               </Span>)
             )}
+            {/* <span class="letter" ref={letter =>(this.t = letter)}>T</span>
+            <span class="letter" ref={letter =>(this.r = letter)}>r</span>
+            <span class="letter" ref={letter =>(this.a = letter)}>a</span>
+            <span class="letter" ref={letter =>(this.n = letter)}>n</span>
+            <span class="letter" ref={letter =>(this.s = letter)}>s</span>
+            <span class="letter" ref={letter =>(this.i = letter)}>i</span>
+            <span class="letter" ref={letter =>(this.t2 = letter)}>t</span>
+            <span class="letter" ref={letter =>(this.dot = letter)}>.</span>
+            <span class="letter" ref={letter =>(this.f = letter)}>f</span>
+            <span class="letter" ref={letter =>(this.e = letter)}>e</span>
+            <span class="letter" ref={letter =>(this.t3 = letter)}>t</span>
+            <span class="letter" ref={letter =>(this.c = letter)}>c</span>
+            <span class="letter" ref={letter =>(this.h = letter)}>h</span>
+            <span class="letter" ref={letter =>(this.open = letter)}>(</span>
+            <span class="letter" ref={letter =>(this.close = letter)}>)</span> */}
           </h1>
           <p className="modal__intro">
             a real time transit map for Torontonians

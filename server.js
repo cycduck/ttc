@@ -102,13 +102,12 @@ const routePath = async () => {
 }
 const routePathTimed = () => {
   let date = new Date()
-  if (date.getHours()=== 14 && date.getMinutes() > 41 && date.getMinutes() < 43 ) {
+  if (date.getHours() === 23 && date.getMinutes() === 59 ) {
     console.log(`it's ${date.getHours()}:${date.getMinutes()}, wakey wakey. getting data`);
     routePath(); // calling the route path funtion 
   }
 }
-routePathTimed()
-// setInterval(routePathTimed, 100000);
+setInterval(routePathTimed, 3600000);
 
 
 const busMapping = (axiosdata) => {

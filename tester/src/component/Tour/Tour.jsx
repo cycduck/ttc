@@ -11,7 +11,7 @@ export default function Tour2(props) {
       content: ()=>(
 
         <div className="tour__background">
-          <p>"Let's begin the tour! You can use the left and right keys to control this tour. Hover over this box to return to the tour!</p>
+          <p>"Let's begin the tour! You can use the left and right keys to control this tour. Click this box to return to the tour!</p>
         </div>
       )
     },

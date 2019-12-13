@@ -18,6 +18,17 @@
   line-height: 1;
   font-size: 0.8rem;
 }
+@mixin info-icon-style ($background, $border){
+  align-items: center;
+  justify-content: center;
+  background: $background;
+  color: $border;
+  border: 2px solid $border;
+  font-size: 12px;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+}
 
 // if it's row then just use display
 @mixin flex-col {

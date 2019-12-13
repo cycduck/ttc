@@ -59,7 +59,7 @@ export default function BusMap(props) {
         ) : null}
         {/* <Polyline positions={this takes the coordinates related to the route ID}/> */}
 
-        <Overlay checked name="505">
+        <Overlay name="505">
           <FeatureGroup>
             <BusMarker bus={bus.v505} clickMe={pathTrigger} />
           </FeatureGroup>
@@ -76,6 +76,17 @@ export default function BusMap(props) {
             <BusMarker bus={bus.v510} clickMe={pathTrigger} />
           </FeatureGroup>
         </Overlay>
+        <Overlay checked name="504">
+          <FeatureGroup>
+            <BusMarker bus={bus.v504} clickMe={pathTrigger} />
+          </FeatureGroup>
+        </Overlay>
+        <Overlay checked name="25">
+          <FeatureGroup>
+            <BusMarker bus={bus.v25} clickMe={pathTrigger} />
+          </FeatureGroup>
+        </Overlay>
+        
 
         <FeatureGroup>
           {Object.keys(busStop).length>0 ? <StopMarker busStop={busStop} /> : null}
